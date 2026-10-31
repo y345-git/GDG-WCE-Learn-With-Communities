@@ -20,6 +20,7 @@ let state = {
 document.addEventListener('DOMContentLoaded', async () => {
     await loadInitialData();
     startRealtimePolling();
+    if (typeof lucide !== 'undefined') lucide.createIcons();
 });
 
 // Dark Mode Toggle

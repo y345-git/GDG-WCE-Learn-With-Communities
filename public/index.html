@@ -229,56 +229,111 @@
             </div>
         </section>
 
-        <!-- Executive Metrics KPI Summary (Google 4 Colors Integrated) -->
-        <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            <!-- Total Students (Google Blue) -->
-            <div class="aww-card p-4 rounded-2xl border-l-4 border-l-[#4285f4] border border-slate-200/80 dark:border-slate-800 shadow-2xs">
-                <div class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider flex items-center justify-between">
-                    <span>Enrolled</span>
-                    <span class="w-2 h-2 rounded-full bg-[#4285f4]"></span>
+        <!-- Executive Metrics KPI Summary (Google 4 Colors Balanced Cards) -->
+        <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
+            <!-- 1. Total Enrolled (Google Blue) -->
+            <div class="aww-card rounded-2xl p-4 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-800 transition-all relative overflow-hidden flex flex-col justify-between">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-[#4285f4]"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-1.5 mb-2.5">
+                        <div class="flex items-center gap-2 min-w-0">
+                            <div class="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-950/70 text-[#1a73e8] dark:text-blue-300 flex items-center justify-center shrink-0 border border-blue-100 dark:border-blue-900/60">
+                                <i data-lucide="users" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-[11px] font-extrabold text-slate-600 dark:text-slate-400 uppercase tracking-wider truncate">Enrolled</span>
+                        </div>
+                        <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-blue-50 dark:bg-blue-950/60 text-[#1a73e8] dark:text-blue-300 border border-blue-200/60 dark:border-blue-800 shrink-0">WCE</span>
+                    </div>
+                    <div class="text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiTotal">363</div>
                 </div>
-                <div class="text-2xl font-black text-slate-900 dark:text-white mt-1" id="kpiTotal">363</div>
-                <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">WCE Students</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#4285f4] shrink-0"></span>
+                    <span class="truncate">WCE Students</span>
+                </div>
             </div>
 
-            <!-- Stage 2: T-Shirt Winner (Google Blue) -->
-            <div onclick="filterMilestone('10')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#4285f4] bg-gradient-to-br from-blue-50/70 via-white to-white dark:from-blue-950/30 dark:to-[#111726] border border-blue-200/70 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-500 transition-all cursor-pointer group shadow-2xs">
-                <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200">
-                    <span>👕 Stage 2</span>
-                    <span class="text-[10px] font-black bg-blue-100 dark:bg-blue-900/60 text-[#1a73e8] dark:text-blue-300 px-1.5 py-0.5 rounded-md">10/10</span>
+            <!-- 2. Stage 2: T-Shirt Winner (Google Blue) -->
+            <div onclick="filterMilestone('10')" class="aww-card rounded-2xl p-4 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-blue-400 dark:hover:border-blue-700 hover:-translate-y-0.5 transition-all cursor-pointer group relative overflow-hidden flex flex-col justify-between">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-[#4285f4]"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-1.5 mb-2.5">
+                        <div class="flex items-center gap-2 min-w-0">
+                            <div class="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-950/70 text-sm flex items-center justify-center shrink-0 border border-blue-100 dark:border-blue-900/60">
+                                👕
+                            </div>
+                            <span class="text-[11px] font-extrabold text-slate-800 dark:text-slate-200 uppercase tracking-wider truncate">Stage 2</span>
+                        </div>
+                        <span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-blue-100 dark:bg-blue-900/70 text-[#1a73e8] dark:text-blue-300 border border-blue-200 dark:border-blue-800 shrink-0">10 Badges</span>
+                    </div>
+                    <div class="text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiTShirt">0</div>
                 </div>
-                <div class="text-2xl font-black text-slate-900 dark:text-white mt-1" id="kpiTShirt">0</div>
-                <div class="text-[11px] text-[#4285f4] dark:text-blue-400 mt-0.5 font-bold group-hover:underline">T-Shirt Achieved</div>
+                <div class="text-xs text-[#1a73e8] dark:text-blue-400 mt-2 font-bold flex items-center gap-1.5 group-hover:underline">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#4285f4] shrink-0"></span>
+                    <span class="truncate">Official T-Shirt Achieved</span>
+                </div>
             </div>
 
-            <!-- Stage 1: Bottle Winner (Google Green) -->
-            <div onclick="filterMilestone('bottle_stage')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#34a853] bg-gradient-to-br from-emerald-50/70 via-white to-white dark:from-emerald-950/30 dark:to-[#111726] border border-emerald-200/70 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-500 transition-all cursor-pointer group shadow-2xs">
-                <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200">
-                    <span>🍼 Stage 1</span>
-                    <span class="text-[10px] font-black bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 px-1.5 py-0.5 rounded-md">5-9</span>
+            <!-- 3. Stage 1: Bottle Winner (Google Green) -->
+            <div onclick="filterMilestone('bottle_stage')" class="aww-card rounded-2xl p-4 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-emerald-400 dark:hover:border-emerald-700 hover:-translate-y-0.5 transition-all cursor-pointer group relative overflow-hidden flex flex-col justify-between">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-[#34a853]"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-1.5 mb-2.5">
+                        <div class="flex items-center gap-2 min-w-0">
+                            <div class="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-950/70 text-sm flex items-center justify-center shrink-0 border border-emerald-100 dark:border-emerald-900/60">
+                                🍼
+                            </div>
+                            <span class="text-[11px] font-extrabold text-slate-800 dark:text-slate-200 uppercase tracking-wider truncate">Stage 1</span>
+                        </div>
+                        <span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-emerald-100 dark:bg-emerald-900/70 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 shrink-0">5-9 Badges</span>
+                    </div>
+                    <div class="text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiBottle">0</div>
                 </div>
-                <div class="text-2xl font-black text-slate-900 dark:text-white mt-1" id="kpiBottle">0</div>
-                <div class="text-[11px] text-[#34a853] dark:text-emerald-400 mt-0.5 font-bold group-hover:underline">Bottle Achieved</div>
+                <div class="text-xs text-[#1e8e3e] dark:text-emerald-400 mt-2 font-bold flex items-center gap-1.5 group-hover:underline">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#34a853] shrink-0"></span>
+                    <span class="truncate">Water Bottle Achieved</span>
+                </div>
             </div>
 
-            <!-- In Progress: 1-4 Badges (Google Yellow) -->
-            <div onclick="filterMilestone('in_progress_total')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#fbbc05] bg-gradient-to-br from-amber-50/70 via-white to-white dark:from-amber-950/30 dark:to-[#111726] border border-amber-200/70 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-500 transition-all cursor-pointer group shadow-2xs">
-                <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200">
-                    <span>⚡ In Progress</span>
-                    <span class="text-[10px] font-extrabold bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-300 px-1.5 py-0.5 rounded-md">1-4</span>
+            <!-- 4. In Progress: 1-4 Badges (Google Yellow) -->
+            <div onclick="filterMilestone('in_progress_total')" class="aww-card rounded-2xl p-4 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-amber-400 dark:hover:border-amber-700 hover:-translate-y-0.5 transition-all cursor-pointer group relative overflow-hidden flex flex-col justify-between">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-[#fbbc05]"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-1.5 mb-2.5">
+                        <div class="flex items-center gap-2 min-w-0">
+                            <div class="w-7 h-7 rounded-lg bg-amber-50 dark:bg-amber-950/70 text-sm flex items-center justify-center shrink-0 border border-amber-100 dark:border-amber-900/60">
+                                ⚡
+                            </div>
+                            <span class="text-[11px] font-extrabold text-slate-800 dark:text-slate-200 uppercase tracking-wider truncate">In Progress</span>
+                        </div>
+                        <span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-amber-100 dark:bg-amber-900/70 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800 shrink-0">1-4 Badges</span>
+                    </div>
+                    <div class="text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiInProg">0</div>
                 </div>
-                <div class="text-2xl font-black text-slate-900 dark:text-white mt-1" id="kpiInProg">0</div>
-                <div class="text-[11px] text-amber-600 dark:text-amber-400 mt-0.5 font-medium group-hover:underline">Working to Bottle</div>
+                <div class="text-xs text-amber-700 dark:text-amber-400 mt-2 font-bold flex items-center gap-1.5 group-hover:underline">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#fbbc05] shrink-0"></span>
+                    <span class="truncate">Working to Bottle</span>
+                </div>
             </div>
 
-            <!-- Overall Workshop Completion Rate (Google Red) -->
-            <div class="aww-card p-4 rounded-2xl border-l-4 border-l-[#ea4335] bg-gradient-to-br from-rose-50/60 via-white to-white dark:from-rose-950/30 dark:to-[#111726] border border-rose-200/70 dark:border-slate-800 shadow-2xs">
-                <div class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider flex items-center justify-between">
-                    <span>Completion Rate</span>
-                    <span class="w-2 h-2 rounded-full bg-[#ea4335]"></span>
+            <!-- 5. Overall Track Completion Rate (Google Red) -->
+            <div class="aww-card rounded-2xl p-4 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-rose-300 dark:hover:border-rose-800 transition-all relative overflow-hidden flex flex-col justify-between">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-[#ea4335]"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-1.5 mb-2.5">
+                        <div class="flex items-center gap-2 min-w-0">
+                            <div class="w-7 h-7 rounded-lg bg-rose-50 dark:bg-rose-950/70 text-[#d93025] dark:text-rose-300 flex items-center justify-center shrink-0 border border-rose-100 dark:border-rose-900/60">
+                                <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-[11px] font-extrabold text-slate-600 dark:text-slate-400 uppercase tracking-wider truncate">Completion</span>
+                        </div>
+                        <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-rose-50 dark:bg-rose-950/60 text-[#d93025] dark:text-rose-300 border border-rose-200/60 dark:border-rose-800 shrink-0">Track</span>
+                    </div>
+                    <div class="text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiCompletionRate">0%</div>
                 </div>
-                <div class="text-2xl font-black text-slate-900 dark:text-white mt-1" id="kpiCompletionRate">0%</div>
-                <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5" id="kpiTotalBadges">0 total badges</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-semibold flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#ea4335] shrink-0"></span>
+                    <span class="truncate" id="kpiTotalBadges">0 total badges</span>
+                </div>
             </div>
         </section>
 
