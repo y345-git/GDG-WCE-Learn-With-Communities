@@ -1,0 +1,23 @@
+{
+  "name": "gdgc-wce-cloud-workshop-tracker",
+  "version": "2.0.0",
+  "description": "Google Developer Groups On Campus WCE - Cloud Workshop 10-Badge Live Tracking Webapp",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'Static assets ready in public/'"
+  },
+  "keywords": [
+    "gdg",
+    "gdg-on-campus",
+    "wce",
+    "google-cloud",
+    "skill-badges",
+    "live-tracker",
+    "vercel"
+  ],
+  "author": "GDG On Campus WCE",
+  "license": "MIT"
+}

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDG Cloud Workshop - Live Badge & Milestone Tracker</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        google: {
+                            blue: '#1a73e8',
+                            blueDark: '#1557b0',
+                            red: '#ea4335',
+                            yellow: '#fbbc04',
+                            green: '#34a853',
+                            surface: '#f8fafd'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+</head>
+<body class="bg-[#f8fafd] text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Top Navigation Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand Title -->
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 shadow-sm">
+                        <span class="text-xl">☁️</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h1 class="font-bold text-lg text-slate-900 leading-tight">GDG Cloud Workshop Tracker</h1>
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-google-blue">10-Badge Track</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Live Skills Profile Verification & Milestone Tracking</p>
+                    </div>
+                </div>
+
+                <!-- Global Action Bar -->
+                <div class="flex items-center gap-2.5">
+                    <!-- Live Sync Indicator Pill -->
+                    <div id="syncIndicatorPill" class="hidden items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-amber-50 text-amber-700 border border-amber-200">
+                        <div class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
+                        <span id="syncIndicatorText">Live Syncing (0%)...</span>
+                    </div>
+
+                    <!-- Sync All Button -->
+                    <button id="btnSyncAll" onclick="triggerSync('all')" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-lg bg-google-blue hover:bg-google-blueDark text-white shadow-sm transition-all focus:ring-2 focus:ring-blue-300">
+                        <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+                        <span>Sync All Profiles</span>
+                    </button>
+
+                    <!-- Quick Sync Active Button -->
+                    <button id="btnSyncActive" onclick="triggerSync('active')" class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 transition-all">
+                        <i data-lucide="zap" class="w-3.5 h-3.5 text-emerald-600"></i>
+                        <span>Sync Active Only</span>
+                    </button>
+
+                    <!-- Stop Sync Button (Hidden when idle) -->
+                    <button id="btnStopSync" onclick="stopSync()" class="hidden inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 transition-all">
+                        <i data-lucide="square" class="w-3.5 h-3.5 fill-current text-rose-600"></i>
+                        <span>Stop</span>
+                    </button>
+
+                    <!-- Export Excel Button -->
+                    <a href="/api/export/excel" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-lg bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 shadow-xs transition-all">
+                        <i data-lucide="download" class="w-3.5 h-3.5 text-slate-500"></i>
+                        <span>Export Excel</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Sync Progress Banner (shown while syncing) -->
+        <div id="liveSyncBanner" class="hidden bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 text-white px-4 py-2 text-xs font-medium transition-all shadow-inner">
+            <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>
+                    <span>Live Scraping Profiles: <strong id="syncCurrentName">Starting...</strong></span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span id="syncProgressStats">0 / 363 (0%)</span>
+                    <span id="syncTimeEstimate" class="text-blue-100 text-[11px]">ETA: calculating...</span>
+                    <div class="w-32 bg-white/30 rounded-full h-2 overflow-hidden">
+                        <div id="syncProgressBar" class="bg-white h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6">
+
+        <!-- Executive Metrics KPI Cards -->
+        <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5">
+            <!-- Total Enrolled -->
+            <div class="bg-white rounded-xl p-4 border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all">
+                <div class="flex items-center justify-between text-slate-500 text-xs font-medium">
+                    <span>Enrolled</span>
+                    <i data-lucide="users" class="w-4 h-4 text-slate-400"></i>
+                </div>
+                <div class="mt-2 text-2xl font-bold text-slate-900" id="kpiTotalParticipants">363</div>
+                <div class="mt-1 text-[11px] text-slate-500">Registered Students</div>
+            </div>
+
+            <!-- Milestone 3 (10/10 Completed) -->
+            <div class="bg-white rounded-xl p-4 border border-amber-200 bg-amber-50/20 shadow-xs hover:shadow-sm transition-all cursor-pointer" onclick="filterByMilestone('milestone_3')">
+                <div class="flex items-center justify-between text-amber-700 text-xs font-semibold">
+                    <span>🏆 Milestone 3</span>
+                    <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-100 text-amber-800">10/10</span>
+                </div>
+                <div class="mt-2 text-2xl font-bold text-amber-900" id="kpiMilestone3">0</div>
+                <div class="mt-1 text-[11px] text-amber-700 font-medium">Completed Track</div>
+            </div>
+
+            <!-- Milestone 2 (5-9 Badges) -->
+            <div class="bg-white rounded-xl p-4 border border-indigo-200 bg-indigo-50/20 shadow-xs hover:shadow-sm transition-all cursor-pointer" onclick="filterByMilestone('milestone_2')">
+                <div class="flex items-center justify-between text-indigo-700 text-xs font-semibold">
+                    <span>🥈 Milestone 2</span>
+                    <span class="px-1.5 py-0.5 rounded text-[10px] bg-indigo-100 text-indigo-800">5-9</span>
+                </div>
+                <div class="mt-2 text-2xl font-bold text-indigo-900" id="kpiMilestone2">0</div>
+                <div class="mt-1 text-[11px] text-indigo-700 font-medium">Halfway or More</div>
+            </div>
+
+            <!-- Milestone 1 (3-4 Badges) -->
+            <div class="bg-white rounded-xl p-4 border border-blue-200 bg-blue-50/20 shadow-xs hover:shadow-sm transition-all cursor-pointer" onclick="filterByMilestone('milestone_1')">
+                <div class="flex items-center justify-between text-blue-700 text-xs font-semibold">
+                    <span>🥉 Milestone 1</span>
+                    <span class="px-1.5 py-0.5 rounded text-[10px] bg-blue-100 text-blue-800">3-4</span>
+                </div>
+                <div class="mt-2 text-2xl font-bold text-blue-900" id="kpiMilestone1">0</div>
+                <div class="mt-1 text-[11px] text-blue-700 font-medium">Initial Threshold</div>
+            </div>
+
+            <!-- In Progress (1-2 Badges) -->
+            <div class="bg-white rounded-xl p-4 border border-emerald-200 bg-emerald-50/20 shadow-xs hover:shadow-sm transition-all cursor-pointer" onclick="filterByMilestone('in_progress')">
+                <div class="flex items-center justify-between text-emerald-700 text-xs font-semibold">
+                    <span>⚡ In Progress</span>
+                    <span class="px-1.5 py-0.5 rounded text-[10px] bg-emerald-100 text-emerald-800">1-2</span>
+                </div>
+                <div class="mt-2 text-2xl font-bold text-emerald-900" id="kpiInProgress">0</div>
+                <div class="mt-1 text-[11px] text-emerald-700 font-medium">Started Learning</div>
+            </div>
+
+            <!-- Total Badges Completed -->
+            <div class="bg-white rounded-xl p-4 border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all">
+                <div class="flex items-center justify-between text-slate-500 text-xs font-medium">
+                    <span>Badges Earned</span>
+                    <i data-lucide="award" class="w-4 h-4 text-slate-400"></i>
+                </div>
+                <div class="mt-2 text-2xl font-bold text-slate-900" id="kpiTotalBadgesEarned">0</div>
+                <div class="mt-1 text-[11px] text-slate-500" id="kpiAvgBadges">Avg: 0.0 badges / person</div>
+            </div>
+        </section>
+
+        <!-- Official 10 Target Badges Overview (Google Sheet Syllabus) -->
+        <section class="bg-white rounded-xl p-5 border border-slate-200/80 shadow-xs">
+            <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 rounded-full bg-google-blue"></div>
+                    <h2 class="text-sm font-bold text-slate-900">Curriculum Target Badges (10 Required Badges)</h2>
+                    <span class="text-xs text-slate-400">Click any badge to filter participants</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTVMEFW24yi5IVcBblZFEK5xMdQyeF9pndf-wxE37BKu5hyOghhSkYiCHW6rSLjNJd5U3OI_E_I9vZi/pubhtml?gid=411469390&single=true" target="_blank" class="inline-flex items-center gap-1 text-xs text-google-blue hover:underline">
+                        <span>Official Google Sheet Syllabus</span>
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Badges Grid -->
+            <div id="targetBadgesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+                <!-- Dynamically loaded badge cards -->
+                <div class="p-3 rounded-lg border border-slate-100 bg-slate-50 text-center animate-pulse text-xs text-slate-400">
+                    Loading badge curriculum...
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Participants Section -->
+        <section class="space-y-4">
+            <!-- Controls Bar: Search, Filters, Views -->
+            <div class="bg-white rounded-xl p-4 border border-slate-200/80 shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+                <!-- Search Box -->
+                <div class="relative flex-1 max-w-md">
+                    <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+                    <input type="text" id="searchInput" placeholder="Search by name, email, or access code..." 
+                           class="w-full pl-9 pr-8 py-2 text-xs bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-google-blue transition-all"
+                           oninput="handleSearch()">
+                    <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
+                        <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+                <!-- Filter Tabs & Sort -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <!-- Milestone Filter Buttons -->
+                    <div class="inline-flex rounded-lg border border-slate-200 bg-slate-50 p-0.5 text-xs font-medium text-slate-600">
+                        <button onclick="setMilestoneFilter('')" id="filterTabAll" class="filter-tab px-2.5 py-1.5 rounded-md transition-all active-tab">All (<span id="countAll">363</span>)</button>
+                        <button onclick="setMilestoneFilter('10')" id="filterTabM3" class="filter-tab px-2.5 py-1.5 rounded-md transition-all">🏆 10/10 (<span id="countM3">0</span>)</button>
+                        <button onclick="setMilestoneFilter('milestone_2')" id="filterTabM2" class="filter-tab px-2.5 py-1.5 rounded-md transition-all">5-9 (<span id="countM2">0</span>)</button>
+                        <button onclick="setMilestoneFilter('milestone_1')" id="filterTabM1" class="filter-tab px-2.5 py-1.5 rounded-md transition-all">3-4 (<span id="countM1">0</span>)</button>
+                        <button onclick="setMilestoneFilter('in_progress')" id="filterTabInProg" class="filter-tab px-2.5 py-1.5 rounded-md transition-all">1-2 (<span id="countInProg">0</span>)</button>
+                        <button onclick="setMilestoneFilter('not_started')" id="filterTabZero" class="filter-tab px-2.5 py-1.5 rounded-md transition-all">0 (<span id="countZero">0</span>)</button>
+                    </div>
+
+                    <!-- Sort Dropdown -->
+                    <select id="sortSelect" onchange="handleSortChange()" class="py-1.5 px-3 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-100">
+                        <option value="count_desc">Badges (High to Low)</option>
+                        <option value="count_asc">Badges (Low to High)</option>
+                        <option value="name_asc">Name (A to Z)</option>
+                        <option value="name_desc">Name (Z to A)</option>
+                        <option value="updated_desc">Recently Scraped</option>
+                    </select>
+
+                    <!-- View Switcher -->
+                    <div class="inline-flex rounded-lg border border-slate-200 bg-slate-50 p-0.5">
+                        <button id="viewGridBtn" onclick="switchView('grid')" title="Card Grid View" class="p-1.5 rounded-md text-slate-700 bg-white shadow-xs">
+                            <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                        </button>
+                        <button id="viewTableBtn" onclick="switchView('table')" title="Detailed Matrix Table" class="p-1.5 rounded-md text-slate-500 hover:text-slate-800">
+                            <i data-lucide="table" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Filter Indicator (if filtered by badge or search) -->
+            <div id="activeFilterBanner" class="hidden items-center justify-between bg-blue-50/80 border border-blue-200 rounded-lg px-4 py-2 text-xs text-blue-900">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="filter" class="w-3.5 h-3.5 text-google-blue"></i>
+                    <span id="activeFilterText">Filtered</span>
+                </div>
+                <button onclick="resetAllFilters()" class="text-xs font-semibold text-google-blue hover:underline">
+                    Reset Filter
+                </button>
+            </div>
+
+            <!-- Card Grid View Container -->
+            <div id="participantsGridView" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Dynamically populated cards -->
+            </div>
+
+            <!-- Detailed Table View Container (Hidden by default) -->
+            <div id="participantsTableView" class="hidden bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs">
+                        <thead class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold uppercase tracking-wider text-[11px]">
+                            <tr>
+                                <th class="py-3 px-4">Participant</th>
+                                <th class="py-3 px-3">Progress</th>
+                                <th class="py-3 px-3">Milestone</th>
+                                <th class="py-3 px-3 text-center" title="The Basics of Google Cloud Compute">B1</th>
+                                <th class="py-3 px-3 text-center" title="Configure Service Accounts and IAM Roles">B2</th>
+                                <th class="py-3 px-3 text-center" title="Implement Speech and Language Solutions">B3</th>
+                                <th class="py-3 px-3 text-center" title="Develop AI-Powered Prototypes in Google AI Studio">B4</th>
+                                <th class="py-3 px-3 text-center" title="Analyze Images with the Cloud Vision API">B5</th>
+                                <th class="py-3 px-3 text-center" title="Build a Website on Google Cloud">B6</th>
+                                <th class="py-3 px-3 text-center" title="Create Your First Gemini Enterprise Application">B7</th>
+                                <th class="py-3 px-3 text-center" title="Store, Process, and Manage Data on Google Cloud">B8</th>
+                                <th class="py-3 px-3 text-center" title="Using the Google Cloud Speech API">B9</th>
+                                <th class="py-3 px-3 text-center" title="Explore Generative AI in Agent Platform">B10</th>
+                                <th class="py-3 px-4 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="participantsTableBody" class="divide-y divide-slate-100">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Empty State / No Results -->
+            <div id="noResultsState" class="hidden text-center py-12 bg-white rounded-xl border border-slate-200/80 p-6">
+                <i data-lucide="search-x" class="w-10 h-10 text-slate-300 mx-auto mb-3"></i>
+                <h3 class="text-sm font-semibold text-slate-800">No participants match your criteria</h3>
+                <p class="text-xs text-slate-500 mt-1">Try clearing your search query or switching milestone filters.</p>
+                <button onclick="resetAllFilters()" class="mt-4 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-google-blue text-white hover:bg-google-blueDark">
+                    Reset Filters
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Participant Details Drawer / Modal -->
+    <div id="participantModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/40 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="relative bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden my-8 max-h-[90vh] flex flex-col">
+            <!-- Modal Header -->
+            <div class="p-5 border-b border-slate-100 flex items-start justify-between bg-slate-50/50">
+                <div class="flex items-center gap-3">
+                    <div id="modalAvatar" class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-500 to-indigo-600 text-white font-bold text-lg flex items-center justify-center shadow-sm">
+                        JD
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h3 id="modalUserName" class="text-base font-bold text-slate-900 leading-tight">Participant Name</h3>
+                            <span id="modalMilestoneBadge" class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-200">Milestone 3</span>
+                        </div>
+                        <p id="modalUserEmail" class="text-xs text-slate-500 font-mono mt-0.5">student@example.com</p>
+                    </div>
+                </div>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-100 transition-all">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div class="p-6 overflow-y-auto space-y-6 flex-1 text-xs">
+                <!-- Overview Stats Row -->
+                <div class="grid grid-cols-3 gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/60">
+                    <div>
+                        <span class="text-[10px] text-slate-500 uppercase font-semibold">Workshop Badges</span>
+                        <div class="text-lg font-bold text-slate-900 mt-0.5" id="modalBadgeCount">0 / 10</div>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-slate-500 uppercase font-semibold">Access Code</span>
+                        <div class="text-xs font-mono text-slate-800 mt-1 truncate" id="modalAccessCode">-</div>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-slate-500 uppercase font-semibold">Last Live Scrape</span>
+                        <div class="text-xs text-slate-800 mt-1" id="modalLastScraped">Never</div>
+                    </div>
+                </div>
+
+                <!-- 10 Target Badges Checklist -->
+                <div>
+                    <div class="flex items-center justify-between mb-2.5">
+                        <h4 class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-google-blue"></i>
+                            <span>Workshop 10-Badge Completion Status</span>
+                        </h4>
+                        <span class="text-[11px] text-slate-500" id="modalBadgeProgressText">0% Complete</span>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-3">
+                        <div id="modalProgressBar" class="h-2 rounded-full bg-google-blue transition-all duration-300" style="width: 0%"></div>
+                    </div>
+
+                    <!-- Badges Checklist Items -->
+                    <div id="modalBadgeList" class="space-y-2">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Ignored Extra Badges Notice (as requested by user) -->
+                <div id="modalExtraBadgesSection" class="hidden p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-600">
+                    <div class="flex items-center gap-2 text-xs font-semibold text-slate-700">
+                        <i data-lucide="info" class="w-4 h-4 text-slate-400"></i>
+                        <span>Additional Badges on Public Profile</span>
+                    </div>
+                    <p class="text-[11px] text-slate-500 mt-1">
+                        This participant has <strong id="modalExtraCount">0</strong> other badges earned outside the official 10 workshop track. As per tracking rules, these are ignored for milestone completion.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+                <a id="modalProfileLink" href="#" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 text-xs font-semibold shadow-xs">
+                    <span>View Public Skills Profile</span>
+                    <i data-lucide="external-link" class="w-3.5 h-3.5 text-slate-400"></i>
+                </a>
+
+                <div class="flex items-center gap-2">
+                    <button id="modalSyncBtn" onclick="syncSingleParticipantFromModal()" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-google-blue hover:bg-google-blueDark text-white text-xs font-semibold shadow-xs">
+                        <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+                        <span>Live Sync This Profile</span>
+                    </button>
+                    <button onclick="closeModal()" class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-xs font-semibold">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- App JavaScript -->
+    <script src="/static/js/app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "order": 1,
+    "name": "The Basics of Google Cloud Compute",
+    "normalizedName": "the basics of google cloud compute",
+    "url": "https://www.skills.google/course_templates/754",
+    "credits": 4,
+    "type": "Skill Badge"
+  },
+  {
+    "id": 2,
+    "order": 2,
+    "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+    "normalizedName": "configure service accounts and iam roles for google cloud",
+    "url": "https://www.skills.google/course_templates/702",
+    "credits": 4,
+    "type": "Skill Badge"
+  },
+  {
+    "id": 3,
+    "order": 3,
+    "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+    "normalizedName": "implement speech and language solutions with pre-trained apis",
+    "url": "https://www.skills.google/course_templates/700",
+    "credits": 4,
+    "type": "Skill Badge"
+  },
+  {
+    "id": 4,
+    "order": 4,
+    "name": "Develop AI-Powered Prototypes in Google AI Studio",
+    "normalizedName": "develop ai-powered prototypes in google ai studio",
+    "url": "https://www.skills.google/course_templates/1426",
+    "credits": 0,
+    "type": "Skill Badge"
+  },
+  {
+    "id": 5,
+    "order": 5,
+    "name": "Analyze Images with the Cloud Vision API",
+    "normalizedName": "analyze images with the cloud vision api",
+    "url": "https://www.skills.google/course_templates/633",
+    "credits": 12,
+    "type": "Skill Badge"
+  },
+  {
+    "id": 6,
+    "order": 6,
+    "name": "Build a Website on Google Cloud",
+    "normalizedName": "build a website on google cloud",
+    "url": "https://www.skills.google/course_templates/638",
+    "credits": 13,
+    "type": "Skill Badge"
+  },
+  {
+    "id": 7,
+    "order": 7,
+    "name": "Create Your First Gemini Enterprise Application",
+    "normalizedName": "create your first gemini enterprise application",
+    "url": "https://www.skills.google/course_templates/1586/",
+    "credits": 0,
+    "type": "Skill Badge"
+  },
+  {
+    "id": 8,
+    "order": 8,
+    "name": "Store, Process, and Manage Data on Google Cloud - Console",
+    "normalizedName": "store, process, and manage data on google cloud - console",
+    "url": "https://www.skills.google/course_templates/658",
+    "credits": 3,
+    "type": "Skill Badge"
+  },
+  {
+    "id": 9,
+    "order": 9,
+    "name": "Using the Google Cloud Speech API",
+    "normalizedName": "using the google cloud speech api",
+    "url": "https://www.skills.google/course_templates/756",
+    "credits": 4,
+    "type": "Skill Badge"
+  },
+  {
+    "id": 10,
+    "order": 10,
+    "name": "Explore Generative AI in Agent Platform",
+    "normalizedName": "explore generative ai in agent platform",
+    "url": "https://www.skills.google/course_templates/959",
+    "credits": 16,
+    "type": "Skill Badge"
+  }
+]
