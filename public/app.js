@@ -46,49 +46,93 @@ async function loadInitialData() {
     }
 }
 
-// Fetch Centralized Participants from /api/participants
+// Fetch Centralized Participants (Primary: /api/participants, Fallback: /data/participants.json for Vercel/CDN)
 async function fetchCentralizedParticipants() {
+    let loaded = false;
+
+    // 1. Try real-time API endpoint first
     try {
         const pResp = await fetch('/api/participants');
-        const data = await pResp.json();
-
-        if (data && data.success && Array.isArray(data.participants)) {
-            state.participants = data.participants;
-            state.currentlySyncingId = data.currentlySyncingId || null;
-
-            updateStats();
-            renderParticipants();
+        if (pResp.ok) {
+            const data = await pResp.json();
+            if (data && data.success && Array.isArray(data.participants) && data.participants.length > 0) {
+                state.participants = data.participants;
+                state.currentlySyncingId = data.currentlySyncingId || null;
+                loaded = true;
+            }
         }
     } catch (e) {
-        console.warn('Real-time sync poll error:', e);
+        // Fallback to static JSON
+    }
+
+    // 2. Direct static fallback (Ensures 100% instant data rendering on Vercel)
+    if (!loaded) {
+        try {
+            const sResp = await fetch('/data/participants.json');
+            if (sResp.ok) {
+                const raw = await sResp.json();
+                state.participants = Array.isArray(raw) ? raw : (raw.participants || []);
+                state.currentlySyncingId = null;
+                loaded = true;
+            }
+        } catch (err) {
+            console.error('Error fetching static participants fallback:', err);
+        }
+    }
+
+    if (state.participants && state.participants.length > 0) {
+        updateStats();
+        renderParticipants();
     }
 }
 
-// Start Real-Time Background Polling (Every 4 seconds, silent, zero lag)
+// Start Real-Time Background Polling (Every 4 seconds, silent, zero lag, auto-fallback)
 function startRealtimePolling() {
     if (state.realtimePollTimer) clearInterval(state.realtimePollTimer);
     state.realtimePollTimer = setInterval(async () => {
         try {
-            const pResp = await fetch('/api/participants');
-            const data = await pResp.json();
+            let newParticipants = null;
+            let syncId = null;
 
-            if (data && data.success && Array.isArray(data.participants)) {
-                // Check if any counts changed
+            // Try API first
+            try {
+                const pResp = await fetch('/api/participants');
+                if (pResp.ok) {
+                    const data = await pResp.json();
+                    if (data && data.success && Array.isArray(data.participants)) {
+                        newParticipants = data.participants;
+                        syncId = data.currentlySyncingId || null;
+                    }
+                }
+            } catch (err) {}
+
+            // Static fallback with cache busting if API endpoint is not active
+            if (!newParticipants || newParticipants.length === 0) {
+                try {
+                    const sResp = await fetch('/data/participants.json?_t=' + Date.now());
+                    if (sResp.ok) {
+                        const raw = await sResp.json();
+                        newParticipants = Array.isArray(raw) ? raw : (raw.participants || []);
+                    }
+                } catch (e) {}
+            }
+
+            if (newParticipants && newParticipants.length > 0) {
                 let hasChanges = false;
-                if (state.participants.length !== data.participants.length) {
+                if (state.participants.length !== newParticipants.length) {
                     hasChanges = true;
                 } else {
-                    for (let i = 0; i < data.participants.length; i++) {
-                        if (state.participants[i].completedCount !== data.participants[i].completedCount) {
+                    for (let i = 0; i < newParticipants.length; i++) {
+                        if (state.participants[i].completedCount !== newParticipants[i].completedCount) {
                             hasChanges = true;
                             break;
                         }
                     }
                 }
 
-                state.participants = data.participants;
+                state.participants = newParticipants;
                 const prevSyncId = state.currentlySyncingId;
-                state.currentlySyncingId = data.currentlySyncingId || null;
+                state.currentlySyncingId = syncId;
 
                 if (hasChanges || prevSyncId !== state.currentlySyncingId) {
                     updateStats();
