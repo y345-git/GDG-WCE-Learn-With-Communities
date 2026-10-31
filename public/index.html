@@ -52,7 +52,7 @@
         }
     </script>
 </head>
-<body class="bg-[#f8fafc] dark:bg-[#0a0e17] text-slate-800 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col transition-colors duration-200 relative overflow-x-hidden">
+<body class="bg-[#f4f7fb] dark:bg-[#0a0e17] text-slate-800 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col transition-colors duration-200 relative overflow-x-hidden">
 
     <!-- Subtle Ambient Google 4-Color Cursor Spotlight -->
     <div id="ambientCursorSpotlight"></div>
@@ -161,9 +161,10 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6 relative z-10">
 
         <!-- Awwwards Hero Showcase (Google Colors Themed) -->
-        <section class="aww-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+        <section class="aww-card rounded-3xl p-6 sm:p-8 relative overflow-hidden bg-white/95 dark:bg-[#111726]/90">
             <!-- Subtle Multi-Color Ambient Backlight -->
-            <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-gradient-to-br from-[#4285f4]/10 via-[#ea4335]/8 to-[#34a853]/10 dark:from-[#4285f4]/20 dark:via-[#ea4335]/15 dark:to-[#34a853]/20 blur-3xl pointer-events-none"></div>
+            <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-gradient-to-br from-[#4285f4]/15 via-[#fbbc05]/10 to-[#34a853]/15 dark:from-[#4285f4]/20 dark:via-[#ea4335]/15 dark:to-[#34a853]/20 blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-gradient-to-tr from-[#ea4335]/10 via-transparent to-transparent blur-3xl pointer-events-none"></div>
 
             <div class="flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
                 <!-- Left Column: Title & Swag Goal Cards -->
@@ -189,7 +190,7 @@
                     <!-- Interactive Swag Cards -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
                         <!-- Stage 1 Reward Card (Google Green Themed) -->
-                        <div onclick="filterMilestone('bottle_stage')" class="p-4 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 hover:border-emerald-400 dark:hover:border-emerald-600 transition-all cursor-pointer group shadow-2xs">
+                        <div onclick="filterMilestone('bottle_stage')" class="p-4 rounded-2xl bg-gradient-to-br from-emerald-50/90 to-emerald-100/40 dark:from-emerald-950/40 dark:to-emerald-900/20 border border-emerald-200 dark:border-emerald-800 hover:border-emerald-400 dark:hover:border-emerald-600 transition-all cursor-pointer group shadow-2xs hover:shadow-md">
                             <div class="flex items-center justify-between">
                                 <span class="text-xs font-black uppercase tracking-wider text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
                                     <span class="w-2 h-2 rounded-full bg-[#34a853]"></span>
@@ -204,7 +205,7 @@
                         </div>
 
                         <!-- Stage 2 Reward Card (Google Blue Themed) -->
-                        <div onclick="filterMilestone('10')" class="p-4 rounded-2xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-all cursor-pointer group shadow-2xs">
+                        <div onclick="filterMilestone('10')" class="p-4 rounded-2xl bg-gradient-to-br from-blue-50/90 to-blue-100/40 dark:from-blue-950/40 dark:to-blue-900/20 border border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-all cursor-pointer group shadow-2xs hover:shadow-md">
                             <div class="flex items-center justify-between">
                                 <span class="text-xs font-black uppercase tracking-wider text-blue-800 dark:text-blue-300 flex items-center gap-1.5">
                                     <span class="w-2 h-2 rounded-full bg-[#4285f4]"></span>
@@ -234,7 +235,7 @@
         <!-- Executive Metrics KPI Summary (Google 4 Colors Integrated) -->
         <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             <!-- Total Students (Google Blue) -->
-            <div class="aww-card p-4 rounded-2xl border-l-4 border-l-[#4285f4]">
+            <div class="aww-card p-4 rounded-2xl border-l-4 border-l-[#4285f4] border border-slate-200/80 dark:border-slate-800 shadow-2xs">
                 <div class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider flex items-center justify-between">
                     <span>Enrolled</span>
                     <span class="w-2 h-2 rounded-full bg-[#4285f4]"></span>
@@ -244,7 +245,7 @@
             </div>
 
             <!-- Stage 2: T-Shirt Winner (Google Blue) -->
-            <div onclick="filterMilestone('10')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#4285f4] hover:border-blue-400 dark:hover:border-blue-500 transition-all cursor-pointer group">
+            <div onclick="filterMilestone('10')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#4285f4] bg-gradient-to-br from-blue-50/70 via-white to-white dark:from-blue-950/30 dark:to-[#111726] border border-blue-200/70 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-500 transition-all cursor-pointer group shadow-2xs">
                 <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200">
                     <span>👕 Stage 2</span>
                     <span class="text-[10px] font-black bg-blue-100 dark:bg-blue-900/60 text-[#1a73e8] dark:text-blue-300 px-1.5 py-0.5 rounded-md">10/10</span>
@@ -254,7 +255,7 @@
             </div>
 
             <!-- Stage 1: Bottle Winner (Google Green) -->
-            <div onclick="filterMilestone('bottle_stage')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#34a853] hover:border-emerald-400 dark:hover:border-emerald-500 transition-all cursor-pointer group">
+            <div onclick="filterMilestone('bottle_stage')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#34a853] bg-gradient-to-br from-emerald-50/70 via-white to-white dark:from-emerald-950/30 dark:to-[#111726] border border-emerald-200/70 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-500 transition-all cursor-pointer group shadow-2xs">
                 <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200">
                     <span>🍼 Stage 1</span>
                     <span class="text-[10px] font-black bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 px-1.5 py-0.5 rounded-md">5-9</span>
@@ -264,7 +265,7 @@
             </div>
 
             <!-- In Progress: 1-4 Badges (Google Yellow) -->
-            <div onclick="filterMilestone('in_progress_total')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#fbbc05] hover:border-amber-400 dark:hover:border-amber-500 transition-all cursor-pointer group">
+            <div onclick="filterMilestone('in_progress_total')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#fbbc05] bg-gradient-to-br from-amber-50/70 via-white to-white dark:from-amber-950/30 dark:to-[#111726] border border-amber-200/70 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-500 transition-all cursor-pointer group shadow-2xs">
                 <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200">
                     <span>⚡ In Progress</span>
                     <span class="text-[10px] font-extrabold bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-300 px-1.5 py-0.5 rounded-md">1-4</span>
@@ -274,7 +275,7 @@
             </div>
 
             <!-- Overall Workshop Completion Rate (Google Red) -->
-            <div class="aww-card p-4 rounded-2xl border-l-4 border-l-[#ea4335]">
+            <div class="aww-card p-4 rounded-2xl border-l-4 border-l-[#ea4335] bg-gradient-to-br from-rose-50/60 via-white to-white dark:from-rose-950/30 dark:to-[#111726] border border-rose-200/70 dark:border-slate-800 shadow-2xs">
                 <div class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider flex items-center justify-between">
                     <span>Completion Rate</span>
                     <span class="w-2 h-2 rounded-full bg-[#ea4335]"></span>
@@ -345,7 +346,7 @@
             <div id="participantTableWrapper" class="aww-card rounded-3xl overflow-hidden">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse text-xs">
-                        <thead class="bg-slate-50/90 dark:bg-slate-800/80 border-b border-slate-200/80 dark:border-slate-700/80 text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-[11px]">
+                        <thead class="bg-slate-100/80 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300 font-extrabold uppercase tracking-wider text-[11px]">
                             <tr>
                                 <th class="py-3.5 px-4 w-14 text-center">Rank</th>
                                 <th class="py-3.5 px-4">Participant</th>

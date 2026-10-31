@@ -63,10 +63,10 @@ function initAmbientCursorSpotlight() {
     function updateSpotlight() {
         const dx = targetX - currentX;
         const dy = targetY - currentY;
-        currentX += dx * 0.18;
-        currentY += dy * 0.18;
+        currentX += dx * 0.22;
+        currentY += dy * 0.22;
 
-        spotlight.style.transform = `translate3d(${currentX - 230}px, ${currentY - 230}px, 0)`;
+        spotlight.style.transform = `translate3d(${currentX - 95}px, ${currentY - 95}px, 0)`;
 
         if (Math.abs(dx) > 0.2 || Math.abs(dy) > 0.2) {
             requestAnimationFrame(updateSpotlight);
@@ -420,15 +420,16 @@ function renderTableRow(p, rank) {
         `;
     }).join('');
 
-    // Dynamic Progress Bar Color
-    const progressBarColor = count >= 10 
-        ? 'bg-gradient-to-r from-[#4285f4] via-[#ea4335] to-[#34a853]' 
+    // Dynamic Progress Bar Color & Google 4-Color 100% Theme
+    const isCompletedAll = (count >= 10);
+    const progressBarClass = isCompletedAll 
+        ? 'google-progress-100' 
         : count >= 5 
             ? 'bg-[#34a853]' 
             : 'bg-[#4285f4]';
 
     return `
-        <tr id="row-p-${p.id}" class="hover:bg-slate-50/80 dark:hover:bg-slate-800/50 transition-colors">
+        <tr id="row-p-${p.id}" class="hover:bg-blue-50/50 dark:hover:bg-slate-800/50 transition-colors">
             <td class="py-3.5 px-4 text-center">
                 ${rankDisplay}
             </td>
@@ -453,13 +454,16 @@ function renderTableRow(p, rank) {
                 </div>
             </td>
             <td class="py-3.5 px-3">
-                <div class="w-28">
+                <div class="w-32">
                     <div class="flex items-center justify-between text-[11px] mb-1">
                         <span class="font-black text-slate-800 dark:text-slate-200 font-mono">${count}/10</span>
-                        <span class="text-slate-400 dark:text-slate-500 font-semibold">${pct}%</span>
+                        ${isCompletedAll 
+                            ? `<span class="font-black text-[10px] google-gradient-text uppercase tracking-wider">100% All 10</span>`
+                            : `<span class="text-slate-400 dark:text-slate-500 font-semibold">${pct}%</span>`
+                        }
                     </div>
-                    <div class="w-full bg-slate-100 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
-                        <div class="h-1.5 rounded-full ${progressBarColor} smooth-progress" style="width: ${pct}%"></div>
+                    <div class="w-full ${isCompletedAll ? 'bg-blue-100/70 dark:bg-slate-700 ring-1 ring-blue-400/50 shadow-xs' : 'bg-slate-100 dark:bg-slate-700'} h-2 rounded-full overflow-hidden">
+                        <div class="h-2 rounded-full ${progressBarClass} smooth-progress" style="width: ${pct}%"></div>
                     </div>
                 </div>
             </td>
@@ -522,8 +526,9 @@ function renderParticipantCard(p) {
         `;
     }).join('');
 
-    const progressBarColor = count >= 10 
-        ? 'bg-gradient-to-r from-[#4285f4] via-[#ea4335] to-[#34a853]' 
+    const isCompletedAll = (count >= 10);
+    const progressBarClass = isCompletedAll 
+        ? 'google-progress-100' 
         : count >= 5 
             ? 'bg-[#34a853]' 
             : 'bg-[#4285f4]';
@@ -561,12 +566,15 @@ function renderParticipantCard(p) {
 
                 <!-- Progress Bar -->
                 <div class="mt-4">
-                    <div class="flex items-center justify-between text-xs mb-1">
+                    <div class="flex items-center justify-between text-xs mb-1.5">
                         <span class="font-bold text-slate-600 dark:text-slate-400">Workshop Track:</span>
-                        <span class="font-black text-slate-900 dark:text-white font-mono">${count} / 10 <span class="text-slate-400 font-normal">(${pct}%)</span></span>
+                        ${isCompletedAll 
+                            ? `<span class="font-black text-xs google-gradient-text flex items-center gap-1">10 / 10 • 100% Google</span>`
+                            : `<span class="font-black text-slate-900 dark:text-white font-mono">${count} / 10 <span class="text-slate-400 font-normal">(${pct}%)</span></span>`
+                        }
                     </div>
-                    <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
-                        <div class="h-2 rounded-full ${progressBarColor} smooth-progress" style="width: ${pct}%"></div>
+                    <div class="w-full ${isCompletedAll ? 'bg-blue-100/70 dark:bg-slate-700 ring-1 ring-blue-400/50 shadow-xs' : 'bg-slate-100 dark:bg-slate-700'} h-2.5 rounded-full overflow-hidden">
+                        <div class="h-2.5 rounded-full ${progressBarClass} smooth-progress" style="width: ${pct}%"></div>
                     </div>
                 </div>
 
@@ -645,8 +653,15 @@ function renderModalContent(p) {
     const swag = getSwagRewardInfo(count);
 
     document.getElementById('modalCount').textContent = `${count} / 10`;
-    document.getElementById('modalPercent').textContent = `${pct}% Complete`;
-    document.getElementById('modalProgressBar').style.width = `${pct}%`;
+    const modalBar = document.getElementById('modalProgressBar');
+    if (count >= 10) {
+        document.getElementById('modalPercent').innerHTML = `<span class="font-black google-gradient-text">100% Completed • Official T-Shirt Achieved</span>`;
+        modalBar.className = 'h-2.5 rounded-full google-progress-100 smooth-progress';
+    } else {
+        document.getElementById('modalPercent').textContent = `${pct}% Complete`;
+        modalBar.className = `h-2.5 rounded-full ${count >= 5 ? 'bg-[#34a853]' : 'bg-[#4285f4]'} smooth-progress`;
+    }
+    modalBar.style.width = `${pct}%`;
     document.getElementById('modalRewardStatus').textContent = swag.reward;
 
     // Swag Badge
