@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDG On Campus WCE — Cloud Workshop Live 10-Badge Tracker</title>
+    <title>Cloud N Beyond Workshop — GDG On Campus WCE Live Tracker</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +26,7 @@
                             red: '#ea4335',
                             yellow: '#fbbc05',
                             green: '#34a853',
+                            purple: '#4c2889'
                         }
                     }
                 }
@@ -42,10 +43,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="bg-slate-50/60 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-blue-100 selection:text-blue-900">
+<body class="bg-slate-50/70 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-blue-100 selection:text-blue-900">
 
-    <!-- Top Accent Line (Google Colors) -->
-    <div class="h-1 w-full flex">
+    <!-- Top Accent Line (Google Developer 4 Colors) -->
+    <div class="h-1.5 w-full flex">
         <div class="h-full flex-1 bg-[#4285f4]"></div>
         <div class="h-full flex-1 bg-[#ea4335]"></div>
         <div class="h-full flex-1 bg-[#fbbc05]"></div>
@@ -56,60 +57,65 @@
     <header class="glass-header border-b border-slate-200/80 sticky top-0 z-40 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Branding Section: College Logo + Divider + GDG WCE Logo -->
+                <!-- Branding Section: Logos & Event Title -->
                 <div class="flex items-center gap-3 sm:gap-4 min-w-0">
-                    <!-- WCE College Emblem -->
-                    <div class="shrink-0 flex items-center justify-center p-1 rounded-xl bg-white border border-slate-200/70 shadow-2xs">
-                        <img src="/images/wce_logo.png" alt="Walchand College of Engineering Sangli" class="h-11 sm:h-12 w-auto object-contain">
+                    <!-- WCE College Crest -->
+                    <div class="shrink-0 flex items-center justify-center p-1 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+                        <img src="/images/wce_logo.png" alt="WCE Sangli" class="h-11 sm:h-12 w-auto object-contain">
                     </div>
 
-                    <!-- Subtle Vertical Divider -->
+                    <!-- Vertical Divider -->
                     <div class="h-8 w-px bg-slate-200 shrink-0 hidden sm:block"></div>
 
-                    <!-- GDG WCE Official Logo -->
-                    <div class="shrink-0 flex items-center justify-center p-1 rounded-xl bg-white border border-slate-200/70 shadow-2xs">
-                        <img src="/images/gdgwce.png" alt="Google Developer Groups On Campus WCE" class="h-9 sm:h-10 w-auto object-contain">
+                    <!-- GDG WCE Logo -->
+                    <div class="shrink-0 flex items-center justify-center p-1 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+                        <img src="/images/gdgwce.png" alt="GDG On Campus WCE" class="h-9 sm:h-10 w-auto object-contain">
+                    </div>
+
+                    <!-- Cloud N Beyond Art Icon -->
+                    <div class="shrink-0 flex items-center justify-center p-1 rounded-xl bg-white border border-slate-200/80 shadow-2xs hidden md:flex">
+                        <img src="/images/cloud_n_beyond.png" alt="Cloud N Beyond" class="h-9 sm:h-10 w-auto object-contain rounded-lg">
                     </div>
 
                     <!-- Title & Subtitle -->
-                    <div class="min-w-0 hidden md:block">
+                    <div class="min-w-0">
                         <div class="flex items-center gap-2">
-                            <h1 class="text-sm font-extrabold text-slate-900 tracking-tight leading-tight truncate">
-                                Walchand College of Engineering, Sangli
+                            <h1 class="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-tight truncate">
+                                Cloud N Beyond Workshop
                             </h1>
-                            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-50 text-[#1a73e8] border border-blue-200 shrink-0">
-                                GDG On Campus
+                            <span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-purple-50 text-purple-700 border border-purple-200 shrink-0 hidden sm:inline-flex">
+                                Swag Rewards Track
                             </span>
                         </div>
                         <p class="text-xs text-slate-500 font-medium truncate mt-0.5">
-                            Cloud Study Jam & Workshop • <span class="text-slate-700 font-semibold">10-Badge Live Tracking Engine</span>
+                            Google Developer Groups On Campus • <span class="text-slate-700 font-bold">Walchand College of Engineering (WCE)</span>
                         </p>
                     </div>
                 </div>
 
                 <!-- Right Action Bar & Live Auto-Sync Status -->
                 <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
-                    <!-- Automated Live Sync Status Indicator -->
+                    <!-- Fast Auto-Sync Pill -->
                     <div id="syncIndicatorPill" class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-2xs">
                         <div class="w-2 h-2 rounded-full bg-emerald-500 radar-dot shrink-0"></div>
-                        <span id="syncIndicatorLabel" class="hidden sm:inline">Live Auto-Sync Active</span>
-                        <span id="syncIndicatorMobileLabel" class="sm:hidden">Live Sync</span>
-                        <span id="syncCounterBadge" class="text-[10px] font-mono text-emerald-700 bg-emerald-100/80 px-1.5 py-0.5 rounded-md font-bold">0/363</span>
+                        <span id="syncIndicatorLabel" class="hidden sm:inline">Turbo Live Sync</span>
+                        <span id="syncIndicatorMobileLabel" class="sm:hidden">Sync</span>
+                        <span id="syncCounterBadge" class="text-[10px] font-mono text-emerald-700 bg-emerald-100/90 px-1.5 py-0.5 rounded-md font-black">0/363</span>
                     </div>
 
-                    <!-- Pause / Resume Toggle -->
-                    <button id="toggleSyncBtn" onclick="toggleAutoSync()" title="Pause/Resume Background Live Sync" class="p-2 rounded-xl text-xs font-semibold bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 shadow-2xs transition-all">
+                    <!-- Pause/Resume Toggle -->
+                    <button id="toggleSyncBtn" onclick="toggleAutoSync()" title="Pause/Resume Live Sync" class="p-2 rounded-xl text-xs font-semibold bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 shadow-2xs transition-all">
                         <i id="toggleSyncIcon" data-lucide="pause" class="w-4 h-4"></i>
                     </button>
 
-                    <!-- View 10-Badge Curriculum Button -->
+                    <!-- 10 Badges Syllabus Modal Trigger -->
                     <button onclick="openCurriculumModal()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-2xs transition-all">
-                        <i data-lucide="book-open" class="w-3.5 h-3.5 text-blue-600"></i>
+                        <i data-lucide="award" class="w-3.5 h-3.5 text-blue-600"></i>
                         <span class="hidden sm:inline">10 Badges Track</span>
-                        <span class="sm:hidden">Syllabus</span>
+                        <span class="sm:hidden">Badges</span>
                     </button>
 
-                    <!-- Export Excel Button (Client-side SheetJS) -->
+                    <!-- Export Excel Button -->
                     <button onclick="exportToExcel()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white shadow-2xs transition-all">
                         <i data-lucide="download" class="w-3.5 h-3.5 text-slate-300"></i>
                         <span class="hidden sm:inline">Export Excel</span>
@@ -119,20 +125,20 @@
             </div>
         </div>
 
-        <!-- Ultra-Sleek Live Activity Stream Line -->
+        <!-- Silent Live Sync Stream Line (Fast worker status) -->
         <div class="bg-slate-900 text-white px-4 py-1.5 text-xs border-t border-slate-800">
             <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
                 <div class="flex items-center gap-2 truncate">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping shrink-0"></span>
-                    <span class="text-blue-300 font-bold uppercase text-[10px] tracking-wider shrink-0">Background Worker:</span>
+                    <span class="text-blue-300 font-bold uppercase text-[10px] tracking-wider shrink-0">Live Engine:</span>
                     <span id="tickerText" class="text-slate-300 truncate font-mono text-[11px]">
-                        Initializing automated live scraper for all 363 participants...
+                        Turbo concurrent sync active (10 parallel workers)...
                     </span>
                 </div>
                 <div class="shrink-0 flex items-center gap-2.5 text-[11px] text-slate-400">
-                    <span id="tickerPercent" class="font-mono">0% Verified</span>
-                    <div class="w-20 bg-slate-800 rounded-full h-1 overflow-hidden">
-                        <div id="tickerBar" class="h-1 rounded-full bg-emerald-500 smooth-progress" style="width: 0%"></div>
+                    <span id="tickerPercent" class="font-mono">0% Scanned</span>
+                    <div class="w-24 bg-slate-800 rounded-full h-1.5 overflow-hidden">
+                        <div id="tickerBar" class="h-1.5 rounded-full bg-emerald-400 smooth-progress" style="width: 0%"></div>
                     </div>
                 </div>
             </div>
@@ -142,107 +148,123 @@
     <!-- Main Container -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6">
 
-        <!-- Executive Metrics KPI Summary Strip -->
-        <section class="bg-white rounded-2xl p-5 border border-slate-200/90 card-shadow">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-100">
-                <div>
-                    <h2 class="text-sm font-extrabold text-slate-900 tracking-tight">Workshop Milestone Dashboard</h2>
-                    <p class="text-xs text-slate-500">Live progress tracking against the 10 official Google Cloud skill badges</p>
+        <!-- Cloud N Beyond Swag Stages Banner & Executive KPIs -->
+        <section class="bg-white rounded-3xl p-5 border border-slate-200/90 card-shadow space-y-4">
+            <!-- Stage Swag Milestones Info Header -->
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-600 text-white flex items-center justify-center font-black shadow-xs shrink-0">
+                        ☁️
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h2 class="text-sm font-black text-slate-900 tracking-tight">Cloud N Beyond — Swag Completion Stages</h2>
+                            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-200">2 Reward Tiers</span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium mt-0.5">
+                            Complete <span class="font-bold text-emerald-700">5 Badges</span> to win a 🍼 <strong>Water Bottle</strong> • Complete <span class="font-bold text-purple-700">10 Badges</span> to win an official 👕 <strong>T-Shirt</strong>
+                        </p>
+                    </div>
                 </div>
+
                 <div class="flex items-center gap-2">
-                    <span class="text-xs font-semibold text-slate-500">Track Progress:</span>
-                    <span id="kpiCompletionRate" class="text-xs font-black text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100">0% Overall</span>
+                    <button onclick="filterMilestone('all_swag')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-purple-50 hover:bg-purple-100 text-purple-800 border border-purple-200 transition-all">
+                        <span>🎁 All Swag Qualifiers</span>
+                        <span id="kpiTotalSwagBadge" class="bg-purple-200/80 px-1.5 py-0.2 rounded text-[10px]">0</span>
+                    </button>
+                    <span id="kpiCompletionRate" class="text-xs font-black text-slate-700 bg-slate-100 px-2.5 py-1.5 rounded-xl border border-slate-200">
+                        0% Workshop Completion
+                    </span>
                 </div>
             </div>
 
-            <!-- KPI Cards Row -->
+            <!-- KPI Cards Row with Swag Rewards -->
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-                <!-- Total Participants -->
-                <div class="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80">
-                    <div class="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Total Enrolled</div>
+                <!-- Total Students -->
+                <div class="p-3.5 rounded-2xl bg-slate-50/80 border border-slate-200/80">
+                    <div class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Enrolled</div>
                     <div class="text-2xl font-black text-slate-900 mt-1" id="kpiTotal">363</div>
                     <div class="text-[11px] text-slate-500 mt-0.5">WCE Students</div>
                 </div>
 
-                <!-- Milestone 3: 10/10 Badges -->
-                <div onclick="filterMilestone('10')" class="p-3.5 rounded-xl bg-amber-50/60 border border-amber-200/90 hover:bg-amber-100/50 hover:border-amber-300 transition-all cursor-pointer group">
-                    <div class="flex items-center justify-between text-[11px] font-bold text-amber-800">
-                        <span>🏆 Milestone 3</span>
-                        <span class="text-[10px] font-extrabold bg-amber-200/80 text-amber-900 px-1.5 py-0.2 rounded">10/10</span>
+                <!-- Stage 2: T-Shirt Winner (10 Badges) -->
+                <div onclick="filterMilestone('10')" class="p-3.5 rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200 hover:border-purple-300 transition-all cursor-pointer group shadow-2xs">
+                    <div class="flex items-center justify-between text-[11px] font-bold text-purple-900">
+                        <span>👕 Stage 2</span>
+                        <span class="text-[10px] font-black bg-purple-200/90 text-purple-950 px-1.5 py-0.5 rounded-md">10/10</span>
                     </div>
-                    <div class="text-2xl font-black text-amber-900 mt-1" id="kpiM3">0</div>
-                    <div class="text-[11px] text-amber-700 mt-0.5 font-medium group-hover:underline">Track Completed</div>
+                    <div class="text-2xl font-black text-purple-950 mt-1" id="kpiTShirt">0</div>
+                    <div class="text-[11px] text-purple-700 mt-0.5 font-bold group-hover:underline">T-Shirt Earned</div>
                 </div>
 
-                <!-- Milestone 2: 5-9 Badges -->
-                <div onclick="filterMilestone('milestone_2')" class="p-3.5 rounded-xl bg-indigo-50/60 border border-indigo-200/90 hover:bg-indigo-100/50 hover:border-indigo-300 transition-all cursor-pointer group">
-                    <div class="flex items-center justify-between text-[11px] font-bold text-indigo-800">
-                        <span>🥈 Milestone 2</span>
-                        <span class="text-[10px] font-extrabold bg-indigo-200/80 text-indigo-900 px-1.5 py-0.2 rounded">5-9</span>
+                <!-- Stage 1: Bottle Winner (5-9 Badges) -->
+                <div onclick="filterMilestone('bottle_stage')" class="p-3.5 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 hover:border-emerald-300 transition-all cursor-pointer group shadow-2xs">
+                    <div class="flex items-center justify-between text-[11px] font-bold text-emerald-900">
+                        <span>🍼 Stage 1</span>
+                        <span class="text-[10px] font-black bg-emerald-200/90 text-emerald-950 px-1.5 py-0.5 rounded-md">5-9</span>
                     </div>
-                    <div class="text-2xl font-black text-indigo-900 mt-1" id="kpiM2">0</div>
-                    <div class="text-[11px] text-indigo-700 mt-0.5 font-medium group-hover:underline">Intermediate</div>
+                    <div class="text-2xl font-black text-emerald-950 mt-1" id="kpiBottle">0</div>
+                    <div class="text-[11px] text-emerald-700 mt-0.5 font-bold group-hover:underline">Bottle Earned</div>
                 </div>
 
                 <!-- Milestone 1: 3-4 Badges -->
-                <div onclick="filterMilestone('milestone_1')" class="p-3.5 rounded-xl bg-sky-50/60 border border-sky-200/90 hover:bg-sky-100/50 hover:border-sky-300 transition-all cursor-pointer group">
+                <div onclick="filterMilestone('milestone_1')" class="p-3.5 rounded-2xl bg-sky-50/70 border border-sky-200/90 hover:bg-sky-100/60 transition-all cursor-pointer group">
                     <div class="flex items-center justify-between text-[11px] font-bold text-sky-800">
                         <span>🥉 Milestone 1</span>
-                        <span class="text-[10px] font-extrabold bg-sky-200/80 text-sky-900 px-1.5 py-0.2 rounded">3-4</span>
+                        <span class="text-[10px] font-extrabold bg-sky-200/80 text-sky-900 px-1.5 py-0.5 rounded-md">3-4</span>
                     </div>
                     <div class="text-2xl font-black text-sky-900 mt-1" id="kpiM1">0</div>
-                    <div class="text-[11px] text-sky-700 mt-0.5 font-medium group-hover:underline">Starter Tier</div>
+                    <div class="text-[11px] text-sky-700 mt-0.5 font-medium group-hover:underline">1-2 from Bottle</div>
                 </div>
 
                 <!-- In Progress: 1-2 Badges -->
-                <div onclick="filterMilestone('in_progress')" class="p-3.5 rounded-xl bg-emerald-50/60 border border-emerald-200/90 hover:bg-emerald-100/50 hover:border-emerald-300 transition-all cursor-pointer group">
-                    <div class="flex items-center justify-between text-[11px] font-bold text-emerald-800">
+                <div onclick="filterMilestone('in_progress')" class="p-3.5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:bg-slate-100/60 transition-all cursor-pointer group">
+                    <div class="flex items-center justify-between text-[11px] font-bold text-slate-700">
                         <span>⚡ In Progress</span>
-                        <span class="text-[10px] font-extrabold bg-emerald-200/80 text-emerald-900 px-1.5 py-0.2 rounded">1-2</span>
+                        <span class="text-[10px] font-extrabold bg-slate-200 text-slate-800 px-1.5 py-0.5 rounded-md">1-2</span>
                     </div>
-                    <div class="text-2xl font-black text-emerald-900 mt-1" id="kpiInProg">0</div>
-                    <div class="text-[11px] text-emerald-700 mt-0.5 font-medium group-hover:underline">Active Learning</div>
+                    <div class="text-2xl font-black text-slate-900 mt-1" id="kpiInProg">0</div>
+                    <div class="text-[11px] text-slate-600 mt-0.5 font-medium group-hover:underline">Started Badges</div>
                 </div>
 
-                <!-- Total Badges Earned -->
-                <div class="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80">
-                    <div class="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Badges Earned</div>
+                <!-- Total Badges Completed Across Workshop -->
+                <div class="p-3.5 rounded-2xl bg-slate-50/80 border border-slate-200/80">
+                    <div class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Total Badges</div>
                     <div class="text-2xl font-black text-slate-900 mt-1" id="kpiTotalBadges">0</div>
                     <div class="text-[11px] text-slate-500 mt-0.5" id="kpiAvgBadges">0.0 avg / student</div>
                 </div>
             </div>
         </section>
 
-        <!-- Main Participants Section (Search, Tabs, Leaderboard / Cards) -->
+        <!-- Participants Directory Section (Toolbar, Swag Filters, Leaderboard) -->
         <section class="space-y-4">
-            <!-- Sleek Control Toolbar -->
-            <div class="bg-white rounded-2xl p-4 border border-slate-200/90 card-shadow flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+            <!-- Modern Toolbar -->
+            <div class="bg-white rounded-3xl p-4 border border-slate-200/90 card-shadow flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
                 <!-- Search Box -->
                 <div class="relative flex-1 max-w-md">
                     <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
                     <input type="text" id="searchInput" placeholder="Search by name, email, or access code..." 
-                           class="w-full pl-10 pr-9 py-2 text-xs bg-slate-50/80 hover:bg-white focus:bg-white border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-[#4285f4] transition-all"
+                           class="w-full pl-10 pr-9 py-2 text-xs bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-100 focus:border-purple-600 transition-all"
                            oninput="onSearchChange()">
                     <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
                         <i data-lucide="x" class="w-3.5 h-3.5"></i>
                     </button>
                 </div>
 
-                <!-- Filter Tabs & Controls -->
+                <!-- Swag Stage & Milestone Filters -->
                 <div class="flex flex-wrap items-center gap-2">
-                    <!-- Milestone Filter Pills -->
-                    <div class="inline-flex rounded-xl border border-slate-200 bg-slate-50/80 p-0.5 text-xs font-semibold text-slate-600">
-                        <button onclick="filterMilestone('')" id="pillAll" class="filter-tab px-3 py-1.5 rounded-lg active-tab transition-all">All (<span id="countPillAll">363</span>)</button>
-                        <button onclick="filterMilestone('10')" id="pillM3" class="filter-tab px-3 py-1.5 rounded-lg transition-all">🏆 10/10 (<span id="countPillM3">0</span>)</button>
-                        <button onclick="filterMilestone('milestone_2')" id="pillM2" class="filter-tab px-3 py-1.5 rounded-lg transition-all">5-9 (<span id="countPillM2">0</span>)</button>
-                        <button onclick="filterMilestone('milestone_1')" id="pillM1" class="filter-tab px-3 py-1.5 rounded-lg transition-all">3-4 (<span id="countPillM1">0</span>)</button>
-                        <button onclick="filterMilestone('in_progress')" id="pillInProg" class="filter-tab px-3 py-1.5 rounded-lg transition-all">1-2 (<span id="countPillInProg">0</span>)</button>
-                        <button onclick="filterMilestone('not_started')" id="pillZero" class="filter-tab px-3 py-1.5 rounded-lg transition-all">0 (<span id="countPillZero">0</span>)</button>
+                    <!-- Filter Pills -->
+                    <div class="inline-flex rounded-2xl border border-slate-200 bg-slate-50 p-1 text-xs font-semibold text-slate-600">
+                        <button onclick="filterMilestone('')" id="pillAll" class="filter-tab px-3 py-1.5 rounded-xl active-tab transition-all">All (<span id="countPillAll">363</span>)</button>
+                        <button onclick="filterMilestone('10')" id="pillM3" class="filter-tab px-3 py-1.5 rounded-xl transition-all">👕 T-Shirt (<span id="countPillM3">0</span>)</button>
+                        <button onclick="filterMilestone('bottle_stage')" id="pillBottle" class="filter-tab px-3 py-1.5 rounded-xl transition-all">🍼 Bottle (<span id="countPillBottle">0</span>)</button>
+                        <button onclick="filterMilestone('in_progress_total')" id="pillInProg" class="filter-tab px-3 py-1.5 rounded-xl transition-all">⚡ 1-4 (<span id="countPillInProg">0</span>)</button>
+                        <button onclick="filterMilestone('not_started')" id="pillZero" class="filter-tab px-3 py-1.5 rounded-xl transition-all">💤 0 (<span id="countPillZero">0</span>)</button>
                     </div>
 
                     <!-- Sort Selector -->
-                    <select id="sortSelect" onchange="onSortChange()" class="py-1.5 px-3 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-100">
-                        <option value="count_desc">Rank / Highest Badges</option>
+                    <select id="sortSelect" onchange="onSortChange()" class="py-2 px-3 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-2xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-100">
+                        <option value="count_desc">Rank / Most Badges</option>
                         <option value="count_asc">Lowest Badges First</option>
                         <option value="name_asc">Name (A to Z)</option>
                         <option value="name_desc">Name (Z to A)</option>
@@ -250,40 +272,40 @@
                     </select>
 
                     <!-- View Switcher -->
-                    <div class="inline-flex rounded-xl border border-slate-200 bg-slate-50/80 p-0.5">
-                        <button id="btnViewTable" onclick="setViewMode('table')" title="Leaderboard Table View" class="p-1.5 rounded-lg bg-white text-slate-800 shadow-2xs">
+                    <div class="inline-flex rounded-2xl border border-slate-200 bg-slate-50 p-1">
+                        <button id="btnViewTable" onclick="setViewMode('table')" title="Ranked Leaderboard Table" class="p-1.5 rounded-xl bg-white text-slate-800 shadow-2xs">
                             <i data-lucide="list-ordered" class="w-4 h-4"></i>
                         </button>
-                        <button id="btnViewGrid" onclick="setViewMode('grid')" title="Card Grid View" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700">
+                        <button id="btnViewGrid" onclick="setViewMode('grid')" title="Card Grid View" class="p-1.5 rounded-xl text-slate-400 hover:text-slate-700">
                             <i data-lucide="layout-grid" class="w-4 h-4"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Active Filter Banner (Notice if filtered) -->
-            <div id="activeFilterNotice" class="hidden items-center justify-between bg-blue-50/80 border border-blue-200 rounded-xl px-4 py-2 text-xs text-blue-900">
+            <!-- Active Filter Notification -->
+            <div id="activeFilterNotice" class="hidden items-center justify-between bg-purple-50/80 border border-purple-200 rounded-2xl px-4 py-2.5 text-xs text-purple-900">
                 <div class="flex items-center gap-2">
-                    <i data-lucide="filter" class="w-4 h-4 text-[#1a73e8]"></i>
+                    <i data-lucide="filter" class="w-4 h-4 text-purple-600"></i>
                     <span id="activeFilterNoticeText">Filter active</span>
                 </div>
-                <button onclick="resetFilters()" class="text-xs font-bold text-[#1a73e8] hover:underline">
-                    Reset Filter
+                <button onclick="resetFilters()" class="text-xs font-bold text-purple-700 hover:underline">
+                    Clear Filter
                 </button>
             </div>
 
-            <!-- Primary View: Leaderboard Ranked Table (Clean, spacious, modern) -->
-            <div id="participantTableWrapper" class="bg-white rounded-2xl border border-slate-200/90 card-shadow overflow-hidden">
+            <!-- Ranked Leaderboard Table View (Default) -->
+            <div id="participantTableWrapper" class="bg-white rounded-3xl border border-slate-200/90 card-shadow overflow-hidden">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse text-xs">
                         <thead class="bg-slate-50/90 border-b border-slate-200/80 text-slate-500 font-bold uppercase tracking-wider text-[11px]">
                             <tr>
-                                <th class="py-3 px-4 w-14 text-center">Rank</th>
-                                <th class="py-3 px-4">Participant</th>
-                                <th class="py-3 px-3">Progress</th>
-                                <th class="py-3 px-3">Milestone</th>
-                                <th class="py-3 px-2 text-center" title="10 Workshop Badges Checklist">10-Badge Track Checklist</th>
-                                <th class="py-3 px-4 text-right">Actions</th>
+                                <th class="py-3.5 px-4 w-14 text-center">Rank</th>
+                                <th class="py-3.5 px-4">Participant</th>
+                                <th class="py-3.5 px-3">Progress</th>
+                                <th class="py-3.5 px-3">Swag Reward Stage</th>
+                                <th class="py-3.5 px-2 text-center" title="10 Official Badges Track">10-Badge Track Checklist</th>
+                                <th class="py-3.5 px-4 text-right">Actions</th>
                             </tr>
                         </thead>
                         <tbody id="participantTableBody" class="divide-y divide-slate-100">
@@ -293,35 +315,35 @@
                 </div>
             </div>
 
-            <!-- Alternative View: Modern Cards Grid -->
+            <!-- Cards Grid View -->
             <div id="participantGrid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Populated dynamically -->
             </div>
 
             <!-- No Results Found -->
-            <div id="noResultsNotice" class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200 p-8 card-shadow">
+            <div id="noResultsNotice" class="hidden text-center py-12 bg-white rounded-3xl border border-slate-200 p-8 card-shadow">
                 <i data-lucide="search-x" class="w-12 h-12 text-slate-300 mx-auto mb-3"></i>
                 <h3 class="text-sm font-bold text-slate-800">No participants found</h3>
-                <p class="text-xs text-slate-500 mt-1">Try clearing your search query or switching filters</p>
-                <button onclick="resetFilters()" class="mt-4 px-4 py-2 text-xs font-bold rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-all">
+                <p class="text-xs text-slate-500 mt-1">Try resetting your filter or search query</p>
+                <button onclick="resetFilters()" class="mt-4 px-4 py-2 text-xs font-bold rounded-2xl bg-slate-900 text-white hover:bg-slate-800 transition-all">
                     Reset Filters
                 </button>
             </div>
         </section>
     </main>
 
-    <!-- Modal: 10-Badge Workshop Syllabus -->
+    <!-- Modal: Official 10-Badge Syllabus -->
     <div id="curriculumModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/40 backdrop-blur-xs flex items-center justify-center p-4">
         <div class="relative bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden my-8 max-h-[88vh] flex flex-col">
             <!-- Modal Header -->
             <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
                 <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-blue-50 text-[#1a73e8] flex items-center justify-center border border-blue-100 font-black">
-                        <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <div class="w-10 h-10 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center border border-purple-100 font-black">
+                        <i data-lucide="award" class="w-5 h-5"></i>
                     </div>
                     <div>
-                        <h3 class="text-sm font-extrabold text-slate-900 leading-tight">Official 10-Badge Workshop Syllabus</h3>
-                        <p class="text-xs text-slate-500">Google Cloud Study Jam 2026 • Required Badges</p>
+                        <h3 class="text-sm font-extrabold text-slate-900 leading-tight">Cloud N Beyond — 10 Required Badges</h3>
+                        <p class="text-xs text-slate-500">Google Cloud Study Jam Syllabus • Swag Eligibility Badges</p>
                     </div>
                 </div>
                 <button onclick="closeCurriculumModal()" class="text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-100 transition-all">
@@ -329,15 +351,15 @@
                 </button>
             </div>
 
-            <!-- Modal Body (10 Badges List) -->
+            <!-- Badges List -->
             <div class="p-6 overflow-y-auto space-y-3 flex-1 text-xs" id="curriculumBadgesList">
                 <!-- Dynamically loaded badge cards -->
             </div>
 
             <!-- Modal Footer -->
             <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTVMEFW24yi5IVcBblZFEK5xMdQyeF9pndf-wxE37BKu5hyOghhSkYiCHW6rSLjNJd5U3OI_E_I9vZi/pubhtml?gid=411469390&single=true" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1a73e8] hover:underline">
-                    <span>Open Published Google Sheet</span>
+                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTVMEFW24yi5IVcBblZFEK5xMdQyeF9pndf-wxE37BKu5hyOghhSkYiCHW6rSLjNJd5U3OI_E_I9vZi/pubhtml?gid=411469390&single=true" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-700 hover:underline">
+                    <span>Published Google Sheet Syllabus</span>
                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                 </a>
                 <button onclick="closeCurriculumModal()" class="px-4 py-2 rounded-xl border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 text-xs font-bold">
@@ -353,13 +375,13 @@
             <!-- Modal Header -->
             <div class="p-6 border-b border-slate-100 flex items-start justify-between bg-slate-50/70">
                 <div class="flex items-center gap-3.5">
-                    <div id="modalAvatar" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-slate-900 to-slate-700 text-white font-black text-sm flex items-center justify-center shadow-xs">
+                    <div id="modalAvatar" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-700 to-indigo-800 text-white font-black text-sm flex items-center justify-center shadow-xs">
                         WCE
                     </div>
                     <div>
                         <div class="flex items-center gap-2">
                             <h3 id="modalName" class="text-base font-extrabold text-slate-900 leading-tight">Student Name</h3>
-                            <span id="modalMilestoneBadge" class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-200">Milestone 3</span>
+                            <span id="modalSwagBadge" class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-purple-100 text-purple-900 border border-purple-200">Stage 2: T-Shirt</span>
                         </div>
                         <p id="modalEmail" class="text-xs text-slate-500 font-mono mt-0.5">student@wce.ac.in</p>
                     </div>
@@ -378,11 +400,11 @@
                         <div class="text-lg font-black text-slate-900 mt-0.5" id="modalCount">0 / 10</div>
                     </div>
                     <div>
-                        <span class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Access Code</span>
-                        <div class="text-xs font-mono text-slate-800 mt-1 truncate" id="modalAccessCode">-</div>
+                        <span class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Reward Status</span>
+                        <div class="text-xs font-bold text-purple-900 mt-1 truncate" id="modalRewardStatus">Bottle / T-Shirt</div>
                     </div>
                     <div>
-                        <span class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Live Scraped</span>
+                        <span class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Live Verified</span>
                         <div class="text-xs text-slate-800 mt-1" id="modalScrapedAt">Just now</div>
                     </div>
                 </div>
@@ -391,7 +413,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-2">
                         <h4 class="font-extrabold text-slate-900 text-xs flex items-center gap-1.5">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-[#1a73e8]"></i>
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-600"></i>
                             <span>Workshop 10-Badge Completion Status</span>
                         </h4>
                         <span class="text-[11px] font-bold text-slate-600" id="modalPercent">0%</span>
@@ -399,7 +421,7 @@
 
                     <!-- Progress Bar -->
                     <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-3">
-                        <div id="modalProgressBar" class="h-2 rounded-full bg-[#1a73e8] smooth-progress" style="width: 0%"></div>
+                        <div id="modalProgressBar" class="h-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 smooth-progress" style="width: 0%"></div>
                     </div>
 
                     <!-- Badges Checklist Items -->
@@ -415,7 +437,7 @@
                         <span>Additional Profile Badges</span>
                     </div>
                     <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">
-                        This participant holds <strong id="modalExtraCount">0</strong> other badges on Google Skills. In accordance with workshop rules, only the 10 curriculum badges count toward workshop completion milestones.
+                        This participant holds <strong id="modalExtraCount">0</strong> other badges on Google Skills. Under the Cloud N Beyond rules, only the 10 curriculum badges count toward workshop swag stages.
                     </p>
                 </div>
             </div>
@@ -428,7 +450,7 @@
                 </a>
 
                 <div class="flex items-center gap-2">
-                    <button id="modalSyncNowBtn" onclick="syncCurrentModalStudent()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold shadow-xs">
+                    <button id="modalSyncNowBtn" onclick="syncCurrentModalStudent()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold shadow-xs">
                         <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
                         <span>Live Sync Now</span>
                     </button>
@@ -440,20 +462,17 @@
         </div>
     </div>
 
-    <!-- Toast Notification Container -->
-    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
-
     <!-- Footer Branding -->
     <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 mt-auto">
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div class="flex items-center gap-2.5">
+            <div class="flex items-center gap-3">
                 <img src="/images/wce_logo.png" alt="WCE" class="h-6 w-auto object-contain">
                 <span class="font-extrabold text-slate-800">Walchand College of Engineering, Sangli</span>
                 <span>•</span>
-                <span class="font-semibold text-slate-600">Google Developer Groups On Campus</span>
+                <span class="font-semibold text-slate-600">GDG On Campus — Cloud N Beyond</span>
             </div>
             <div class="text-[11px] text-slate-400 font-mono">
-                Cloud Workshop Live 10-Badge Portal • 2026
+                Stage 1 (5 Badges): 🍼 Water Bottle • Stage 2 (10 Badges): 👕 T-Shirt
             </div>
         </div>
     </footer>

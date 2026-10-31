@@ -1,5 +1,5 @@
 // Vercel Serverless Function: /api/scrape
-// Scrapes a single Google Skills public profile and matches against the 10 target badges
+// High-performance scraper with caching for Google Skills profiles
 
 const TARGET_BADGES = [
     { name: "The Basics of Google Cloud Compute", normalized: "the basics of google cloud compute", order: 1, credits: 4 },
@@ -16,6 +16,10 @@ const TARGET_BADGES = [
 
 const TARGET_MAP = new Map(TARGET_BADGES.map(b => [b.normalized, b]));
 
+// Short in-memory cache (prevents redundant fetches within 60s)
+const scrapeCache = new Map();
+const CACHE_TTL_MS = 60 * 1000;
+
 function normalizeTitle(t) {
     if (!t) return '';
     return t.replace(/\xa0/g, ' ')
@@ -26,26 +30,64 @@ function normalizeTitle(t) {
             .toLowerCase();
 }
 
-function calculateMilestone(count) {
-    if (count >= 10) return 'Milestone 3';
-    if (count >= 5) return 'Milestone 2';
-    if (count >= 3) return 'Milestone 1';
-    return 'No Milestone';
+function calculateStageAndMilestone(count) {
+    if (count >= 10) {
+        return {
+            milestone: 'Milestone 3',
+            stage: 'Stage 2',
+            reward: 'T-Shirt',
+            rewardIcon: '👕'
+        };
+    } else if (count >= 5) {
+        return {
+            milestone: 'Milestone 2',
+            stage: 'Stage 1',
+            reward: 'Bottle',
+            rewardIcon: '🍼'
+        };
+    } else if (count >= 3) {
+        return {
+            milestone: 'Milestone 1',
+            stage: 'None',
+            reward: 'Needs ' + (5 - count) + ' for Bottle',
+            rewardIcon: '⚡'
+        };
+    } else if (count >= 1) {
+        return {
+            milestone: 'In Progress',
+            stage: 'None',
+            reward: 'Needs ' + (5 - count) + ' for Bottle',
+            rewardIcon: '⚡'
+        };
+    }
+    return {
+        milestone: 'No Milestone',
+        stage: 'None',
+        reward: 'Needs 5 for Bottle',
+        rewardIcon: '💤'
+    };
 }
 
 export default async function handler(req, res) {
-    // Enable CORS
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-    if (req.method === 'OPTIONS') {
-        return res.status(200).end();
-    }
+    if (req.method === 'OPTIONS') return res.status(200).end();
 
     const url = req.query.url || (req.body && req.body.url);
     if (!url || !url.startsWith('http')) {
-        return res.status(400).json({ success: false, error: 'Missing or invalid profile url parameter' });
+        return res.status(400).json({ success: false, error: 'Missing or invalid profile url' });
+    }
+
+    const force = req.query.force === 'true' || (req.body && req.body.force === true);
+
+    // Check memory cache
+    if (!force && scrapeCache.has(url)) {
+        const cached = scrapeCache.get(url);
+        if (Date.now() - cached.timestamp < CACHE_TTL_MS) {
+            return res.status(200).json({ ...cached.data, cached: true });
+        }
     }
 
     try {
@@ -55,7 +97,7 @@ export default async function handler(req, res) {
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
                 'Accept-Language': 'en-US,en;q=0.9'
             },
-            signal: AbortSignal.timeout(8000)
+            signal: AbortSignal.timeout(5000) // Fast 5s timeout
         });
 
         if (!response.ok) {
@@ -67,7 +109,7 @@ export default async function handler(req, res) {
 
         const html = await response.text();
 
-        // Extract badges
+        // Optimized extraction
         const badgeRegex = /<div class=['"]profile-badge['"]>([\s\S]*?)<\/div>/g;
         let match;
         const completedBadges = {};
@@ -111,19 +153,28 @@ export default async function handler(req, res) {
         }
 
         const completedCount = Object.keys(completedBadges).length;
-        const milestone = calculateMilestone(completedCount);
+        const rewardInfo = calculateStageAndMilestone(completedCount);
 
-        return res.status(200).json({
+        const data = {
             success: true,
             url,
             completedCount,
-            milestone,
+            milestone: rewardInfo.milestone,
+            stage: rewardInfo.stage,
+            reward: rewardInfo.reward,
+            rewardIcon: rewardInfo.rewardIcon,
+            isBottleEligible: completedCount >= 5,
+            isTShirtEligible: completedCount >= 10,
             totalBadgesOnProfile,
             completedBadges: Object.values(completedBadges),
             extraBadgesCount: extraBadges.length,
-            extraBadges,
             scrapedAt: new Date().toISOString()
-        });
+        };
+
+        // Cache response
+        scrapeCache.set(url, { timestamp: Date.now(), data });
+
+        return res.status(200).json(data);
 
     } catch (err) {
         return res.status(500).json({
