@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud N Beyond — GDG On Campus WCE Live Tracker</title>
+    <title>Google Cloud Learn With Communities 2026 — GDG On Campus WCE</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +20,14 @@
                     fontFamily: {
                         sans: ['Plus Jakarta Sans', 'sans-serif'],
                         mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        google: {
+                            blue: '#4285f4',
+                            red: '#ea4335',
+                            yellow: '#fbbc05',
+                            green: '#34a853'
+                        }
                     }
                 }
             }
@@ -44,10 +52,13 @@
         }
     </script>
 </head>
-<body class="bg-slate-50/70 dark:bg-[#0b0f19] text-slate-800 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col transition-colors duration-200">
+<body class="bg-[#f8fafc] dark:bg-[#0a0e17] text-slate-800 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col transition-colors duration-200 relative overflow-x-hidden">
 
-    <!-- Top Accent Line (Google Developer 4 Colors) -->
-    <div class="h-1 w-full flex">
+    <!-- Subtle Ambient Google 4-Color Cursor Spotlight -->
+    <div id="ambientCursorSpotlight"></div>
+
+    <!-- Top Accent Line (Google 4 Iconic Colors) -->
+    <div class="h-1.5 w-full flex relative z-10">
         <div class="h-full flex-1 bg-[#4285f4]"></div>
         <div class="h-full flex-1 bg-[#ea4335]"></div>
         <div class="h-full flex-1 bg-[#fbbc05]"></div>
@@ -55,33 +66,43 @@
     </div>
 
     <!-- Start Top Bar: Stages Swag Requirements & Live Status -->
-    <div class="bg-slate-900 text-white px-4 py-2 text-xs border-b border-slate-800">
+    <div class="bg-slate-900/95 text-white px-4 py-2 text-xs border-b border-slate-800 relative z-10 backdrop-blur-md">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-            <!-- Stages Requirements -->
+            <!-- Stages Requirements with Google Colors -->
             <div class="flex items-center gap-3 sm:gap-4 flex-wrap">
-                <span class="text-[10px] font-black uppercase tracking-wider text-slate-400">Swag Stages:</span>
+                <div class="flex items-center gap-1.5 font-black uppercase text-[10px] tracking-wider text-slate-400">
+                    <span class="flex gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#4285f4]"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#ea4335]"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#fbbc05]"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#34a853]"></span>
+                    </span>
+                    <span>Swag Requirements:</span>
+                </div>
                 
-                <div onclick="filterMilestone('bottle_stage')" class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 font-semibold cursor-pointer hover:bg-emerald-900/50 transition-all">
+                <!-- Stage 1 Pill -->
+                <div onclick="filterMilestone('bottle_stage')" class="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 font-semibold cursor-pointer hover:bg-emerald-900/50 hover:border-emerald-400 transition-all shadow-2xs">
                     <span>🍼</span>
-                    <span>Stage 1 (5 Badges): <strong>Water Bottle</strong></span>
+                    <span>Stage 1 (5 Badges): <strong class="text-white">Water Bottle</strong></span>
                 </div>
 
-                <div onclick="filterMilestone('10')" class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 font-semibold cursor-pointer hover:bg-purple-900/50 transition-all">
+                <!-- Stage 2 Pill -->
+                <div onclick="filterMilestone('10')" class="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-blue-950/80 border border-blue-500/40 text-blue-300 font-semibold cursor-pointer hover:bg-blue-900/50 hover:border-blue-400 transition-all shadow-2xs">
                     <span>👕</span>
-                    <span>Stage 2 (10 Badges): <strong>Official T-Shirt</strong></span>
+                    <span>Stage 2 (10 Badges): <strong class="text-white">Official T-Shirt</strong></span>
                 </div>
             </div>
 
             <!-- Server Sync Real-Time Indicator -->
             <div class="flex items-center gap-2 text-[11px] text-slate-300">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 radar-dot"></span>
-                <span class="font-semibold text-emerald-400">Real-Time Global Sync</span>
+                <span class="w-2 h-2 rounded-full bg-[#34a853] radar-dot"></span>
+                <span class="font-semibold text-emerald-400">Live Global Sync</span>
             </div>
         </div>
     </div>
 
-    <!-- Main Navigation Header (Clean, Aligned, Event Picture Removed from Nav) -->
-    <header class="glass-header border-b border-slate-200/80 dark:border-slate-800/80 sticky top-0 z-40 transition-colors">
+    <!-- Main Navigation Header (Clean, Aligned, Institutional Logos) -->
+    <header class="glass-header border-b border-slate-200/80 dark:border-slate-800/80 sticky top-0 z-30 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Branding Section: College Crest + Divider + GDG Logo -->
@@ -105,7 +126,7 @@
                             Walchand College of Engineering, Sangli
                         </h2>
                         <p class="text-xs text-slate-500 dark:text-slate-400 font-medium truncate mt-0.5">
-                            Google Developer Groups On Campus • <span class="text-purple-600 dark:text-purple-400 font-bold">Cloud N Beyond</span>
+                            Google Developer Groups On Campus • <span class="font-bold text-[#4285f4]">Google Cloud Learn With Communities 2026</span>
                         </p>
                     </div>
                 </div>
@@ -120,13 +141,13 @@
 
                     <!-- 10 Badges Syllabus Modal Trigger -->
                     <button onclick="openCurriculumModal()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-2xs transition-all">
-                        <i data-lucide="award" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
+                        <i data-lucide="award" class="w-3.5 h-3.5 text-[#4285f4]"></i>
                         <span class="hidden sm:inline">10 Badges Track</span>
                         <span class="sm:hidden">Badges</span>
                     </button>
 
                     <!-- Export Excel Button -->
-                    <button onclick="exportToExcel()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-purple-600 hover:bg-slate-800 dark:hover:bg-purple-700 text-white shadow-2xs transition-all">
+                    <button onclick="exportToExcel()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-[#4285f4] hover:bg-slate-800 dark:hover:bg-blue-600 text-white shadow-2xs transition-all">
                         <i data-lucide="download" class="w-3.5 h-3.5 text-slate-300 dark:text-white"></i>
                         <span class="hidden sm:inline">Export Excel</span>
                         <span class="sm:hidden">Export</span>
@@ -137,109 +158,127 @@
     </header>
 
     <!-- Main Container -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6 relative z-10">
 
-        <!-- Awwwards-Inspired Hero Card (Showcases Cloud N Beyond Artwork & Swag Tiers) -->
+        <!-- Awwwards Hero Showcase (Google Colors Themed) -->
         <section class="aww-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
-            <!-- Subtle Background Glows -->
-            <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-gradient-to-br from-purple-500/10 to-blue-500/10 dark:from-purple-500/20 dark:to-blue-500/20 blur-3xl pointer-events-none"></div>
+            <!-- Subtle Multi-Color Ambient Backlight -->
+            <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-gradient-to-br from-[#4285f4]/10 via-[#ea4335]/8 to-[#34a853]/10 dark:from-[#4285f4]/20 dark:via-[#ea4335]/15 dark:to-[#34a853]/20 blur-3xl pointer-events-none"></div>
 
             <div class="flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
-                <!-- Left Column: Event Intro & Stage Cards -->
+                <!-- Left Column: Title & Swag Goal Cards -->
                 <div class="flex-1 space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
-                        <span>☁️ Cloud Study Jam 2026</span>
-                        <span>•</span>
-                        <span>GDG On Campus WCE</span>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-blue-50 dark:bg-blue-950/60 text-[#1a73e8] dark:text-blue-300 border border-blue-200 dark:border-blue-800 shadow-2xs">
+                        <span class="flex gap-1 items-center">
+                            <span class="w-2 h-2 rounded-full bg-[#4285f4]"></span>
+                            <span class="w-2 h-2 rounded-full bg-[#ea4335]"></span>
+                            <span class="w-2 h-2 rounded-full bg-[#fbbc05]"></span>
+                            <span class="w-2 h-2 rounded-full bg-[#34a853]"></span>
+                        </span>
+                        <span>Google Cloud Community Track • WCE Sangli</span>
                     </div>
 
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-                        Cloud <span class="text-[#ea4335]">N</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400">Beyond</span>
+                    <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                        Google Cloud <span class="text-[#4285f4]">Learn</span> <span class="text-[#ea4335]">With</span> <span class="text-[#fbbc05]">Communities</span> <span class="text-[#34a853]">2026</span>
                     </h1>
 
                     <p class="text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
-                        Track live progress of all 363 WCE participants in real time. Complete the 10 official Google Cloud skill badges to qualify for official swag.
+                        Real-time live milestone portal tracking all 363 WCE participants on their journey to complete 10 official Google Cloud skill badges and unlock official community swag.
                     </p>
 
-                    <!-- Interactive Stage Goal Cards -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                        <!-- Stage 1 Pill Card -->
-                        <div onclick="filterMilestone('bottle_stage')" class="p-4 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 hover:border-emerald-300 dark:hover:border-emerald-700 transition-all cursor-pointer group">
+                    <!-- Interactive Swag Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                        <!-- Stage 1 Reward Card (Google Green Themed) -->
+                        <div onclick="filterMilestone('bottle_stage')" class="p-4 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 hover:border-emerald-400 dark:hover:border-emerald-600 transition-all cursor-pointer group shadow-2xs">
                             <div class="flex items-center justify-between">
-                                <span class="text-xs font-black uppercase tracking-wider text-emerald-800 dark:text-emerald-300">Stage 1 Reward</span>
-                                <span class="text-xl">🍼</span>
+                                <span class="text-xs font-black uppercase tracking-wider text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-[#34a853]"></span>
+                                    <span>Stage 1 Reward</span>
+                                </span>
+                                <span class="text-2xl group-hover:scale-110 transition-transform">🍼</span>
                             </div>
-                            <div class="text-lg font-black text-emerald-950 dark:text-emerald-100 mt-1">Water Bottle</div>
+                            <div class="text-lg font-black text-emerald-950 dark:text-emerald-100 mt-1.5">Water Bottle</div>
                             <div class="text-xs text-emerald-700 dark:text-emerald-400 mt-0.5 font-medium group-hover:underline">
-                                Complete <strong>5 Badges</strong> to win
+                                Complete <strong>5 Badges</strong> to qualify
                             </div>
                         </div>
 
-                        <!-- Stage 2 Pill Card -->
-                        <div onclick="filterMilestone('10')" class="p-4 rounded-2xl bg-purple-50/70 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800/60 hover:border-purple-300 dark:hover:border-purple-700 transition-all cursor-pointer group">
+                        <!-- Stage 2 Reward Card (Google Blue Themed) -->
+                        <div onclick="filterMilestone('10')" class="p-4 rounded-2xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-all cursor-pointer group shadow-2xs">
                             <div class="flex items-center justify-between">
-                                <span class="text-xs font-black uppercase tracking-wider text-purple-800 dark:text-purple-300">Stage 2 Reward</span>
-                                <span class="text-xl">👕</span>
+                                <span class="text-xs font-black uppercase tracking-wider text-blue-800 dark:text-blue-300 flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-[#4285f4]"></span>
+                                    <span>Stage 2 Reward</span>
+                                </span>
+                                <span class="text-2xl group-hover:scale-110 transition-transform">👕</span>
                             </div>
-                            <div class="text-lg font-black text-purple-950 dark:text-purple-100 mt-1">Official T-Shirt</div>
-                            <div class="text-xs text-purple-700 dark:text-purple-400 mt-0.5 font-medium group-hover:underline">
-                                Complete <strong>10 Badges</strong> to win
+                            <div class="text-lg font-black text-blue-950 dark:text-blue-100 mt-1.5">Official T-Shirt</div>
+                            <div class="text-xs text-blue-700 dark:text-blue-400 mt-0.5 font-medium group-hover:underline">
+                                Complete <strong>10 Badges</strong> to qualify
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Prominent Cloud N Beyond Artwork Showcase -->
-                <div class="shrink-0 relative">
-                    <div class="w-48 sm:w-56 h-48 sm:h-56 rounded-3xl bg-white dark:bg-slate-800 p-2 border border-slate-200 dark:border-slate-700 shadow-xl overflow-hidden flex items-center justify-center">
-                        <img src="/images/cloud_n_beyond.png" alt="Cloud N Beyond Official Artwork" class="w-full h-full object-contain rounded-2xl">
+                <!-- Right Column: Cloud N Beyond Workshop Artwork Showcase with Google 4-Color Ambient Border -->
+                <div class="shrink-0 relative group">
+                    <div class="p-0.5 rounded-[26px] bg-gradient-to-tr from-[#4285f4] via-[#ea4335] via-[#fbbc05] to-[#34a853] shadow-lg group-hover:shadow-xl transition-all">
+                        <div class="w-48 sm:w-56 h-48 sm:h-56 rounded-3xl bg-white dark:bg-slate-900 p-2.5 overflow-hidden flex flex-col items-center justify-center">
+                            <img src="/images/cloud_n_beyond.png" alt="Cloud N Beyond Official Artwork" class="w-full h-full object-contain rounded-2xl">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Executive Metrics KPI Summary Row -->
+        <!-- Executive Metrics KPI Summary (Google 4 Colors Integrated) -->
         <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            <!-- Total Students -->
-            <div class="aww-card p-4 rounded-2xl">
-                <div class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Total Enrolled</div>
+            <!-- Total Students (Google Blue) -->
+            <div class="aww-card p-4 rounded-2xl border-l-4 border-l-[#4285f4]">
+                <div class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider flex items-center justify-between">
+                    <span>Enrolled</span>
+                    <span class="w-2 h-2 rounded-full bg-[#4285f4]"></span>
+                </div>
                 <div class="text-2xl font-black text-slate-900 dark:text-white mt-1" id="kpiTotal">363</div>
                 <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">WCE Students</div>
             </div>
 
-            <!-- Stage 2: T-Shirt Winner (10 Badges) -->
-            <div onclick="filterMilestone('10')" class="aww-card p-4 rounded-2xl hover:border-purple-300 dark:hover:border-purple-500 transition-all cursor-pointer group">
-                <div class="flex items-center justify-between text-[11px] font-bold text-purple-700 dark:text-purple-300">
+            <!-- Stage 2: T-Shirt Winner (Google Blue) -->
+            <div onclick="filterMilestone('10')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#4285f4] hover:border-blue-400 dark:hover:border-blue-500 transition-all cursor-pointer group">
+                <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200">
                     <span>👕 Stage 2</span>
-                    <span class="text-[10px] font-black bg-purple-100 dark:bg-purple-900/60 text-purple-800 dark:text-purple-200 px-1.5 py-0.5 rounded-md">10/10</span>
+                    <span class="text-[10px] font-black bg-blue-100 dark:bg-blue-900/60 text-[#1a73e8] dark:text-blue-300 px-1.5 py-0.5 rounded-md">10/10</span>
                 </div>
-                <div class="text-2xl font-black text-purple-950 dark:text-purple-100 mt-1" id="kpiTShirt">0</div>
-                <div class="text-[11px] text-purple-700 dark:text-purple-300 mt-0.5 font-bold group-hover:underline">T-Shirt Achieved</div>
+                <div class="text-2xl font-black text-slate-900 dark:text-white mt-1" id="kpiTShirt">0</div>
+                <div class="text-[11px] text-[#4285f4] dark:text-blue-400 mt-0.5 font-bold group-hover:underline">T-Shirt Achieved</div>
             </div>
 
-            <!-- Stage 1: Bottle Winner (5-9 Badges) -->
-            <div onclick="filterMilestone('bottle_stage')" class="aww-card p-4 rounded-2xl hover:border-emerald-300 dark:hover:border-emerald-500 transition-all cursor-pointer group">
-                <div class="flex items-center justify-between text-[11px] font-bold text-emerald-700 dark:text-emerald-300">
+            <!-- Stage 1: Bottle Winner (Google Green) -->
+            <div onclick="filterMilestone('bottle_stage')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#34a853] hover:border-emerald-400 dark:hover:border-emerald-500 transition-all cursor-pointer group">
+                <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200">
                     <span>🍼 Stage 1</span>
-                    <span class="text-[10px] font-black bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 px-1.5 py-0.5 rounded-md">5-9</span>
+                    <span class="text-[10px] font-black bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 px-1.5 py-0.5 rounded-md">5-9</span>
                 </div>
-                <div class="text-2xl font-black text-emerald-950 dark:text-emerald-100 mt-1" id="kpiBottle">0</div>
-                <div class="text-[11px] text-emerald-700 dark:text-emerald-300 mt-0.5 font-bold group-hover:underline">Bottle Achieved</div>
+                <div class="text-2xl font-black text-slate-900 dark:text-white mt-1" id="kpiBottle">0</div>
+                <div class="text-[11px] text-[#34a853] dark:text-emerald-400 mt-0.5 font-bold group-hover:underline">Bottle Achieved</div>
             </div>
 
-            <!-- In Progress: 1-4 Badges -->
-            <div onclick="filterMilestone('in_progress_total')" class="aww-card p-4 rounded-2xl hover:border-sky-300 dark:hover:border-sky-500 transition-all cursor-pointer group">
-                <div class="flex items-center justify-between text-[11px] font-bold text-sky-700 dark:text-sky-300">
+            <!-- In Progress: 1-4 Badges (Google Yellow) -->
+            <div onclick="filterMilestone('in_progress_total')" class="aww-card p-4 rounded-2xl border-l-4 border-l-[#fbbc05] hover:border-amber-400 dark:hover:border-amber-500 transition-all cursor-pointer group">
+                <div class="flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200">
                     <span>⚡ In Progress</span>
-                    <span class="text-[10px] font-extrabold bg-sky-100 dark:bg-sky-900/60 text-sky-800 dark:text-sky-200 px-1.5 py-0.5 rounded-md">1-4</span>
+                    <span class="text-[10px] font-extrabold bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-300 px-1.5 py-0.5 rounded-md">1-4</span>
                 </div>
-                <div class="text-2xl font-black text-sky-950 dark:text-sky-100 mt-1" id="kpiInProg">0</div>
-                <div class="text-[11px] text-sky-700 dark:text-sky-300 mt-0.5 font-medium group-hover:underline">Working to Bottle</div>
+                <div class="text-2xl font-black text-slate-900 dark:text-white mt-1" id="kpiInProg">0</div>
+                <div class="text-[11px] text-amber-600 dark:text-amber-400 mt-0.5 font-medium group-hover:underline">Working to Bottle</div>
             </div>
 
-            <!-- Overall Workshop Completion Rate -->
-            <div class="aww-card p-4 rounded-2xl">
-                <div class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Completion Rate</div>
+            <!-- Overall Workshop Completion Rate (Google Red) -->
+            <div class="aww-card p-4 rounded-2xl border-l-4 border-l-[#ea4335]">
+                <div class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider flex items-center justify-between">
+                    <span>Completion Rate</span>
+                    <span class="w-2 h-2 rounded-full bg-[#ea4335]"></span>
+                </div>
                 <div class="text-2xl font-black text-slate-900 dark:text-white mt-1" id="kpiCompletionRate">0%</div>
                 <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5" id="kpiTotalBadges">0 total badges</div>
             </div>
@@ -253,7 +292,7 @@
                 <div class="relative flex-1 max-w-md">
                     <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
                     <input type="text" id="searchInput" placeholder="Search by student name or email..." 
-                           class="w-full pl-10 pr-9 py-2 text-xs bg-slate-50 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 focus:bg-white dark:focus:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800 focus:border-purple-600 transition-all"
+                           class="w-full pl-10 pr-9 py-2 text-xs bg-slate-50 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 focus:bg-white dark:focus:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 focus:border-[#4285f4] transition-all"
                            oninput="onSearchChange()">
                     <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
                         <i data-lucide="x" class="w-3.5 h-3.5"></i>
@@ -272,7 +311,7 @@
                     </div>
 
                     <!-- Sort Selector -->
-                    <select id="sortSelect" onchange="onSortChange()" class="py-2 px-3 text-xs font-semibold bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-purple-200">
+                    <select id="sortSelect" onchange="onSortChange()" class="py-2 px-3 text-xs font-semibold bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-200">
                         <option value="count_desc">Rank / Most Badges</option>
                         <option value="count_asc">Lowest Badges First</option>
                         <option value="name_asc">Name (A to Z)</option>
@@ -292,12 +331,12 @@
             </div>
 
             <!-- Active Filter Notification -->
-            <div id="activeFilterNotice" class="hidden items-center justify-between bg-purple-50/80 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800 rounded-2xl px-4 py-2 text-xs text-purple-900 dark:text-purple-200">
+            <div id="activeFilterNotice" class="hidden items-center justify-between bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 rounded-2xl px-4 py-2 text-xs text-blue-900 dark:text-blue-200">
                 <div class="flex items-center gap-2">
-                    <i data-lucide="filter" class="w-4 h-4 text-purple-600 dark:text-purple-400"></i>
+                    <i data-lucide="filter" class="w-4 h-4 text-[#4285f4]"></i>
                     <span id="activeFilterNoticeText">Filter active</span>
                 </div>
-                <button onclick="resetFilters()" class="text-xs font-bold text-purple-700 dark:text-purple-300 hover:underline">
+                <button onclick="resetFilters()" class="text-xs font-bold text-[#4285f4] dark:text-blue-400 hover:underline">
                     Clear Filter
                 </button>
             </div>
@@ -333,7 +372,7 @@
                 <i data-lucide="search-x" class="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-3"></i>
                 <h3 class="text-sm font-bold text-slate-800 dark:text-slate-200">No participants found</h3>
                 <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Try resetting your filter or search query</p>
-                <button onclick="resetFilters()" class="mt-4 px-4 py-2 text-xs font-bold rounded-2xl bg-slate-900 dark:bg-purple-600 text-white hover:bg-slate-800 transition-all">
+                <button onclick="resetFilters()" class="mt-4 px-4 py-2 text-xs font-bold rounded-2xl bg-slate-900 dark:bg-[#4285f4] text-white hover:bg-slate-800 transition-all">
                     Reset Filters
                 </button>
             </div>
@@ -346,12 +385,12 @@
             <!-- Modal Header -->
             <div class="p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/70 dark:bg-slate-800/50">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-2xl bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 flex items-center justify-center border border-purple-100 dark:border-purple-800 font-black">
+                    <div class="w-10 h-10 rounded-2xl bg-blue-50 dark:bg-blue-950/60 text-[#1a73e8] dark:text-blue-300 flex items-center justify-center border border-blue-100 dark:border-blue-800 font-black">
                         <i data-lucide="award" class="w-5 h-5"></i>
                     </div>
                     <div>
-                        <h3 class="text-sm font-extrabold text-slate-900 dark:text-white leading-tight">Cloud N Beyond — 10 Required Badges</h3>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">Google Cloud Study Jam Syllabus • Swag Eligibility Badges</p>
+                        <h3 class="text-sm font-extrabold text-slate-900 dark:text-white leading-tight">Google Cloud 10 Required Badges</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Google Cloud Learn With Communities 2026 Syllabus</p>
                     </div>
                 </div>
                 <button onclick="closeCurriculumModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
@@ -366,7 +405,7 @@
 
             <!-- Modal Footer -->
             <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTVMEFW24yi5IVcBblZFEK5xMdQyeF9pndf-wxE37BKu5hyOghhSkYiCHW6rSLjNJd5U3OI_E_I9vZi/pubhtml?gid=411469390&single=true" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-700 dark:text-purple-400 hover:underline">
+                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTVMEFW24yi5IVcBblZFEK5xMdQyeF9pndf-wxE37BKu5hyOghhSkYiCHW6rSLjNJd5U3OI_E_I9vZi/pubhtml?gid=411469390&single=true" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1a73e8] dark:text-blue-400 hover:underline">
                     <span>Published Google Sheet Syllabus</span>
                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                 </a>
@@ -383,13 +422,13 @@
             <!-- Modal Header -->
             <div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-start justify-between bg-slate-50/70 dark:bg-slate-800/50">
                 <div class="flex items-center gap-3.5">
-                    <div id="modalAvatar" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-700 to-indigo-800 text-white font-black text-sm flex items-center justify-center shadow-xs">
+                    <div id="modalAvatar" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#4285f4] to-[#1557b0] text-white font-black text-sm flex items-center justify-center shadow-xs">
                         WCE
                     </div>
                     <div>
                         <div class="flex items-center gap-2">
                             <h3 id="modalName" class="text-base font-extrabold text-slate-900 dark:text-white leading-tight">Student Name</h3>
-                            <span id="modalSwagBadge" class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-purple-100 text-purple-900 border border-purple-200">Stage 2: T-Shirt</span>
+                            <span id="modalSwagBadge" class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-blue-100 text-blue-900 border border-blue-200">Stage 2: T-Shirt</span>
                         </div>
                         <p id="modalEmail" class="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">student@wce.ac.in</p>
                     </div>
@@ -409,7 +448,7 @@
                     </div>
                     <div>
                         <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Swag Status</span>
-                        <div class="text-xs font-bold text-purple-900 dark:text-purple-300 mt-1 truncate" id="modalRewardStatus">T-Shirt</div>
+                        <div class="text-xs font-bold text-blue-900 dark:text-blue-300 mt-1 truncate" id="modalRewardStatus">T-Shirt</div>
                     </div>
                     <div>
                         <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Live Verified</span>
@@ -421,7 +460,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-2">
                         <h4 class="font-extrabold text-slate-900 dark:text-white text-xs flex items-center gap-1.5">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-600 dark:text-purple-400"></i>
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-[#4285f4]"></i>
                             <span>Workshop 10-Badge Completion Status</span>
                         </h4>
                         <span class="text-[11px] font-bold text-slate-600 dark:text-slate-300" id="modalPercent">0%</span>
@@ -429,7 +468,7 @@
 
                     <!-- Progress Bar -->
                     <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden mb-3">
-                        <div id="modalProgressBar" class="h-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 smooth-progress" style="width: 0%"></div>
+                        <div id="modalProgressBar" class="h-2 rounded-full bg-gradient-to-r from-[#4285f4] via-[#ea4335] to-[#34a853] smooth-progress" style="width: 0%"></div>
                     </div>
 
                     <!-- Badges Checklist Items -->
@@ -445,7 +484,7 @@
                         <span>Additional Profile Badges</span>
                     </div>
                     <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
-                        This participant holds <strong id="modalExtraCount">0</strong> other badges on Google Skills. Under the Cloud N Beyond rules, only the 10 curriculum badges count toward workshop swag stages.
+                        This participant holds <strong id="modalExtraCount">0</strong> other badges on Google Skills. Under the Google Cloud Learn With Communities rules, only the 10 curriculum badges count toward workshop swag stages.
                     </p>
                 </div>
             </div>
@@ -458,7 +497,7 @@
                 </a>
 
                 <div class="flex items-center gap-2">
-                    <button id="modalSyncNowBtn" onclick="syncCurrentModalStudent()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold shadow-xs">
+                    <button id="modalSyncNowBtn" onclick="syncCurrentModalStudent()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#4285f4] hover:bg-blue-600 text-white text-xs font-bold shadow-xs">
                         <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
                         <span>Live Sync Now</span>
                     </button>
@@ -471,16 +510,16 @@
     </div>
 
     <!-- Footer Branding -->
-    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500 dark:text-slate-400 mt-auto transition-colors">
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500 dark:text-slate-400 mt-auto transition-colors relative z-10">
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div class="flex items-center gap-3">
                 <img src="/images/wce_logo.png" alt="WCE" class="h-6 w-auto object-contain">
                 <span class="font-extrabold text-slate-800 dark:text-white">Walchand College of Engineering, Sangli</span>
                 <span>•</span>
-                <span class="font-semibold text-slate-600 dark:text-slate-300">GDG On Campus — Cloud N Beyond</span>
+                <span class="font-semibold text-slate-600 dark:text-slate-300">GDG On Campus — Google Cloud Learn With Communities 2026</span>
             </div>
             <div class="text-[11px] text-slate-400 font-mono">
-                Stage 1 (5 Badges): 🍼 Water Bottle • Stage 2 (10 Badges): 👕 T-Shirt
+                Stage 1 (5 Badges): 🍼 Water Bottle • Stage 2 (10 Badges): 👕 Official T-Shirt
             </div>
         </div>
     </footer>

@@ -1,4 +1,4 @@
-// Cloud N Beyond Workshop — GDG On Campus WCE
+// Google Cloud Learn With Communities 2026 — GDG On Campus WCE
 // Centralized Real-Time Live Sync & Reactive Frontend
 
 let state = {
@@ -18,9 +18,63 @@ let state = {
 
 // Initialize Application
 document.addEventListener('DOMContentLoaded', async () => {
+    initAmbientCursorSpotlight();
     await loadInitialData();
     startRealtimePolling();
 });
+
+// Ambient Google 4-Color Cursor Spotlight (Subtle lerp follow)
+function initAmbientCursorSpotlight() {
+    const spotlight = document.getElementById('ambientCursorSpotlight');
+    if (!spotlight) return;
+
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let currentX = targetX;
+    let currentY = targetY;
+    let isMoving = false;
+    let isVisible = false;
+
+    window.addEventListener('mousemove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+
+        if (!isVisible) {
+            isVisible = true;
+            spotlight.style.opacity = '1';
+        }
+
+        if (!isMoving) {
+            isMoving = true;
+            requestAnimationFrame(updateSpotlight);
+        }
+    }, { passive: true });
+
+    document.addEventListener('mouseleave', () => {
+        isVisible = false;
+        spotlight.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', () => {
+        isVisible = true;
+        spotlight.style.opacity = '1';
+    });
+
+    function updateSpotlight() {
+        const dx = targetX - currentX;
+        const dy = targetY - currentY;
+        currentX += dx * 0.18;
+        currentY += dy * 0.18;
+
+        spotlight.style.transform = `translate3d(${currentX - 230}px, ${currentY - 230}px, 0)`;
+
+        if (Math.abs(dx) > 0.2 || Math.abs(dy) > 0.2) {
+            requestAnimationFrame(updateSpotlight);
+        } else {
+            isMoving = false;
+        }
+    }
+}
 
 // Dark Mode Toggle
 function toggleDarkMode() {
@@ -52,7 +106,6 @@ async function fetchCentralizedParticipants() {
         const data = await pResp.json();
 
         if (data && data.success && Array.isArray(data.participants)) {
-            const prevLength = state.participants.length;
             state.participants = data.participants;
             state.currentlySyncingId = data.currentlySyncingId || null;
 
@@ -88,7 +141,7 @@ function startRealtimePolling() {
 
                 state.participants = data.participants;
                 const prevSyncId = state.currentlySyncingId;
-                state.currentlySyncId = data.currentlySyncingId || null;
+                state.currentlySyncingId = data.currentlySyncingId || null;
 
                 if (hasChanges || prevSyncId !== state.currentlySyncingId) {
                     updateStats();
@@ -105,13 +158,13 @@ function startRealtimePolling() {
     }, 4000);
 }
 
-// Swag Rewards Helper (Clean: only T-Shirt at 10, only Bottle at 5)
+// Swag Rewards Helper (Clean: Stage 2: T-Shirt at 10, Stage 1: Bottle at 5, strictly in Google Colors)
 function getSwagRewardInfo(count) {
     if (count >= 10) {
         return {
             stage: 'Stage 2',
             reward: 'T-Shirt',
-            badgeClass: 'bg-purple-100 dark:bg-purple-900/60 text-purple-900 dark:text-purple-200 border-purple-200 dark:border-purple-800',
+            badgeClass: 'bg-blue-50 dark:bg-blue-950/70 text-[#1a73e8] dark:text-blue-300 border-blue-200 dark:border-blue-800',
             pillLabel: '👕 T-Shirt',
             isTShirt: true,
             isBottle: false
@@ -119,8 +172,8 @@ function getSwagRewardInfo(count) {
     } else if (count >= 5) {
         return {
             stage: 'Stage 1',
-            reward: 'Bottle',
-            badgeClass: 'bg-emerald-100 dark:bg-emerald-900/60 text-emerald-900 dark:text-emerald-200 border-emerald-200 dark:border-emerald-800',
+            reward: 'Water Bottle',
+            badgeClass: 'bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800',
             pillLabel: '🍼 Bottle',
             isTShirt: false,
             isBottle: true
@@ -130,7 +183,7 @@ function getSwagRewardInfo(count) {
         return {
             stage: 'In Progress',
             reward: `Needs ${needed} for Bottle`,
-            badgeClass: 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700',
+            badgeClass: 'bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800',
             pillLabel: `${needed} to Bottle 🍼`,
             isTShirt: false,
             isBottle: false
@@ -208,9 +261,9 @@ function renderCurriculumModalContent() {
         const pct = Math.round((completedCount / totalStudents) * 100);
 
         return `
-            <div class="p-3.5 rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-800/80 hover:border-slate-300 transition-all flex items-center justify-between gap-3">
+            <div class="p-3.5 rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-800/80 hover:border-blue-300 dark:hover:border-blue-700 transition-all flex items-center justify-between gap-3">
                 <div class="flex items-start gap-3 min-w-0">
-                    <div class="w-7 h-7 rounded-full bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 flex items-center justify-center font-black text-xs shrink-0 mt-0.5">
+                    <div class="w-7 h-7 rounded-full bg-blue-50 dark:bg-blue-950/60 text-[#1a73e8] dark:text-blue-300 border border-blue-200 dark:border-blue-800 flex items-center justify-center font-black text-xs shrink-0 mt-0.5">
                         ${tb.order}
                     </div>
                     <div class="min-w-0">
@@ -226,10 +279,10 @@ function renderCurriculumModalContent() {
                 </div>
 
                 <div class="flex items-center gap-2 shrink-0">
-                    <button onclick="toggleBadgeFilter('${norm}'); closeCurriculumModal();" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 text-slate-700 dark:text-slate-200 transition-all">
+                    <button onclick="toggleBadgeFilter('${norm}'); closeCurriculumModal();" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 dark:bg-slate-700 hover:bg-[#4285f4] hover:text-white dark:hover:bg-[#4285f4] text-slate-700 dark:text-slate-200 transition-all">
                         Filter
                     </button>
-                    <a href="${tb.url}" target="_blank" class="p-1 rounded-lg text-slate-400 hover:text-purple-700 dark:hover:text-purple-400 transition-colors">
+                    <a href="${tb.url}" target="_blank" class="p-1 rounded-lg text-slate-400 hover:text-[#4285f4] dark:hover:text-blue-400 transition-colors">
                         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     </a>
                 </div>
@@ -338,12 +391,18 @@ function renderTableRow(p, rank) {
     const isCurrentlySyncing = (state.currentlySyncingId === p.id);
     const swag = getSwagRewardInfo(count);
 
-    // Rank Medal / Icon
+    // Rank Medal / Icon with Google Color accents
     let rankDisplay = '';
-    if (rank === 1 && count > 0) rankDisplay = '<span class="text-base" title="Rank 1">🥇</span>';
-    else if (rank === 2 && count > 0) rankDisplay = '<span class="text-base" title="Rank 2">🥈</span>';
-    else if (rank === 3 && count > 0) rankDisplay = '<span class="text-base" title="Rank 3">🥉</span>';
+    if (rank === 1 && count > 0) rankDisplay = '<span class="inline-flex items-center gap-1 font-black text-[#fbbc05] text-xs" title="Rank 1">🥇 #1</span>';
+    else if (rank === 2 && count > 0) rankDisplay = '<span class="inline-flex items-center gap-1 font-black text-[#4285f4] text-xs" title="Rank 2">🥈 #2</span>';
+    else if (rank === 3 && count > 0) rankDisplay = '<span class="inline-flex items-center gap-1 font-black text-[#ea4335] text-xs" title="Rank 3">🥉 #3</span>';
     else rankDisplay = `<span class="font-bold font-mono text-slate-400 dark:text-slate-500">#${rank}</span>`;
+
+    // Dynamic Avatar Google-themed background
+    let avatarStyle = 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700';
+    if (count >= 10) avatarStyle = 'bg-blue-50 dark:bg-blue-950/70 text-[#1a73e8] dark:text-blue-300 border-blue-200 dark:border-blue-800 shadow-2xs';
+    else if (count >= 5) avatarStyle = 'bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800 shadow-2xs';
+    else if (count >= 1) avatarStyle = 'bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800';
 
     // 10 Mini Track Dots
     const dotsHtml = (state.targetBadges || []).map((tb, idx) => {
@@ -361,6 +420,13 @@ function renderTableRow(p, rank) {
         `;
     }).join('');
 
+    // Dynamic Progress Bar Color
+    const progressBarColor = count >= 10 
+        ? 'bg-gradient-to-r from-[#4285f4] via-[#ea4335] to-[#34a853]' 
+        : count >= 5 
+            ? 'bg-[#34a853]' 
+            : 'bg-[#4285f4]';
+
     return `
         <tr id="row-p-${p.id}" class="hover:bg-slate-50/80 dark:hover:bg-slate-800/50 transition-colors">
             <td class="py-3.5 px-4 text-center">
@@ -368,7 +434,7 @@ function renderTableRow(p, rank) {
             </td>
             <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2.5">
-                    <div class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-black text-xs flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700">
+                    <div class="w-8 h-8 rounded-xl ${avatarStyle} font-black text-xs flex items-center justify-center shrink-0 border">
                         ${getInitials(p.name)}
                     </div>
                     <div class="min-w-0">
@@ -376,7 +442,7 @@ function renderTableRow(p, rank) {
                             <span class="truncate">${escapeHtml(p.name)}</span>
                             <!-- Sync spinning icon appears ONLY if currently syncing -->
                             ${isCurrentlySyncing ? `
-                                <svg class="animate-spin h-3.5 w-3.5 text-purple-600 dark:text-purple-400 shrink-0 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <svg class="animate-spin h-3.5 w-3.5 text-[#4285f4] shrink-0 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
@@ -393,7 +459,7 @@ function renderTableRow(p, rank) {
                         <span class="text-slate-400 dark:text-slate-500 font-semibold">${pct}%</span>
                     </div>
                     <div class="w-full bg-slate-100 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
-                        <div class="h-1.5 rounded-full ${count >= 10 ? 'bg-purple-600' : count >= 5 ? 'bg-emerald-600' : 'bg-[#1a73e8]'} smooth-progress" style="width: ${pct}%"></div>
+                        <div class="h-1.5 rounded-full ${progressBarColor} smooth-progress" style="width: ${pct}%"></div>
                     </div>
                 </div>
             </td>
@@ -409,10 +475,10 @@ function renderTableRow(p, rank) {
             </td>
             <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-1.5">
-                    <a href="${p.profileUrl}" target="_blank" title="Skills Profile" class="p-1.5 rounded-lg text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-flex items-center">
+                    <a href="${p.profileUrl}" target="_blank" title="Skills Profile" class="p-1.5 rounded-lg text-slate-400 hover:text-[#4285f4] dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-flex items-center">
                         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     </a>
-                    <button onclick="openModal(${p.id})" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors">
+                    <button onclick="openModal(${p.id})" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 dark:bg-slate-800 hover:bg-[#4285f4] hover:text-white dark:hover:bg-[#4285f4] text-slate-700 dark:text-slate-200 transition-all">
                         Details
                     </button>
                 </div>
@@ -428,6 +494,12 @@ function renderParticipantCard(p) {
     const initials = getInitials(p.name);
     const isCurrentlySyncing = (state.currentlySyncingId === p.id);
     const swag = getSwagRewardInfo(count);
+
+    // Dynamic Avatar Google-themed background
+    let avatarStyle = 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700';
+    if (count >= 10) avatarStyle = 'bg-blue-50 dark:bg-blue-950/70 text-[#1a73e8] dark:text-blue-300 border-blue-200 dark:border-blue-800 shadow-2xs';
+    else if (count >= 5) avatarStyle = 'bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800 shadow-2xs';
+    else if (count >= 1) avatarStyle = 'bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800';
 
     const completedSet = new Set((p.completedBadges || []).map(b => (b.normalizedName || '').toLowerCase()));
 
@@ -450,20 +522,26 @@ function renderParticipantCard(p) {
         `;
     }).join('');
 
+    const progressBarColor = count >= 10 
+        ? 'bg-gradient-to-r from-[#4285f4] via-[#ea4335] to-[#34a853]' 
+        : count >= 5 
+            ? 'bg-[#34a853]' 
+            : 'bg-[#4285f4]';
+
     return `
         <div id="p-card-${p.id}" class="aww-card rounded-3xl p-5 transition-all flex flex-col justify-between relative overflow-hidden">
             <div>
                 <!-- Top Row: Avatar, Name, Email, Swag Badge -->
                 <div class="flex items-start justify-between gap-3">
                     <div class="flex items-center gap-3 min-w-0">
-                        <div class="w-10 h-10 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-black text-xs flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700">
+                        <div class="w-10 h-10 rounded-2xl ${avatarStyle} font-black text-xs flex items-center justify-center shrink-0 border">
                             ${initials}
                         </div>
                         <div class="min-w-0">
                             <h3 class="font-extrabold text-slate-900 dark:text-white text-xs truncate leading-snug flex items-center gap-1.5" title="${escapeHtml(p.name)}">
                                 <span>${escapeHtml(p.name)}</span>
                                 ${isCurrentlySyncing ? `
-                                    <svg class="animate-spin h-3.5 w-3.5 text-purple-600 dark:text-purple-400 shrink-0 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <svg class="animate-spin h-3.5 w-3.5 text-[#4285f4] shrink-0 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                     </svg>
@@ -488,7 +566,7 @@ function renderParticipantCard(p) {
                         <span class="font-black text-slate-900 dark:text-white font-mono">${count} / 10 <span class="text-slate-400 font-normal">(${pct}%)</span></span>
                     </div>
                     <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
-                        <div class="h-2 rounded-full ${count >= 10 ? 'bg-purple-600' : count >= 5 ? 'bg-emerald-600' : 'bg-[#1a73e8]'} smooth-progress" style="width: ${pct}%"></div>
+                        <div class="h-2 rounded-full ${progressBarColor} smooth-progress" style="width: ${pct}%"></div>
                     </div>
                 </div>
 
@@ -506,12 +584,12 @@ function renderParticipantCard(p) {
 
             <!-- Bottom Actions -->
             <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
-                <a href="${p.profileUrl}" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-slate-500 dark:text-slate-400 hover:text-purple-600 font-semibold transition-colors">
+                <a href="${p.profileUrl}" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-slate-500 dark:text-slate-400 hover:text-[#4285f4] font-semibold transition-colors">
                     <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     <span>Profile</span>
                 </a>
 
-                <button onclick="openModal(${p.id})" class="px-3 py-1 rounded-xl text-[11px] font-bold bg-slate-900 dark:bg-purple-600 hover:bg-slate-800 text-white transition-all shadow-2xs">
+                <button onclick="openModal(${p.id})" class="px-3 py-1 rounded-xl text-[11px] font-bold bg-slate-900 dark:bg-[#4285f4] hover:bg-slate-800 dark:hover:bg-blue-600 text-white transition-all shadow-2xs">
                     Details
                 </button>
             </div>
@@ -609,7 +687,7 @@ function renderModalContent(p) {
 
                 <div class="shrink-0 flex items-center gap-2">
                     ${tb.url ? `
-                        <a href="${tb.url}" target="_blank" class="text-[11px] font-bold text-purple-700 dark:text-purple-400 hover:underline inline-flex items-center gap-0.5">
+                        <a href="${tb.url}" target="_blank" class="text-[11px] font-bold text-[#1a73e8] dark:text-blue-400 hover:text-blue-700 hover:underline inline-flex items-center gap-0.5">
                             <span>Syllabus</span>
                             <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                         </a>
@@ -834,11 +912,11 @@ function exportToExcel() {
     const ws2 = XLSX.utils.json_to_sheet(badgeRows);
 
     const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws1, "Cloud N Beyond Swag Progress");
+    XLSX.utils.book_append_sheet(wb, ws1, "Swag Rewards - WCE 2026");
     XLSX.utils.book_append_sheet(wb, ws2, "10 Badges Track Summary");
 
     const dateStr = new Date().toISOString().slice(0, 10);
-    XLSX.writeFile(wb, `Cloud_N_Beyond_WCE_Live_Tracking_${dateStr}.xlsx`);
+    XLSX.writeFile(wb, `Google_Cloud_Learn_With_Communities_2026_WCE_${dateStr}.xlsx`);
 }
 
 function escapeHtml(str) {

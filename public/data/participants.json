@@ -11,7 +11,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:36.064Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 2,
@@ -25,7 +27,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:36.818Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 3,
@@ -72,7 +76,7 @@
       }
     ],
     "totalProfileBadges": 4,
-    "lastScrapedAt": "2026-10-31T16:06:35.525Z",
+    "lastScrapedAt": "2026-10-31T16:19:18.289Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -88,7 +92,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:38.647Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 5,
@@ -102,7 +108,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:39.348Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 6,
@@ -116,7 +124,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:40.075Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 7,
@@ -130,7 +140,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:40.864Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 8,
@@ -144,7 +156,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:41.847Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 9,
@@ -239,7 +253,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-10-31T16:06:26.451Z",
+    "lastScrapedAt": "2026-10-31T16:19:07.462Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -255,7 +269,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:42.551Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 11,
@@ -269,7 +285,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:43.649Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 12,
@@ -283,7 +301,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:44.412Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 13,
@@ -322,7 +342,7 @@
       }
     ],
     "totalProfileBadges": 3,
-    "lastScrapedAt": "2026-10-31T16:06:38.765Z",
+    "lastScrapedAt": "2026-10-31T16:19:19.950Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -419,7 +439,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-10-31T16:06:27.707Z",
+    "lastScrapedAt": "2026-10-31T16:19:08.558Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -435,7 +455,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:45.372Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 16,
@@ -449,7 +471,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:46.124Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 17,
@@ -512,7 +536,7 @@
       }
     ],
     "totalProfileBadges": 6,
-    "lastScrapedAt": "2026-10-31T16:06:36.627Z",
+    "lastScrapedAt": "2026-10-31T16:19:16.221Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -525,10 +549,21 @@
     "accessCode": "6s-EDUCR-70::Nfw_xV0pEpr6k0ps3t1Tkg",
     "redemptionStatus": "Yes",
     "originalMilestone": "No Milestone",
-    "completedCount": 0,
-    "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "completedCount": 1,
+    "completedBadges": [
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Oct 29, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/ddb37d7a-bbcd-4d21-8f2c-82d871ee506e/badges/29215735"
+      }
+    ],
+    "totalProfileBadges": 1,
+    "lastScrapedAt": "2026-10-31T16:19:23.939Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 19,
@@ -542,7 +577,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:46.843Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 20,
@@ -556,7 +593,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:47.645Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 21,
@@ -570,7 +609,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:48.723Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 22,
@@ -584,7 +625,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:49.444Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 23,
@@ -598,7 +641,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:50.398Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 24,
@@ -612,7 +657,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:51.143Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 25,
@@ -626,7 +673,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:51.991Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 26,
@@ -649,7 +698,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-10-31T16:06:39.538Z",
+    "lastScrapedAt": "2026-10-31T16:19:24.681Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -746,7 +795,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-10-31T16:06:28.920Z",
+    "lastScrapedAt": "2026-10-31T16:19:09.731Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -762,7 +811,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:52.995Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 29,
@@ -785,7 +836,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-10-31T16:06:40.399Z",
+    "lastScrapedAt": "2026-10-31T16:19:25.461Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -801,7 +852,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:53.809Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 31,
@@ -815,7 +868,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:54.570Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 32,
@@ -829,7 +884,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:55.329Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 33,
@@ -843,7 +900,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:56.221Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 34,
@@ -857,7 +916,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:57.064Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 35,
@@ -870,8 +931,10 @@
     "originalMilestone": "No Milestone",
     "completedCount": 0,
     "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "totalProfileBadges": 1,
+    "lastScrapedAt": "2026-10-31T16:20:00.180Z",
+    "extraBadges": [],
+    "extraBadgesCount": 1
   },
   {
     "id": 36,
@@ -885,7 +948,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:00.936Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 37,
@@ -899,7 +964,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:04.114Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 38,
@@ -913,7 +980,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:05.294Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 39,
@@ -952,7 +1021,7 @@
       }
     ],
     "totalProfileBadges": 3,
-    "lastScrapedAt": "2026-10-31T16:06:37.470Z",
+    "lastScrapedAt": "2026-10-31T16:19:20.841Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -968,7 +1037,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:06.046Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 41,
@@ -982,7 +1053,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:06.776Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 42,
@@ -996,7 +1069,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:07.650Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 43,
@@ -1010,7 +1085,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:09.008Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 44,
@@ -1024,7 +1101,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:13.139Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 45,
@@ -1038,7 +1117,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:14.640Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 46,
@@ -1052,7 +1133,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:15.400Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 47,
@@ -1066,7 +1149,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:16.312Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 48,
@@ -1077,10 +1162,21 @@
     "accessCode": "6s-EDUCR-70::vW0sumydf1cP1vGXRha8vg",
     "redemptionStatus": "No",
     "originalMilestone": "No Milestone",
-    "completedCount": 0,
-    "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "completedCount": 1,
+    "completedBadges": [
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Oct 31, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/c15d75e1-b0d1-42bb-8664-611ce75b9d4d/badges/29289819"
+      }
+    ],
+    "totalProfileBadges": 1,
+    "lastScrapedAt": "2026-10-31T16:19:26.199Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 49,
@@ -1094,7 +1190,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:17.110Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 50,
@@ -1108,7 +1206,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:17.869Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 51,
@@ -1122,7 +1222,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:18.731Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 52,
@@ -1136,7 +1238,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:19.566Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 53,
@@ -1150,7 +1254,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:20.824Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 54,
@@ -1164,7 +1270,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:22.097Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 55,
@@ -1178,7 +1286,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:22.919Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 56,
@@ -1192,7 +1302,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:20:23.642Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 57,
@@ -1206,7 +1318,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:42.793Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 58,
@@ -1217,10 +1331,21 @@
     "accessCode": "6s-EDUCR-70::8kBe7VDkRRQT0X23g4pB0w",
     "redemptionStatus": "Yes",
     "originalMilestone": "No Milestone",
-    "completedCount": 0,
-    "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "completedCount": 1,
+    "completedBadges": [
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Oct 29, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/60e4f451-09d8-4494-b622-7eceb0f6e203/badges/29228291"
+      }
+    ],
+    "totalProfileBadges": 1,
+    "lastScrapedAt": "2026-10-31T16:19:27.098Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 59,
@@ -1234,7 +1359,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:43.530Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 60,
@@ -1248,7 +1375,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:44.316Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 61,
@@ -1262,7 +1391,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:45.048Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 62,
@@ -1276,7 +1407,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:45.786Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 63,
@@ -1290,7 +1423,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:46.562Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 64,
@@ -1304,7 +1439,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:47.375Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 65,
@@ -1318,7 +1455,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:48.133Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 66,
@@ -1413,7 +1552,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-10-31T16:06:41.663Z",
+    "lastScrapedAt": "2026-10-31T16:19:10.955Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -1429,7 +1568,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:48.910Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 68,
@@ -1443,7 +1584,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:50.579Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 69,
@@ -1457,7 +1600,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:51.270Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 70,
@@ -1471,7 +1616,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:13:54.007Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 71,
@@ -1485,7 +1632,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:07:46.067Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 72,
@@ -1499,7 +1648,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:00.868Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 73,
@@ -1513,7 +1664,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:01.590Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 74,
@@ -1526,8 +1679,10 @@
     "originalMilestone": "No Milestone",
     "completedCount": 0,
     "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "totalProfileBadges": 5,
+    "lastScrapedAt": "2026-10-31T16:14:03.719Z",
+    "extraBadges": [],
+    "extraBadgesCount": 5
   },
   {
     "id": 75,
@@ -1541,7 +1696,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:04.559Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 76,
@@ -1555,7 +1712,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:06.259Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 77,
@@ -1569,7 +1728,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:07.054Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 78,
@@ -1583,7 +1744,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:09.365Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 79,
@@ -1597,7 +1760,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:10.167Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 80,
@@ -1611,7 +1776,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:11.232Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 81,
@@ -1625,7 +1792,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:12.137Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 82,
@@ -1639,7 +1808,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:12.857Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 83,
@@ -1653,7 +1824,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:13.769Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 84,
@@ -1667,7 +1840,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:14.681Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 85,
@@ -1681,7 +1856,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:15.402Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 86,
@@ -1695,7 +1872,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:17.069Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 87,
@@ -1709,7 +1888,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:18.284Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 88,
@@ -1723,7 +1904,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:19.462Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 89,
@@ -1737,7 +1920,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:20.306Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 90,
@@ -1751,7 +1936,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:21.064Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 91,
@@ -1765,7 +1952,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:21.954Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 92,
@@ -1779,7 +1968,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:22.733Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 93,
@@ -1793,7 +1984,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:23.530Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 94,
@@ -1806,8 +1999,10 @@
     "originalMilestone": "No Milestone",
     "completedCount": 0,
     "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "totalProfileBadges": 2,
+    "lastScrapedAt": "2026-10-31T16:14:24.372Z",
+    "extraBadges": [],
+    "extraBadgesCount": 2
   },
   {
     "id": 95,
@@ -1821,7 +2016,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:25.496Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 96,
@@ -1835,7 +2032,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:26.250Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 97,
@@ -1849,7 +2048,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:27.013Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 98,
@@ -1863,7 +2064,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:27.965Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 99,
@@ -1877,7 +2080,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:28.733Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 100,
@@ -1891,7 +2096,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:29.580Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 101,
@@ -1905,7 +2112,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:30.344Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 102,
@@ -1919,7 +2128,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:31.215Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 103,
@@ -1933,7 +2144,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:31.998Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 104,
@@ -1947,7 +2160,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:32.801Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 105,
@@ -1961,7 +2176,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:33.566Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 106,
@@ -1975,7 +2192,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:34.342Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 107,
@@ -1989,7 +2208,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:35.207Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 108,
@@ -2003,7 +2224,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:36.217Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 109,
@@ -2017,7 +2240,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:37.015Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 110,
@@ -2031,7 +2256,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:37.715Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 111,
@@ -2045,7 +2272,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:38.435Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 112,
@@ -2059,7 +2288,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:39.248Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 113,
@@ -2073,7 +2304,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:40.203Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 114,
@@ -2087,7 +2320,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:41.013Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 115,
@@ -2101,7 +2336,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:41.818Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 116,
@@ -2115,7 +2352,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:43.615Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 117,
@@ -2129,7 +2368,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:44.447Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 118,
@@ -2143,7 +2384,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:45.323Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 119,
@@ -2157,7 +2400,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:46.356Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 120,
@@ -2171,7 +2416,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:47.064Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 121,
@@ -2185,7 +2432,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:47.900Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 122,
@@ -2199,7 +2448,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:48.797Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 123,
@@ -2213,7 +2464,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:49.769Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 124,
@@ -2227,7 +2480,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:50.506Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 125,
@@ -2241,7 +2496,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:51.443Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 126,
@@ -2255,7 +2512,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:52.145Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 127,
@@ -2269,7 +2528,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:53.124Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 128,
@@ -2283,7 +2544,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:53.968Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 129,
@@ -2297,7 +2560,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:54.715Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 130,
@@ -2311,7 +2576,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:55.785Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 131,
@@ -2325,7 +2592,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:56.495Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 132,
@@ -2339,7 +2608,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:57.259Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 133,
@@ -2353,7 +2624,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:58.007Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 134,
@@ -2367,7 +2640,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:58.770Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 135,
@@ -2381,7 +2656,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:14:59.470Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 136,
@@ -2395,7 +2672,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:00.269Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 137,
@@ -2409,7 +2688,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:01.068Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 138,
@@ -2423,7 +2704,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:01.844Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 139,
@@ -2437,7 +2720,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:02.552Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 140,
@@ -2460,7 +2745,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-10-31T16:06:42.465Z",
+    "lastScrapedAt": "2026-10-31T16:19:28.688Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -2476,7 +2761,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:03.253Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 142,
@@ -2490,7 +2777,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:04.192Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 143,
@@ -2504,7 +2793,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:05.128Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 144,
@@ -2518,7 +2809,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:05.995Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 145,
@@ -2541,7 +2834,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-10-31T16:06:43.203Z",
+    "lastScrapedAt": "2026-10-31T16:19:29.572Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -2557,7 +2850,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:06.686Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 147,
@@ -2571,7 +2866,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:08.616Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 148,
@@ -2585,7 +2882,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:09.405Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 149,
@@ -2599,7 +2898,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:10.150Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 150,
@@ -2613,7 +2914,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:11.063Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 151,
@@ -2627,7 +2930,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:12.443Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 152,
@@ -2641,7 +2946,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:13.410Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 153,
@@ -2655,7 +2962,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:14.191Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 154,
@@ -2669,7 +2978,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:14.926Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 155,
@@ -2683,7 +2994,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:15.676Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 156,
@@ -2697,7 +3010,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:16.654Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 157,
@@ -2711,7 +3026,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:18.602Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 158,
@@ -2725,7 +3042,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:22.044Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 159,
@@ -2739,7 +3058,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:22.809Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 160,
@@ -2753,7 +3074,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:23.610Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 161,
@@ -2767,7 +3090,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:25.327Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 162,
@@ -2781,7 +3106,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:26.141Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 163,
@@ -2795,7 +3122,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:26.898Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 164,
@@ -2809,7 +3138,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:28.856Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 165,
@@ -2823,7 +3154,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:29.753Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 166,
@@ -2837,7 +3170,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:32.515Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 167,
@@ -2851,7 +3186,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:33.291Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 168,
@@ -2865,7 +3202,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:34.267Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 169,
@@ -2879,7 +3218,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:35.026Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 170,
@@ -2893,7 +3234,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:35.911Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 171,
@@ -2907,7 +3250,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:36.650Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 172,
@@ -3002,7 +3347,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-10-31T16:06:30.421Z",
+    "lastScrapedAt": "2026-10-31T16:19:12.032Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -3018,7 +3363,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:37.480Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 174,
@@ -3041,7 +3388,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-10-31T16:06:43.986Z",
+    "lastScrapedAt": "2026-10-31T16:19:30.417Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -3057,7 +3404,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:38.213Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 176,
@@ -3071,7 +3420,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:39.018Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 177,
@@ -3085,7 +3436,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:40.356Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 178,
@@ -3099,7 +3452,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:41.288Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 179,
@@ -3113,7 +3468,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:42.597Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 180,
@@ -3127,7 +3484,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:43.481Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 181,
@@ -3141,7 +3500,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:44.527Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 182,
@@ -3155,7 +3516,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:45.545Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 183,
@@ -3169,7 +3532,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:46.297Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 184,
@@ -3183,7 +3548,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:47.062Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 185,
@@ -3206,7 +3573,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-10-31T16:06:44.839Z",
+    "lastScrapedAt": "2026-10-31T16:19:31.188Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -3222,7 +3589,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:48.368Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 187,
@@ -3236,7 +3605,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:49.085Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 188,
@@ -3250,7 +3621,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:49.798Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 189,
@@ -3264,7 +3637,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:51.384Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 190,
@@ -3278,7 +3653,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:52.113Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 191,
@@ -3292,7 +3669,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:52.958Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 192,
@@ -3306,7 +3685,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:57.728Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 193,
@@ -3320,7 +3701,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:58.789Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 194,
@@ -3334,7 +3717,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:15:59.719Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 195,
@@ -3348,7 +3733,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:00.550Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 196,
@@ -3362,7 +3749,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:01.496Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 197,
@@ -3425,7 +3814,7 @@
       }
     ],
     "totalProfileBadges": 6,
-    "lastScrapedAt": "2026-10-31T16:06:32.819Z",
+    "lastScrapedAt": "2026-10-31T16:19:17.432Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -3450,7 +3839,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-10-31T16:06:45.703Z",
+    "lastScrapedAt": "2026-10-31T16:19:32.024Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -3466,7 +3855,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:02.452Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 200,
@@ -3480,7 +3871,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:03.622Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 201,
@@ -3494,7 +3887,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:04.309Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 202,
@@ -3508,7 +3903,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:07.904Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 203,
@@ -3522,7 +3919,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:08.902Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 204,
@@ -3536,7 +3935,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:09.647Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 205,
@@ -3550,7 +3951,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:10.462Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 206,
@@ -3564,7 +3967,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:11.577Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 207,
@@ -3578,7 +3983,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:12.316Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 208,
@@ -3592,7 +3999,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:13.046Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 209,
@@ -3606,7 +4015,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:13.742Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 210,
@@ -3620,7 +4031,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:14.487Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 211,
@@ -3634,7 +4047,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:15.255Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 212,
@@ -3648,7 +4063,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:15.985Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 213,
@@ -3662,7 +4079,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:16.699Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 214,
@@ -3676,7 +4095,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:17.436Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 215,
@@ -3690,7 +4111,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:18.233Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 216,
@@ -3704,7 +4127,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:18.980Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 217,
@@ -3718,7 +4143,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:19.716Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 218,
@@ -3732,7 +4159,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:20.689Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 219,
@@ -3746,7 +4175,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:21.476Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 220,
@@ -3760,7 +4191,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:22.266Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 221,
@@ -3774,7 +4207,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:23.010Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 222,
@@ -3788,7 +4223,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:24.641Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 223,
@@ -3801,8 +4238,10 @@
     "originalMilestone": "No Milestone",
     "completedCount": 0,
     "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "totalProfileBadges": 1,
+    "lastScrapedAt": "2026-10-31T16:16:25.483Z",
+    "extraBadges": [],
+    "extraBadgesCount": 1
   },
   {
     "id": 224,
@@ -3816,7 +4255,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:26.263Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 225,
@@ -3830,7 +4271,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:27.044Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 226,
@@ -3844,7 +4287,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:28.106Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 227,
@@ -3858,7 +4303,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:28.823Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 228,
@@ -3872,7 +4319,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:29.678Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 229,
@@ -3886,7 +4335,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:30.433Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 230,
@@ -3900,7 +4351,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:32.943Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 231,
@@ -3914,7 +4367,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:33.704Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 232,
@@ -3928,7 +4383,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:34.660Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 233,
@@ -3942,7 +4399,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:35.376Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 234,
@@ -3956,7 +4415,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:36.200Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 235,
@@ -3970,7 +4431,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:37.176Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 236,
@@ -3984,7 +4447,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:37.984Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 237,
@@ -3998,7 +4463,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:39.025Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 238,
@@ -4012,7 +4479,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:39.782Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 239,
@@ -4026,7 +4495,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:42.640Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 240,
@@ -4040,7 +4511,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:43.418Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 241,
@@ -4054,7 +4527,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:44.445Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 242,
@@ -4068,7 +4543,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:45.264Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 243,
@@ -4082,7 +4559,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:46.263Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 244,
@@ -4096,7 +4575,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:47.868Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 245,
@@ -4110,7 +4591,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:48.590Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 246,
@@ -4124,7 +4607,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:49.466Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 247,
@@ -4138,7 +4623,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:50.167Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 248,
@@ -4152,7 +4639,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:50.992Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 249,
@@ -4166,7 +4655,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:51.718Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 250,
@@ -4180,7 +4671,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:52.543Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 251,
@@ -4194,7 +4687,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:53.297Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 252,
@@ -4208,7 +4703,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:54.155Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 253,
@@ -4222,7 +4719,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:54.867Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 254,
@@ -4236,7 +4735,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:55.621Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 255,
@@ -4250,7 +4751,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:56.403Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 256,
@@ -4264,7 +4767,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:57.160Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 257,
@@ -4278,7 +4783,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:58.095Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 258,
@@ -4292,7 +4799,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:16:58.859Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 259,
@@ -4306,7 +4815,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:01.528Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 260,
@@ -4320,7 +4831,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:03.267Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 261,
@@ -4334,7 +4847,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:04.012Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 262,
@@ -4348,7 +4863,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:04.731Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 263,
@@ -4362,7 +4879,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:05.715Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 264,
@@ -4376,7 +4895,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:06.590Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 265,
@@ -4390,7 +4911,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:07.382Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 266,
@@ -4404,7 +4927,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:08.067Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 267,
@@ -4418,7 +4943,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:08.771Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 268,
@@ -4432,7 +4959,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:09.501Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 269,
@@ -4446,7 +4975,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:10.320Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 270,
@@ -4460,7 +4991,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:11.118Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 271,
@@ -4474,7 +5007,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:12.119Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 272,
@@ -4488,7 +5023,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:14.041Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 273,
@@ -4502,7 +5039,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:14.861Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 274,
@@ -4516,7 +5055,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:15.566Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 275,
@@ -4530,7 +5071,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:16.327Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 276,
@@ -4544,7 +5087,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:17.453Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 277,
@@ -4558,7 +5103,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:18.226Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 278,
@@ -4572,7 +5119,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:20.188Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 279,
@@ -4586,7 +5135,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:21.012Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 280,
@@ -4600,7 +5151,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:21.848Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 281,
@@ -4614,7 +5167,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:22.648Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 282,
@@ -4628,7 +5183,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:23.374Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 283,
@@ -4642,7 +5199,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:24.096Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 284,
@@ -4656,7 +5215,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:24.864Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 285,
@@ -4670,7 +5231,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:26.928Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 286,
@@ -4684,7 +5247,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:28.314Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 287,
@@ -4698,7 +5263,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:29.150Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 288,
@@ -4712,7 +5279,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:31.426Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 289,
@@ -4726,7 +5295,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:32.559Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 290,
@@ -4740,7 +5311,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:33.379Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 291,
@@ -4763,7 +5336,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-10-31T16:06:46.624Z",
+    "lastScrapedAt": "2026-10-31T16:19:32.800Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -4778,8 +5351,10 @@
     "originalMilestone": "No Milestone",
     "completedCount": 0,
     "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "totalProfileBadges": 2,
+    "lastScrapedAt": "2026-10-31T16:17:34.406Z",
+    "extraBadges": [],
+    "extraBadgesCount": 2
   },
   {
     "id": 293,
@@ -4793,7 +5368,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:35.172Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 294,
@@ -4807,7 +5384,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:35.995Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 295,
@@ -4821,7 +5400,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:37.172Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 296,
@@ -4835,7 +5416,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:37.863Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 297,
@@ -4849,7 +5432,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:38.595Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 298,
@@ -4863,7 +5448,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:39.376Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 299,
@@ -4877,7 +5464,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:41.542Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 300,
@@ -4891,7 +5480,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:42.451Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 301,
@@ -4905,7 +5496,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:43.193Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 302,
@@ -4919,7 +5512,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:44.146Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 303,
@@ -4933,7 +5528,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:44.922Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 304,
@@ -4947,7 +5544,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:45.808Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 305,
@@ -4961,7 +5560,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:46.502Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 306,
@@ -4975,7 +5576,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:47.182Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 307,
@@ -5070,7 +5673,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-10-31T16:06:31.797Z",
+    "lastScrapedAt": "2026-10-31T16:19:13.238Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -5085,8 +5688,10 @@
     "originalMilestone": "No Milestone",
     "completedCount": 0,
     "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "totalProfileBadges": 2,
+    "lastScrapedAt": "2026-10-31T16:17:48.053Z",
+    "extraBadges": [],
+    "extraBadgesCount": 2
   },
   {
     "id": 309,
@@ -5100,7 +5705,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:48.892Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 310,
@@ -5114,7 +5721,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:51.336Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 311,
@@ -5137,7 +5746,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-10-31T16:06:47.556Z",
+    "lastScrapedAt": "2026-10-31T16:19:33.655Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -5153,7 +5762,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:52.080Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 313,
@@ -5167,7 +5778,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:52.881Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 314,
@@ -5181,7 +5794,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:53.613Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 315,
@@ -5195,7 +5810,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:56.448Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 316,
@@ -5209,7 +5826,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:57.355Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 317,
@@ -5223,7 +5842,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:58.501Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 318,
@@ -5237,7 +5858,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:17:59.383Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 319,
@@ -5251,7 +5874,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:00.197Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 320,
@@ -5265,7 +5890,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:01.376Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 321,
@@ -5279,7 +5906,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:02.546Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 322,
@@ -5293,7 +5922,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:03.234Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 323,
@@ -5307,7 +5938,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:04.053Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 324,
@@ -5321,7 +5954,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:04.776Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 325,
@@ -5335,7 +5970,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:05.785Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 326,
@@ -5349,7 +5986,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:06.711Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 327,
@@ -5360,17 +5999,29 @@
     "accessCode": "6s-EDUCR-70::jOYsvWqD03HN6uzJjmAfnw",
     "redemptionStatus": "Yes",
     "originalMilestone": "No Milestone",
-    "completedCount": 1,
+    "completedCount": 2,
     "completedBadges": [
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 29, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a695ed0-0491-4893-9aba-1fd5686f57ad/badges/29232541"
+      },
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 24, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a695ed0-0491-4893-9aba-1fd5686f57ad/badges/29085834"
       }
     ],
-    "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "totalProfileBadges": 2,
+    "lastScrapedAt": "2026-10-31T16:19:23.196Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 328,
@@ -5384,7 +6035,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:07.414Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 329,
@@ -5398,7 +6051,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:08.357Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 330,
@@ -5412,7 +6067,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:09.119Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 331,
@@ -5507,7 +6164,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-10-31T16:06:33.865Z",
+    "lastScrapedAt": "2026-10-31T16:19:14.335Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -5523,7 +6180,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:10.037Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 333,
@@ -5537,7 +6196,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:10.932Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 334,
@@ -5551,7 +6212,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:11.624Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 335,
@@ -5565,7 +6228,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:12.495Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 336,
@@ -5579,7 +6244,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:13.283Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 337,
@@ -5593,7 +6260,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:14.026Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 338,
@@ -5607,7 +6276,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:14.745Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 339,
@@ -5621,7 +6292,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:15.490Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 340,
@@ -5635,7 +6308,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:16.212Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 341,
@@ -5646,10 +6321,21 @@
     "accessCode": "6s-EDUCR-70::k27KfUJ978BlnvDH_xvCsA",
     "redemptionStatus": "Yes",
     "originalMilestone": "No Milestone",
-    "completedCount": 0,
-    "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "completedCount": 1,
+    "completedBadges": [
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Oct 29, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/59ad4113-4f2b-458e-a92a-d488d2174dd8/badges/29211702"
+      }
+    ],
+    "totalProfileBadges": 2,
+    "lastScrapedAt": "2026-10-31T16:19:34.511Z",
+    "extraBadges": [],
+    "extraBadgesCount": 1
   },
   {
     "id": 342,
@@ -5665,12 +6351,16 @@
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 26, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/c7db0df1-11e4-417c-8461-13ced1db6f6b/badges/29141856"
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:19:35.329Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 343,
@@ -5684,7 +6374,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:17.198Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 344,
@@ -5698,7 +6390,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:18.006Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 345,
@@ -5709,10 +6403,37 @@
     "accessCode": "6s-EDUCR-70::8QSf6DLSIFhSlOBYNTaTHA",
     "redemptionStatus": "No",
     "originalMilestone": "No Milestone",
-    "completedCount": 0,
-    "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "completedCount": 3,
+    "completedBadges": [
+      {
+        "name": "Analyze Images with the Cloud Vision API",
+        "normalizedName": "analyze images with the cloud vision api",
+        "order": 5,
+        "earnedDate": "Earned Oct 13, 2024 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/SKhZvKVw%2Fm%2Fna2irfgE7f4Pe5bQh2g9mNp6f5CkYcvg%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/68f410bd-f54a-495e-812c-c60bd1c98da2/badges/12033920"
+      },
+      {
+        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+        "normalizedName": "implement speech and language solutions with pre-trained apis",
+        "order": 3,
+        "earnedDate": "Earned Oct 11, 2024 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/myv1oFfj3%2Bs%2FIBG9Er41VKuROqTZkAOWR398cyx%2BtPw%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/68f410bd-f54a-495e-812c-c60bd1c98da2/badges/11999424"
+      },
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Oct  5, 2024 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Zh524Oah%2BBH1EpgjW798TsWtdSdKZPK4oy2yOHr7O2w%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/68f410bd-f54a-495e-812c-c60bd1c98da2/badges/11876899"
+      }
+    ],
+    "totalProfileBadges": 19,
+    "lastScrapedAt": "2026-10-31T16:19:22.326Z",
+    "extraBadges": [],
+    "extraBadgesCount": 16
   },
   {
     "id": 346,
@@ -5726,7 +6447,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:18.779Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 347,
@@ -5740,7 +6463,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:19.615Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 348,
@@ -5754,7 +6479,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:20.385Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 349,
@@ -5768,7 +6495,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:21.161Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 350,
@@ -5782,7 +6511,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:21.839Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 351,
@@ -5796,7 +6527,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:22.674Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 352,
@@ -5810,7 +6543,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:23.445Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 353,
@@ -5824,7 +6559,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:24.204Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 354,
@@ -5838,7 +6575,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-10-31T16:06:26.430Z"
+    "lastScrapedAt": "2026-10-31T16:18:28.334Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 355,
@@ -5852,7 +6591,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-10-31T16:06:28.530Z"
+    "lastScrapedAt": "2026-10-31T16:18:29.023Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 356,
@@ -5866,7 +6607,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-10-31T16:06:32.117Z"
+    "lastScrapedAt": "2026-10-31T16:18:29.817Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 357,
@@ -5880,7 +6623,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-10-31T16:06:35.008Z"
+    "lastScrapedAt": "2026-10-31T16:18:30.577Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 358,
@@ -5894,7 +6639,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-10-31T16:06:41.699Z"
+    "lastScrapedAt": "2026-10-31T16:18:31.513Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 359,
@@ -5908,7 +6655,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-10-31T16:06:43.911Z"
+    "lastScrapedAt": "2026-10-31T16:18:32.579Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 360,
@@ -5922,7 +6671,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-10-31T16:06:47.774Z"
+    "lastScrapedAt": "2026-10-31T16:18:33.491Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 361,
@@ -5936,7 +6687,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:34.254Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 362,
@@ -5950,7 +6703,9 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:18:35.053Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 363,
@@ -5963,7 +6718,9 @@
     "originalMilestone": "No Milestone",
     "completedCount": 0,
     "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "totalProfileBadges": 1,
+    "lastScrapedAt": "2026-10-31T16:18:35.844Z",
+    "extraBadges": [],
+    "extraBadgesCount": 1
   }
 ]
