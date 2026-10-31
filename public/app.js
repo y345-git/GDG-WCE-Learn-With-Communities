@@ -18,63 +18,9 @@ let state = {
 
 // Initialize Application
 document.addEventListener('DOMContentLoaded', async () => {
-    initAmbientCursorSpotlight();
     await loadInitialData();
     startRealtimePolling();
 });
-
-// Ambient Google 4-Color Cursor Spotlight (Subtle lerp follow)
-function initAmbientCursorSpotlight() {
-    const spotlight = document.getElementById('ambientCursorSpotlight');
-    if (!spotlight) return;
-
-    let targetX = window.innerWidth / 2;
-    let targetY = window.innerHeight / 2;
-    let currentX = targetX;
-    let currentY = targetY;
-    let isMoving = false;
-    let isVisible = false;
-
-    window.addEventListener('mousemove', (e) => {
-        targetX = e.clientX;
-        targetY = e.clientY;
-
-        if (!isVisible) {
-            isVisible = true;
-            spotlight.style.opacity = '1';
-        }
-
-        if (!isMoving) {
-            isMoving = true;
-            requestAnimationFrame(updateSpotlight);
-        }
-    }, { passive: true });
-
-    document.addEventListener('mouseleave', () => {
-        isVisible = false;
-        spotlight.style.opacity = '0';
-    });
-
-    document.addEventListener('mouseenter', () => {
-        isVisible = true;
-        spotlight.style.opacity = '1';
-    });
-
-    function updateSpotlight() {
-        const dx = targetX - currentX;
-        const dy = targetY - currentY;
-        currentX += dx * 0.22;
-        currentY += dy * 0.22;
-
-        spotlight.style.transform = `translate3d(${currentX - 95}px, ${currentY - 95}px, 0)`;
-
-        if (Math.abs(dx) > 0.2 || Math.abs(dy) > 0.2) {
-            requestAnimationFrame(updateSpotlight);
-        } else {
-            isMoving = false;
-        }
-    }
-}
 
 // Dark Mode Toggle
 function toggleDarkMode() {
@@ -458,7 +404,7 @@ function renderTableRow(p, rank) {
                     <div class="flex items-center justify-between text-[11px] mb-1">
                         <span class="font-black text-slate-800 dark:text-slate-200 font-mono">${count}/10</span>
                         ${isCompletedAll 
-                            ? `<span class="font-black text-[10px] google-gradient-text uppercase tracking-wider">100% All 10</span>`
+                            ? `<span class="font-extrabold text-[11px] google-gradient-text">100% Complete</span>`
                             : `<span class="text-slate-400 dark:text-slate-500 font-semibold">${pct}%</span>`
                         }
                     </div>
@@ -569,7 +515,7 @@ function renderParticipantCard(p) {
                     <div class="flex items-center justify-between text-xs mb-1.5">
                         <span class="font-bold text-slate-600 dark:text-slate-400">Workshop Track:</span>
                         ${isCompletedAll 
-                            ? `<span class="font-black text-xs google-gradient-text flex items-center gap-1">10 / 10 • 100% Google</span>`
+                            ? `<span class="font-extrabold text-xs google-gradient-text">10 / 10 • 100% Complete</span>`
                             : `<span class="font-black text-slate-900 dark:text-white font-mono">${count} / 10 <span class="text-slate-400 font-normal">(${pct}%)</span></span>`
                         }
                     </div>
@@ -655,7 +601,7 @@ function renderModalContent(p) {
     document.getElementById('modalCount').textContent = `${count} / 10`;
     const modalBar = document.getElementById('modalProgressBar');
     if (count >= 10) {
-        document.getElementById('modalPercent').innerHTML = `<span class="font-black google-gradient-text">100% Completed • Official T-Shirt Achieved</span>`;
+        document.getElementById('modalPercent').innerHTML = `<span class="font-extrabold text-xs google-gradient-text">100% Complete • Stage 2 T-Shirt Achieved</span>`;
         modalBar.className = 'h-2.5 rounded-full google-progress-100 smooth-progress';
     } else {
         document.getElementById('modalPercent').textContent = `${pct}% Complete`;
