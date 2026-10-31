@@ -27,18 +27,22 @@ try {
     console.error('[Server] Error loading participants.json:', e);
 }
 
-// Save store to disk (throttled)
+// Save store to disk (throttled & atomic for Windows filesystem stability)
 let saveTimer = null;
 function saveStoreToDisk() {
     if (saveTimer) return;
     saveTimer = setTimeout(() => {
         saveTimer = null;
         try {
-            fs.writeFileSync(DATA_FILE, JSON.stringify(participantsStore, null, 2), 'utf-8');
+            const tempFile = `${DATA_FILE}.tmp`;
+            fs.writeFileSync(tempFile, JSON.stringify(participantsStore, null, 2), 'utf-8');
+            fs.renameSync(tempFile, DATA_FILE);
         } catch (e) {
-            console.error('[Server] Error writing participants to disk:', e);
+            try {
+                fs.writeFileSync(DATA_FILE, JSON.stringify(participantsStore, null, 2), 'utf-8');
+            } catch (retryErr) {}
         }
-    }, 5000);
+    }, 4000);
 }
 
 // Server-Side Continuous Background Live Scraper
