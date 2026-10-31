@@ -1,7 +1,5 @@
-// Cloud N Beyond Workshop — GDG On Campus WCE Live Tracker
-// High-Performance Silent Sync Engine
-
-const LOCAL_STORAGE_KEY = 'gdgc_wce_cloud_n_beyond_cache_v5';
+// Cloud N Beyond Workshop — GDG On Campus WCE
+// Centralized Real-Time Live Sync & Reactive Frontend
 
 let state = {
     participants: [],
@@ -12,29 +10,26 @@ let state = {
     sortBy: 'count_desc',
     viewMode: 'table', // Default to ranked leaderboard
     modalParticipantId: null,
+    currentlySyncingId: null,
 
-    // High-Speed Background Sync
-    autoSyncEnabled: true,
-    syncQueue: [],
-    syncingSet: new Set(),
-    syncedCount: 0,
-    totalToSync: 0,
-    workerPoolSize: 6, // 6 concurrent workers with staggering
-    activeWorkers: 0,
-
-    // Performance throttles
-    needsRender: false,
-    renderThrottleTimer: null,
-    storageSaveTimer: null,
+    // Real-Time Polling Timer
+    realtimePollTimer: null,
 };
 
 // Initialize Application
 document.addEventListener('DOMContentLoaded', async () => {
     await loadInitialData();
-    initAutoSyncQueue();
+    startRealtimePolling();
 });
 
-// Load Initial Data
+// Dark Mode Toggle
+function toggleDarkMode() {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    lucide.createIcons();
+}
+
+// Load Initial Data (Centralized Server API)
 async function loadInitialData() {
     try {
         // 1. Fetch Target Badges
@@ -42,31 +37,72 @@ async function loadInitialData() {
         state.targetBadges = await bResp.json();
         renderCurriculumModalContent();
 
-        // 2. Fetch Participants from localStorage cache first
-        const cached = localStorage.getItem(LOCAL_STORAGE_KEY);
-        if (cached) {
-            try {
-                const parsed = JSON.parse(cached);
-                if (Array.isArray(parsed) && parsed.length > 0) {
-                    state.participants = parsed;
-                }
-            } catch (e) {
-                console.warn('Cache parse error:', e);
-            }
-        }
-
-        // If no cache, load baseline JSON
-        if (!state.participants || state.participants.length === 0) {
-            const pResp = await fetch('/data/participants.json');
-            state.participants = await pResp.json();
-        }
-
-        updateStats();
-        renderParticipants();
+        // 2. Fetch Centralized Real-Time Participants from Server API
+        await fetchCentralizedParticipants();
 
     } catch (err) {
         console.error('Error loading initial data:', err);
     }
+}
+
+// Fetch Centralized Participants from /api/participants
+async function fetchCentralizedParticipants() {
+    try {
+        const pResp = await fetch('/api/participants');
+        const data = await pResp.json();
+
+        if (data && data.success && Array.isArray(data.participants)) {
+            const prevLength = state.participants.length;
+            state.participants = data.participants;
+            state.currentlySyncingId = data.currentlySyncingId || null;
+
+            updateStats();
+            renderParticipants();
+        }
+    } catch (e) {
+        console.warn('Real-time sync poll error:', e);
+    }
+}
+
+// Start Real-Time Background Polling (Every 4 seconds, silent, zero lag)
+function startRealtimePolling() {
+    if (state.realtimePollTimer) clearInterval(state.realtimePollTimer);
+    state.realtimePollTimer = setInterval(async () => {
+        try {
+            const pResp = await fetch('/api/participants');
+            const data = await pResp.json();
+
+            if (data && data.success && Array.isArray(data.participants)) {
+                // Check if any counts changed
+                let hasChanges = false;
+                if (state.participants.length !== data.participants.length) {
+                    hasChanges = true;
+                } else {
+                    for (let i = 0; i < data.participants.length; i++) {
+                        if (state.participants[i].completedCount !== data.participants[i].completedCount) {
+                            hasChanges = true;
+                            break;
+                        }
+                    }
+                }
+
+                state.participants = data.participants;
+                const prevSyncId = state.currentlySyncingId;
+                state.currentlySyncId = data.currentlySyncingId || null;
+
+                if (hasChanges || prevSyncId !== state.currentlySyncingId) {
+                    updateStats();
+                    renderParticipants();
+
+                    // If modal is open for a changed student, update modal
+                    if (state.modalParticipantId) {
+                        const cur = state.participants.find(p => p.id === state.modalParticipantId);
+                        if (cur) renderModalContent(cur);
+                    }
+                }
+            }
+        } catch (err) {}
+    }, 4000);
 }
 
 // Swag Rewards Helper (Clean: only T-Shirt at 10, only Bottle at 5)
@@ -75,7 +111,7 @@ function getSwagRewardInfo(count) {
         return {
             stage: 'Stage 2',
             reward: 'T-Shirt',
-            badgeClass: 'bg-purple-100 text-purple-900 border-purple-200',
+            badgeClass: 'bg-purple-100 dark:bg-purple-900/60 text-purple-900 dark:text-purple-200 border-purple-200 dark:border-purple-800',
             pillLabel: '👕 T-Shirt',
             isTShirt: true,
             isBottle: false
@@ -84,7 +120,7 @@ function getSwagRewardInfo(count) {
         return {
             stage: 'Stage 1',
             reward: 'Bottle',
-            badgeClass: 'bg-emerald-100 text-emerald-900 border-emerald-200',
+            badgeClass: 'bg-emerald-100 dark:bg-emerald-900/60 text-emerald-900 dark:text-emerald-200 border-emerald-200 dark:border-emerald-800',
             pillLabel: '🍼 Bottle',
             isTShirt: false,
             isBottle: true
@@ -94,7 +130,7 @@ function getSwagRewardInfo(count) {
         return {
             stage: 'In Progress',
             reward: `Needs ${needed} for Bottle`,
-            badgeClass: 'bg-slate-100 text-slate-700 border-slate-200',
+            badgeClass: 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700',
             pillLabel: `${needed} to Bottle 🍼`,
             isTShirt: false,
             isBottle: false
@@ -103,7 +139,7 @@ function getSwagRewardInfo(count) {
     return {
         stage: 'Not Started',
         reward: 'Needs 5 for Bottle',
-        badgeClass: 'bg-slate-50 text-slate-400 border-slate-200',
+        badgeClass: 'bg-slate-50 dark:bg-slate-800/40 text-slate-400 dark:text-slate-500 border-slate-200 dark:border-slate-700/60',
         pillLabel: 'Not Started',
         isTShirt: false,
         isBottle: false
@@ -134,12 +170,11 @@ function updateStats() {
     document.getElementById('kpiTShirt').textContent = tshirts;
     document.getElementById('kpiBottle').textContent = bottles;
     document.getElementById('kpiInProg').textContent = inProg;
-    document.getElementById('kpiTotalBadges').textContent = totalBadges;
     
     const avg = total > 0 ? (totalBadges / total).toFixed(1) : 0;
     const avgPct = total > 0 ? ((totalBadges / (total * 10)) * 100).toFixed(1) : 0;
-    document.getElementById('kpiAvgBadges').textContent = `${avg} avg / student`;
-    document.getElementById('kpiCompletionRate').textContent = `${avgPct}% Workshop Completion`;
+    document.getElementById('kpiCompletionRate').textContent = `${avgPct}%`;
+    document.getElementById('kpiTotalBadges').textContent = `${totalBadges} badges completed`;
 
     // Filter pill numbers
     document.getElementById('countPillAll').textContent = total;
@@ -173,28 +208,28 @@ function renderCurriculumModalContent() {
         const pct = Math.round((completedCount / totalStudents) * 100);
 
         return `
-            <div class="p-3.5 rounded-2xl border border-slate-200/90 bg-white hover:border-slate-300 transition-all flex items-center justify-between gap-3">
+            <div class="p-3.5 rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-800/80 hover:border-slate-300 transition-all flex items-center justify-between gap-3">
                 <div class="flex items-start gap-3 min-w-0">
-                    <div class="w-7 h-7 rounded-full bg-purple-50 text-purple-700 border border-purple-200 flex items-center justify-center font-black text-xs shrink-0 mt-0.5">
+                    <div class="w-7 h-7 rounded-full bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 flex items-center justify-center font-black text-xs shrink-0 mt-0.5">
                         ${tb.order}
                     </div>
                     <div class="min-w-0">
-                        <div class="font-extrabold text-slate-800 text-xs leading-snug">
+                        <div class="font-extrabold text-slate-800 dark:text-white text-xs leading-snug">
                             ${escapeHtml(tb.name)}
                         </div>
-                        <div class="flex items-center gap-2 mt-1 text-[11px] text-slate-500">
+                        <div class="flex items-center gap-2 mt-1 text-[11px] text-slate-500 dark:text-slate-400">
                             <span>${tb.credits} Credits required</span>
                             <span>•</span>
-                            <span class="font-bold text-slate-700">${completedCount} completed (${pct}%)</span>
+                            <span class="font-bold text-slate-700 dark:text-slate-200">${completedCount} completed (${pct}%)</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex items-center gap-2 shrink-0">
-                    <button onclick="toggleBadgeFilter('${norm}'); closeCurriculumModal();" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">
+                    <button onclick="toggleBadgeFilter('${norm}'); closeCurriculumModal();" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 text-slate-700 dark:text-slate-200 transition-all">
                         Filter
                     </button>
-                    <a href="${tb.url}" target="_blank" class="p-1 rounded-lg text-slate-400 hover:text-purple-700 transition-colors">
+                    <a href="${tb.url}" target="_blank" class="p-1 rounded-lg text-slate-400 hover:text-purple-700 dark:hover:text-purple-400 transition-colors">
                         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     </a>
                 </div>
@@ -264,27 +299,6 @@ function getFilteredAndSortedParticipants() {
     return list;
 }
 
-// Scheduled Render (Throttled for zero lag)
-function scheduleRender() {
-    if (state.renderThrottleTimer) return;
-    state.renderThrottleTimer = setTimeout(() => {
-        state.renderThrottleTimer = null;
-        renderParticipants();
-        updateStats();
-    }, 350); // Updates at most ~3 times per second
-}
-
-// Debounced Storage Save
-function scheduleStorageSave() {
-    if (state.storageSaveTimer) return;
-    state.storageSaveTimer = setTimeout(() => {
-        state.storageSaveTimer = null;
-        try {
-            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state.participants));
-        } catch (e) {}
-    }, 4000);
-}
-
 // Render Participants (Leaderboard Table or Grid)
 function renderParticipants() {
     const list = getFilteredAndSortedParticipants();
@@ -316,12 +330,12 @@ function getInitials(name) {
     return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 }
 
-// Render Table Row for Leaderboard (Fast, pure HTML strings)
+// Render Table Row for Leaderboard (Fast, pure HTML strings, Awwwards styling)
 function renderTableRow(p, rank) {
     const count = p.completedCount || 0;
     const pct = Math.round((count / 10) * 100);
     const completedSet = new Set((p.completedBadges || []).map(b => (b.normalizedName || '').toLowerCase()));
-    const isCurrentlySyncing = state.syncingSet.has(p.id);
+    const isCurrentlySyncing = (state.currentlySyncingId === p.id);
     const swag = getSwagRewardInfo(count);
 
     // Rank Medal / Icon
@@ -329,7 +343,7 @@ function renderTableRow(p, rank) {
     if (rank === 1 && count > 0) rankDisplay = '<span class="text-base" title="Rank 1">🥇</span>';
     else if (rank === 2 && count > 0) rankDisplay = '<span class="text-base" title="Rank 2">🥈</span>';
     else if (rank === 3 && count > 0) rankDisplay = '<span class="text-base" title="Rank 3">🥉</span>';
-    else rankDisplay = `<span class="font-bold font-mono text-slate-400">#${rank}</span>`;
+    else rankDisplay = `<span class="font-bold font-mono text-slate-400 dark:text-slate-500">#${rank}</span>`;
 
     // 10 Mini Track Dots
     const dotsHtml = (state.targetBadges || []).map((tb, idx) => {
@@ -338,7 +352,7 @@ function renderTableRow(p, rank) {
         return `
             <span class="has-tooltip inline-block">
                 <span class="inline-flex items-center justify-center w-4 h-4 rounded-full text-[9px] font-black ${
-                    isDone ? 'bg-[#34a853] text-white shadow-2xs' : 'bg-slate-100 text-slate-300'
+                    isDone ? 'bg-[#34a853] text-white shadow-2xs' : 'bg-slate-100 dark:bg-slate-700 text-slate-300 dark:text-slate-500'
                 }">
                     ${isDone ? '✓' : (idx + 1)}
                 </span>
@@ -348,37 +362,37 @@ function renderTableRow(p, rank) {
     }).join('');
 
     return `
-        <tr id="row-p-${p.id}" class="hover:bg-slate-50/80 transition-colors">
+        <tr id="row-p-${p.id}" class="hover:bg-slate-50/80 dark:hover:bg-slate-800/50 transition-colors">
             <td class="py-3.5 px-4 text-center">
                 ${rankDisplay}
             </td>
             <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2.5">
-                    <div class="w-8 h-8 rounded-xl bg-slate-100 text-slate-700 font-black text-xs flex items-center justify-center shrink-0 border border-slate-200">
+                    <div class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-black text-xs flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700">
                         ${getInitials(p.name)}
                     </div>
                     <div class="min-w-0">
-                        <div class="font-extrabold text-slate-900 truncate leading-snug flex items-center gap-1.5">
+                        <div class="font-extrabold text-slate-900 dark:text-white truncate leading-snug flex items-center gap-1.5">
                             <span class="truncate">${escapeHtml(p.name)}</span>
                             <!-- Sync spinning icon appears ONLY if currently syncing -->
                             ${isCurrentlySyncing ? `
-                                <svg class="animate-spin h-3.5 w-3.5 text-purple-600 shrink-0 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <svg class="animate-spin h-3.5 w-3.5 text-purple-600 dark:text-purple-400 shrink-0 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
                             ` : ''}
                         </div>
-                        <div class="text-[11px] text-slate-400 font-mono truncate">${escapeHtml(p.email)}</div>
+                        <div class="text-[11px] text-slate-400 dark:text-slate-500 font-mono truncate">${escapeHtml(p.email)}</div>
                     </div>
                 </div>
             </td>
             <td class="py-3.5 px-3">
                 <div class="w-28">
                     <div class="flex items-center justify-between text-[11px] mb-1">
-                        <span class="font-black text-slate-800 font-mono">${count}/10</span>
-                        <span class="text-slate-400 font-semibold">${pct}%</span>
+                        <span class="font-black text-slate-800 dark:text-slate-200 font-mono">${count}/10</span>
+                        <span class="text-slate-400 dark:text-slate-500 font-semibold">${pct}%</span>
                     </div>
-                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                    <div class="w-full bg-slate-100 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
                         <div class="h-1.5 rounded-full ${count >= 10 ? 'bg-purple-600' : count >= 5 ? 'bg-emerald-600' : 'bg-[#1a73e8]'} smooth-progress" style="width: ${pct}%"></div>
                     </div>
                 </div>
@@ -389,16 +403,16 @@ function renderTableRow(p, rank) {
                 </span>
             </td>
             <td class="py-3.5 px-2 text-center">
-                <div class="inline-flex items-center gap-1 bg-slate-50 p-1 rounded-xl border border-slate-200/60">
+                <div class="inline-flex items-center gap-1 bg-slate-50 dark:bg-slate-800 p-1 rounded-xl border border-slate-200/60 dark:border-slate-700/60">
                     ${dotsHtml}
                 </div>
             </td>
             <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-1.5">
-                    <a href="${p.profileUrl}" target="_blank" title="Skills Profile" class="p-1.5 rounded-lg text-slate-400 hover:text-purple-600 hover:bg-slate-100 transition-colors inline-flex items-center">
+                    <a href="${p.profileUrl}" target="_blank" title="Skills Profile" class="p-1.5 rounded-lg text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-flex items-center">
                         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     </a>
-                    <button onclick="openModal(${p.id})" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
+                    <button onclick="openModal(${p.id})" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors">
                         Details
                     </button>
                 </div>
@@ -412,7 +426,7 @@ function renderParticipantCard(p) {
     const count = p.completedCount || 0;
     const pct = Math.round((count / 10) * 100);
     const initials = getInitials(p.name);
-    const isCurrentlySyncing = state.syncingSet.has(p.id);
+    const isCurrentlySyncing = (state.currentlySyncingId === p.id);
     const swag = getSwagRewardInfo(count);
 
     const completedSet = new Set((p.completedBadges || []).map(b => (b.normalizedName || '').toLowerCase()));
@@ -424,7 +438,7 @@ function renderParticipantCard(p) {
         return `
             <div class="has-tooltip inline-block">
                 <div class="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${
-                    isDone ? 'bg-[#34a853] text-white shadow-2xs' : 'bg-slate-100 text-slate-400 border border-slate-200'
+                    isDone ? 'bg-[#34a853] text-white shadow-2xs' : 'bg-slate-100 dark:bg-slate-700 text-slate-400 border border-slate-200 dark:border-slate-600'
                 }">
                     ${isDone ? '✓' : (idx + 1)}
                 </div>
@@ -437,25 +451,25 @@ function renderParticipantCard(p) {
     }).join('');
 
     return `
-        <div id="p-card-${p.id}" class="bg-white rounded-3xl p-4 border border-slate-200/90 card-shadow transition-all flex flex-col justify-between relative overflow-hidden">
+        <div id="p-card-${p.id}" class="aww-card rounded-3xl p-5 transition-all flex flex-col justify-between relative overflow-hidden">
             <div>
                 <!-- Top Row: Avatar, Name, Email, Swag Badge -->
                 <div class="flex items-start justify-between gap-3">
                     <div class="flex items-center gap-3 min-w-0">
-                        <div class="w-10 h-10 rounded-2xl bg-slate-100 text-slate-700 font-black text-xs flex items-center justify-center shrink-0 border border-slate-200">
+                        <div class="w-10 h-10 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-black text-xs flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700">
                             ${initials}
                         </div>
                         <div class="min-w-0">
-                            <h3 class="font-extrabold text-slate-900 text-xs truncate leading-snug flex items-center gap-1.5" title="${escapeHtml(p.name)}">
+                            <h3 class="font-extrabold text-slate-900 dark:text-white text-xs truncate leading-snug flex items-center gap-1.5" title="${escapeHtml(p.name)}">
                                 <span>${escapeHtml(p.name)}</span>
                                 ${isCurrentlySyncing ? `
-                                    <svg class="animate-spin h-3.5 w-3.5 text-purple-600 shrink-0 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <svg class="animate-spin h-3.5 w-3.5 text-purple-600 dark:text-purple-400 shrink-0 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                     </svg>
                                 ` : ''}
                             </h3>
-                            <p class="text-[11px] text-slate-400 font-mono truncate" title="${escapeHtml(p.email)}">
+                            <p class="text-[11px] text-slate-400 dark:text-slate-500 font-mono truncate" title="${escapeHtml(p.email)}">
                                 ${escapeHtml(p.email)}
                             </p>
                         </div>
@@ -470,19 +484,19 @@ function renderParticipantCard(p) {
                 <!-- Progress Bar -->
                 <div class="mt-4">
                     <div class="flex items-center justify-between text-xs mb-1">
-                        <span class="font-bold text-slate-600">Workshop Track:</span>
-                        <span class="font-black text-slate-900 font-mono">${count} / 10 <span class="text-slate-400 font-normal">(${pct}%)</span></span>
+                        <span class="font-bold text-slate-600 dark:text-slate-400">Workshop Track:</span>
+                        <span class="font-black text-slate-900 dark:text-white font-mono">${count} / 10 <span class="text-slate-400 font-normal">(${pct}%)</span></span>
                     </div>
-                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                    <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
                         <div class="h-2 rounded-full ${count >= 10 ? 'bg-purple-600' : count >= 5 ? 'bg-emerald-600' : 'bg-[#1a73e8]'} smooth-progress" style="width: ${pct}%"></div>
                     </div>
                 </div>
 
                 <!-- 10 Badges Mini Ribbon -->
-                <div class="mt-3.5 pt-3 border-t border-slate-100">
+                <div class="mt-3.5 pt-3 border-t border-slate-100 dark:border-slate-800">
                     <div class="text-[10px] text-slate-400 uppercase font-bold mb-1.5 flex items-center justify-between">
                         <span>10 Workshop Badges</span>
-                        ${p.lastScrapedAt ? `<span class="text-emerald-600 font-medium lowercase">verified</span>` : ''}
+                        ${p.lastScrapedAt ? `<span class="text-emerald-600 dark:text-emerald-400 font-medium lowercase">verified</span>` : ''}
                     </div>
                     <div class="flex items-center justify-between gap-1">
                         ${dotsHtml}
@@ -491,13 +505,13 @@ function renderParticipantCard(p) {
             </div>
 
             <!-- Bottom Actions -->
-            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
-                <a href="${p.profileUrl}" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-slate-500 hover:text-purple-600 font-semibold transition-colors">
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                <a href="${p.profileUrl}" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-slate-500 dark:text-slate-400 hover:text-purple-600 font-semibold transition-colors">
                     <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     <span>Profile</span>
                 </a>
 
-                <button onclick="openModal(${p.id})" class="px-3 py-1 rounded-xl text-[11px] font-bold bg-slate-900 hover:bg-slate-800 text-white transition-all shadow-2xs">
+                <button onclick="openModal(${p.id})" class="px-3 py-1 rounded-xl text-[11px] font-bold bg-slate-900 dark:bg-purple-600 hover:bg-slate-800 text-white transition-all shadow-2xs">
                     Details
                 </button>
             </div>
@@ -505,118 +519,7 @@ function renderParticipantCard(p) {
     `;
 }
 
-// =========================================================================
-// HIGH-SPEED SMOOTH BACKGROUND SYNC (SILENT, ZERO LAG)
-// =========================================================================
-
-function initAutoSyncQueue() {
-    if (!state.autoSyncEnabled) return;
-
-    // Prioritized queue: active learners (>0) first, then remainder
-    const activeFirst = [...state.participants].sort((a, b) => (b.completedCount || 0) - (a.completedCount || 0));
-    state.syncQueue = activeFirst.map(p => p.id);
-    state.totalToSync = state.syncQueue.length;
-    state.syncedCount = 0;
-
-    // Launch worker pool with staggered start to keep UI thread 100% fluid
-    for (let i = 0; i < state.workerPoolSize; i++) {
-        setTimeout(() => processNextInQueue(), i * 60);
-    }
-}
-
-async function processNextInQueue() {
-    if (!state.autoSyncEnabled) return;
-
-    if (state.syncQueue.length === 0) {
-        // Complete cycle, rest 30s before re-checking
-        setTimeout(() => {
-            if (state.autoSyncEnabled) initAutoSyncQueue();
-        }, 30000);
-        return;
-    }
-
-    const nextId = state.syncQueue.shift();
-    const participant = state.participants.find(p => p.id === nextId);
-    if (!participant || !participant.profileUrl) {
-        return processNextInQueue();
-    }
-
-    state.syncingSet.add(participant.id);
-    state.activeWorkers++;
-
-    // Mark single row/card with spinning sync icon
-    updateSingleRowSyncState(participant.id, true);
-
-    try {
-        const result = await fetchLiveProfile(participant.profileUrl);
-        if (result && result.success) {
-            handleLiveScrapeUpdate(participant, result);
-        }
-    } catch (err) {
-        // Silent error handling
-    } finally {
-        state.syncingSet.delete(participant.id);
-        state.activeWorkers--;
-        state.syncedCount++;
-
-        // Clear sync icon from row
-        updateSingleRowSyncState(participant.id, false);
-
-        // Schedule next request with slight micro-delay for smooth 60fps rendering
-        setTimeout(() => processNextInQueue(), 40);
-    }
-}
-
-async function fetchLiveProfile(url) {
-    const resp = await fetch(`/api/scrape?url=${encodeURIComponent(url)}`);
-    return await resp.json();
-}
-
-// Update single row's sync spinner without full re-render
-function updateSingleRowSyncState(id, isSyncing) {
-    const row = document.getElementById(`row-p-${id}`);
-    if (!row) return;
-
-    const spinner = row.querySelector('.animate-spin');
-    if (isSyncing && !spinner) {
-        const nameContainer = row.querySelector('.font-extrabold.text-slate-900');
-        if (nameContainer) {
-            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-            svg.setAttribute('class', 'animate-spin h-3.5 w-3.5 text-purple-600 shrink-0 inline-block');
-            svg.setAttribute('viewBox', '0 0 24 24');
-            svg.setAttribute('fill', 'none');
-            svg.innerHTML = '<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>';
-            nameContainer.appendChild(svg);
-        }
-    } else if (!isSyncing && spinner) {
-        spinner.remove();
-    }
-}
-
-// Handle Scrape Update (Silent, debounced storage & render)
-function handleLiveScrapeUpdate(participant, result) {
-    const countChanged = (participant.completedCount !== result.completedCount);
-
-    participant.completedCount = result.completedCount || 0;
-    participant.completedBadges = result.completedBadges || [];
-    participant.totalProfileBadges = result.totalBadgesOnProfile || participant.completedCount;
-    participant.extraBadges = result.extraBadges || [];
-    participant.extraBadgesCount = result.extraBadgesCount || 0;
-    participant.lastScrapedAt = result.scrapedAt || new Date().toISOString();
-
-    // Debounced storage save
-    scheduleStorageSave();
-
-    // If badge count changed, schedule a throttled render so user sees progress immediately
-    if (countChanged) {
-        scheduleRender();
-    }
-
-    if (state.modalParticipantId === participant.id) {
-        renderModalContent(participant);
-    }
-}
-
+// Pause/Resume background sync
 function toggleAutoSync() {
     state.autoSyncEnabled = !state.autoSyncEnabled;
     const icon = document.getElementById('toggleSyncIcon');
@@ -627,11 +530,12 @@ function toggleAutoSync() {
         icon.setAttribute('data-lucide', 'pause');
         if (label) label.textContent = 'Live Sync Active';
         if (dot) dot.className = 'w-2 h-2 rounded-full bg-emerald-500 radar-dot shrink-0';
-        initAutoSyncQueue();
+        startRealtimePolling();
     } else {
         icon.setAttribute('data-lucide', 'play');
         if (label) label.textContent = 'Sync Paused';
         if (dot) dot.className = 'w-2 h-2 rounded-full bg-amber-400 shrink-0';
+        if (state.realtimePollTimer) clearInterval(state.realtimePollTimer);
     }
     lucide.createIcons();
 }
@@ -685,33 +589,33 @@ function renderModalContent(p) {
         const isDone = !!earned;
 
         return `
-            <div class="flex items-center justify-between p-3 rounded-2xl border ${isDone ? 'border-emerald-200 bg-emerald-50/50' : 'border-slate-200/90 bg-white'} shadow-2xs">
+            <div class="flex items-center justify-between p-3 rounded-2xl border ${isDone ? 'border-emerald-200 dark:border-emerald-800 bg-emerald-50/50 dark:bg-emerald-950/30' : 'border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-800/80'} shadow-2xs">
                 <div class="flex items-start gap-3 min-w-0 pr-3">
                     <div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-xs font-black ${
-                        isDone ? 'bg-[#34a853] text-white' : 'bg-slate-100 text-slate-400 border border-slate-200'
+                        isDone ? 'bg-[#34a853] text-white' : 'bg-slate-100 dark:bg-slate-700 text-slate-400 border border-slate-200 dark:border-slate-600'
                     }">
                         ${isDone ? '✓' : tb.order}
                     </div>
                     <div class="min-w-0">
-                        <div class="font-extrabold text-slate-800 text-xs leading-snug">
+                        <div class="font-extrabold text-slate-800 dark:text-white text-xs leading-snug">
                             ${escapeHtml(tb.name)}
                         </div>
-                        <div class="flex items-center gap-2 mt-0.5 text-[11px] text-slate-500">
+                        <div class="flex items-center gap-2 mt-0.5 text-[11px] text-slate-500 dark:text-slate-400">
                             <span>${tb.credits} Credits</span>
-                            ${isDone && earned.earnedDate ? `<span>•</span><span class="text-emerald-700 font-bold">🗓️ ${escapeHtml(earned.earnedDate)}</span>` : ''}
+                            ${isDone && earned.earnedDate ? `<span>•</span><span class="text-emerald-700 dark:text-emerald-400 font-bold">🗓️ ${escapeHtml(earned.earnedDate)}</span>` : ''}
                         </div>
                     </div>
                 </div>
 
                 <div class="shrink-0 flex items-center gap-2">
                     ${tb.url ? `
-                        <a href="${tb.url}" target="_blank" class="text-[11px] font-bold text-purple-700 hover:underline inline-flex items-center gap-0.5">
+                        <a href="${tb.url}" target="_blank" class="text-[11px] font-bold text-purple-700 dark:text-purple-400 hover:underline inline-flex items-center gap-0.5">
                             <span>Syllabus</span>
                             <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                         </a>
                     ` : ''}
                     <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold ${
-                        isDone ? 'bg-emerald-100 text-emerald-900 border border-emerald-300' : 'bg-slate-100 text-slate-500'
+                        isDone ? 'bg-emerald-100 dark:bg-emerald-900/60 text-emerald-900 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700' : 'bg-slate-100 dark:bg-slate-700 text-slate-500'
                     }">
                         ${isDone ? 'Completed' : 'Pending'}
                     </span>
@@ -741,10 +645,15 @@ async function syncCurrentModalStudent() {
     const p = state.participants.find(item => item.id === state.modalParticipantId);
     if (p) {
         try {
-            const res = await fetchLiveProfile(p.profileUrl);
+            const resp = await fetch(`/api/scrape?url=${encodeURIComponent(p.profileUrl)}&force=true`);
+            const res = await resp.json();
             if (res && res.success) {
-                handleLiveScrapeUpdate(p, res);
+                p.completedCount = res.completedCount || 0;
+                p.completedBadges = res.completedBadges || [];
+                p.lastScrapedAt = res.scrapedAt || new Date().toISOString();
                 renderModalContent(p);
+                updateStats();
+                renderParticipants();
             }
         } catch (e) {}
     }
@@ -820,16 +729,16 @@ function setViewMode(mode) {
     if (mode === 'grid') {
         grid.classList.remove('hidden');
         table.classList.add('hidden');
-        btnGrid.classList.add('bg-white', 'text-slate-800', 'shadow-2xs');
+        btnGrid.classList.add('bg-white', 'dark:bg-slate-700', 'text-slate-800', 'dark:text-white', 'shadow-2xs');
         btnGrid.classList.remove('text-slate-400');
-        btnTable.classList.remove('bg-white', 'text-slate-800', 'shadow-2xs');
+        btnTable.classList.remove('bg-white', 'dark:bg-slate-700', 'text-slate-800', 'dark:text-white', 'shadow-2xs');
         btnTable.classList.add('text-slate-400');
     } else {
         grid.classList.add('hidden');
         table.classList.remove('hidden');
-        btnTable.classList.add('bg-white', 'text-slate-800', 'shadow-2xs');
+        btnTable.classList.add('bg-white', 'dark:bg-slate-700', 'text-slate-800', 'dark:text-white', 'shadow-2xs');
         btnTable.classList.remove('text-slate-400');
-        btnGrid.classList.remove('bg-white', 'text-slate-800', 'shadow-2xs');
+        btnGrid.classList.remove('bg-white', 'dark:bg-slate-700', 'text-slate-800', 'dark:text-white', 'shadow-2xs');
         btnGrid.classList.add('text-slate-400');
     }
     renderParticipants();
@@ -848,8 +757,8 @@ function updateFilterNotice(count) {
 
     const desc = [];
     if (state.searchQuery) desc.push(`"${state.searchQuery}"`);
-    if (state.milestoneFilter === '10') desc.push('Stage 2: 👕 T-Shirt Winners (10 Badges)');
-    else if (state.milestoneFilter === 'bottle_stage') desc.push('Stage 1: 🍼 Bottle Winners (5-9 Badges)');
+    if (state.milestoneFilter === '10') desc.push('Stage 2: 👕 T-Shirt (10 Badges)');
+    else if (state.milestoneFilter === 'bottle_stage') desc.push('Stage 1: 🍼 Bottle (5-9 Badges)');
     else if (state.milestoneFilter === 'in_progress_total') desc.push('In Progress (1-4 Badges)');
     else if (state.milestoneFilter === 'not_started') desc.push('Not Started (0 Badges)');
 
@@ -874,7 +783,7 @@ function resetFilters() {
 }
 
 // =========================================================================
-// EXCEL EXPORT (CLIENT-SIDE VIA SHEETJS - ZERO SERVER REQUIRED)
+// EXCEL EXPORT (CLIENT-SIDE VIA SHEETJS)
 // =========================================================================
 
 function exportToExcel() {

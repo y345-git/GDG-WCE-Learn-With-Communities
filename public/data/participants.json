@@ -39,32 +39,42 @@
     "completedCount": 4,
     "completedBadges": [
       {
-        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
-        "normalizedName": "configure service accounts and iam roles for google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/702"
-      },
-      {
-        "name": "Create Your First Gemini Enterprise Application",
-        "normalizedName": "create your first gemini enterprise application",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1586/"
-      },
-      {
         "name": "Implement Speech and Language Solutions with Pre-trained APIs",
         "normalizedName": "implement speech and language solutions with pre-trained apis",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/700"
+        "order": 3,
+        "earnedDate": "Earned Oct 26, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/6f0a2c0c-588a-45ed-b893-1015b346719e/badges/29131640"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 26, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/6f0a2c0c-588a-45ed-b893-1015b346719e/badges/29131473"
       },
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 26, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/6f0a2c0c-588a-45ed-b893-1015b346719e/badges/29130778"
+      },
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Oct 26, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/L0e8u5bkhDYEvFV%2Bsx%2FfXsxQiz%2F%2FsAwAHrJOvwu9VJY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/6f0a2c0c-588a-45ed-b893-1015b346719e/badges/29130001"
       }
     ],
     "totalProfileBadges": 4,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:35.525Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 4,
@@ -150,60 +160,88 @@
       {
         "name": "Analyze Images with the Cloud Vision API",
         "normalizedName": "analyze images with the cloud vision api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/633"
+        "order": 5,
+        "earnedDate": "Earned Oct 14, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a6a8ff6-8541-4821-a095-1eaef1ade389/badges/28877577"
       },
       {
         "name": "Build a Website on Google Cloud",
         "normalizedName": "build a website on google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/638"
-      },
-      {
-        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
-        "normalizedName": "configure service accounts and iam roles for google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/702"
-      },
-      {
-        "name": "Create Your First Gemini Enterprise Application",
-        "normalizedName": "create your first gemini enterprise application",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1586/"
-      },
-      {
-        "name": "Develop AI-Powered Prototypes in Google AI Studio",
-        "normalizedName": "develop ai-powered prototypes in google ai studio",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1426"
+        "order": 6,
+        "earnedDate": "Earned Oct 13, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/vLbCm9dqTGstk0Ck0nY4zU8Z0ALwJpXi2i4OzMZAMxY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a6a8ff6-8541-4821-a095-1eaef1ade389/badges/28845357"
       },
       {
         "name": "Explore Generative AI in Agent Platform",
         "normalizedName": "explore generative ai in agent platform",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/959"
-      },
-      {
-        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
-        "normalizedName": "implement speech and language solutions with pre-trained apis",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/700"
-      },
-      {
-        "name": "The Basics of Google Cloud Compute",
-        "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 10,
+        "earnedDate": "Earned Oct 13, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Ep488ur7qy53c%2Fwb0D1OS%2BeWzeTrNgXPu2ZbDDurm3E%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a6a8ff6-8541-4821-a095-1eaef1ade389/badges/28843636"
       },
       {
         "name": "Using the Google Cloud Speech API",
         "normalizedName": "using the google cloud speech api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/756"
+        "order": 9,
+        "earnedDate": "Earned Oct 13, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/sugwT79SbI2u2hS9K4Pxd%2FXn7aFbHvZhTPhy4LaCMQg%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a6a8ff6-8541-4821-a095-1eaef1ade389/badges/28843274"
+      },
+      {
+        "name": "Store, Process, and Manage Data on Google Cloud - Console",
+        "normalizedName": "store, process, and manage data on google cloud - console",
+        "order": 8,
+        "earnedDate": "Earned Oct 13, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/%2FQCXEzViv64XY8tyFtMCHw7onppQaikKcCSnSEFbay0%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a6a8ff6-8541-4821-a095-1eaef1ade389/badges/28842873"
+      },
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Oct 13, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/ajd19cPiPee6d9M7LUQxm%2BnQ6VdHWkZ0G16%2F4SKfPa8%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a6a8ff6-8541-4821-a095-1eaef1ade389/badges/28841690"
+      },
+      {
+        "name": "Develop AI-Powered Prototypes in Google AI Studio",
+        "normalizedName": "develop ai-powered prototypes in google ai studio",
+        "order": 4,
+        "earnedDate": "Earned Oct 13, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a6a8ff6-8541-4821-a095-1eaef1ade389/badges/28841565"
+      },
+      {
+        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+        "normalizedName": "implement speech and language solutions with pre-trained apis",
+        "order": 3,
+        "earnedDate": "Earned Oct 13, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a6a8ff6-8541-4821-a095-1eaef1ade389/badges/28832259"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 13, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a6a8ff6-8541-4821-a095-1eaef1ade389/badges/28831017"
+      },
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Oct 13, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3a6a8ff6-8541-4821-a095-1eaef1ade389/badges/28830153"
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:26.451Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 10,
@@ -256,17 +294,37 @@
     "accessCode": "6s-EDUCR-70::XvkM-jFgJYsVC1LvZLLPXw",
     "redemptionStatus": "Yes",
     "originalMilestone": "No Milestone",
-    "completedCount": 1,
+    "completedCount": 3,
     "completedBadges": [
+      {
+        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+        "normalizedName": "implement speech and language solutions with pre-trained apis",
+        "order": 3,
+        "earnedDate": "Earned Oct 30, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/88cff255-72dc-4ba0-9537-35899cc7934a/badges/29269633"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 30, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/88cff255-72dc-4ba0-9537-35899cc7934a/badges/29250419"
+      },
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 19, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/88cff255-72dc-4ba0-9537-35899cc7934a/badges/28970657"
       }
     ],
-    "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "totalProfileBadges": 3,
+    "lastScrapedAt": "2026-10-31T16:06:38.765Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 14,
@@ -280,62 +338,90 @@
     "completedCount": 10,
     "completedBadges": [
       {
-        "name": "Analyze Images with the Cloud Vision API",
-        "normalizedName": "analyze images with the cloud vision api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/633"
-      },
-      {
-        "name": "Build a Website on Google Cloud",
-        "normalizedName": "build a website on google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/638"
-      },
-      {
-        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
-        "normalizedName": "configure service accounts and iam roles for google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/702"
-      },
-      {
-        "name": "Create Your First Gemini Enterprise Application",
-        "normalizedName": "create your first gemini enterprise application",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1586/"
-      },
-      {
-        "name": "Develop AI-Powered Prototypes in Google AI Studio",
-        "normalizedName": "develop ai-powered prototypes in google ai studio",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1426"
-      },
-      {
         "name": "Explore Generative AI in Agent Platform",
         "normalizedName": "explore generative ai in agent platform",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/959"
-      },
-      {
-        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
-        "normalizedName": "implement speech and language solutions with pre-trained apis",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/700"
-      },
-      {
-        "name": "The Basics of Google Cloud Compute",
-        "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 10,
+        "earnedDate": "Earned Oct 28, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Ep488ur7qy53c%2Fwb0D1OS%2BeWzeTrNgXPu2ZbDDurm3E%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/7fe9d40c-9ae7-4432-831d-05fbad94bd39/badges/29186254"
       },
       {
         "name": "Using the Google Cloud Speech API",
         "normalizedName": "using the google cloud speech api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/756"
+        "order": 9,
+        "earnedDate": "Earned Oct 27, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/sugwT79SbI2u2hS9K4Pxd%2FXn7aFbHvZhTPhy4LaCMQg%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/7fe9d40c-9ae7-4432-831d-05fbad94bd39/badges/29171523"
+      },
+      {
+        "name": "Store, Process, and Manage Data on Google Cloud - Console",
+        "normalizedName": "store, process, and manage data on google cloud - console",
+        "order": 8,
+        "earnedDate": "Earned Oct 26, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/%2FQCXEzViv64XY8tyFtMCHw7onppQaikKcCSnSEFbay0%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/7fe9d40c-9ae7-4432-831d-05fbad94bd39/badges/29140679"
+      },
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Oct 25, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/L0e8u5bkhDYEvFV%2Bsx%2FfXsxQiz%2F%2FsAwAHrJOvwu9VJY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/7fe9d40c-9ae7-4432-831d-05fbad94bd39/badges/29109791"
+      },
+      {
+        "name": "Build a Website on Google Cloud",
+        "normalizedName": "build a website on google cloud",
+        "order": 6,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/vLbCm9dqTGstk0Ck0nY4zU8Z0ALwJpXi2i4OzMZAMxY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/7fe9d40c-9ae7-4432-831d-05fbad94bd39/badges/29077874"
+      },
+      {
+        "name": "Analyze Images with the Cloud Vision API",
+        "normalizedName": "analyze images with the cloud vision api",
+        "order": 5,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/7fe9d40c-9ae7-4432-831d-05fbad94bd39/badges/29076548"
+      },
+      {
+        "name": "Develop AI-Powered Prototypes in Google AI Studio",
+        "normalizedName": "develop ai-powered prototypes in google ai studio",
+        "order": 4,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/7fe9d40c-9ae7-4432-831d-05fbad94bd39/badges/29075581"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/7fe9d40c-9ae7-4432-831d-05fbad94bd39/badges/29074098"
+      },
+      {
+        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+        "normalizedName": "implement speech and language solutions with pre-trained apis",
+        "order": 3,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/7fe9d40c-9ae7-4432-831d-05fbad94bd39/badges/29073150"
+      },
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Oct 14, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/7fe9d40c-9ae7-4432-831d-05fbad94bd39/badges/28861613"
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:27.707Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 15,
@@ -374,35 +460,61 @@
     "accessCode": "6s-EDUCR-70::GQCTWWghT8Bugyrt8rYUzw",
     "redemptionStatus": "Yes",
     "originalMilestone": "Milestone 1",
-    "completedCount": 4,
+    "completedCount": 6,
     "completedBadges": [
       {
-        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
-        "normalizedName": "configure service accounts and iam roles for google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/702"
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Oct 30, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/L0e8u5bkhDYEvFV%2Bsx%2FfXsxQiz%2F%2FsAwAHrJOvwu9VJY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/0b5f0f81-3d26-4763-b71b-7424d3c5af6e/badges/29251084"
       },
       {
-        "name": "Develop AI-Powered Prototypes in Google AI Studio",
-        "normalizedName": "develop ai-powered prototypes in google ai studio",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1426"
+        "name": "Analyze Images with the Cloud Vision API",
+        "normalizedName": "analyze images with the cloud vision api",
+        "order": 5,
+        "earnedDate": "Earned Oct 30, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/0b5f0f81-3d26-4763-b71b-7424d3c5af6e/badges/29250778"
       },
       {
         "name": "Implement Speech and Language Solutions with Pre-trained APIs",
         "normalizedName": "implement speech and language solutions with pre-trained apis",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/700"
+        "order": 3,
+        "earnedDate": "Earned Oct 28, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/0b5f0f81-3d26-4763-b71b-7424d3c5af6e/badges/29197391"
+      },
+      {
+        "name": "Develop AI-Powered Prototypes in Google AI Studio",
+        "normalizedName": "develop ai-powered prototypes in google ai studio",
+        "order": 4,
+        "earnedDate": "Earned Oct 28, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/0b5f0f81-3d26-4763-b71b-7424d3c5af6e/badges/29188985"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 27, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/0b5f0f81-3d26-4763-b71b-7424d3c5af6e/badges/29162136"
       },
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 15, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/0b5f0f81-3d26-4763-b71b-7424d3c5af6e/badges/28888050"
       }
     ],
-    "totalProfileBadges": 4,
-    "lastScrapedAt": null
+    "totalProfileBadges": 6,
+    "lastScrapedAt": "2026-10-31T16:06:36.627Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 18,
@@ -530,12 +642,16 @@
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 15, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/34755443-c5e3-4da2-8bb1-3e32762cbc0f/badges/28888292"
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:39.538Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 27,
@@ -549,62 +665,90 @@
     "completedCount": 10,
     "completedBadges": [
       {
-        "name": "Analyze Images with the Cloud Vision API",
-        "normalizedName": "analyze images with the cloud vision api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/633"
-      },
-      {
-        "name": "Build a Website on Google Cloud",
-        "normalizedName": "build a website on google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/638"
-      },
-      {
-        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
-        "normalizedName": "configure service accounts and iam roles for google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/702"
-      },
-      {
-        "name": "Create Your First Gemini Enterprise Application",
-        "normalizedName": "create your first gemini enterprise application",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1586/"
-      },
-      {
-        "name": "Develop AI-Powered Prototypes in Google AI Studio",
-        "normalizedName": "develop ai-powered prototypes in google ai studio",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1426"
-      },
-      {
         "name": "Explore Generative AI in Agent Platform",
         "normalizedName": "explore generative ai in agent platform",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/959"
-      },
-      {
-        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
-        "normalizedName": "implement speech and language solutions with pre-trained apis",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/700"
-      },
-      {
-        "name": "The Basics of Google Cloud Compute",
-        "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 10,
+        "earnedDate": "Earned Oct 27, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Ep488ur7qy53c%2Fwb0D1OS%2BeWzeTrNgXPu2ZbDDurm3E%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/73df5d73-6ca4-44de-8aba-849d5664c245/badges/29166977"
       },
       {
         "name": "Using the Google Cloud Speech API",
         "normalizedName": "using the google cloud speech api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/756"
+        "order": 9,
+        "earnedDate": "Earned Oct 27, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/sugwT79SbI2u2hS9K4Pxd%2FXn7aFbHvZhTPhy4LaCMQg%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/73df5d73-6ca4-44de-8aba-849d5664c245/badges/29165268"
+      },
+      {
+        "name": "Store, Process, and Manage Data on Google Cloud - Console",
+        "normalizedName": "store, process, and manage data on google cloud - console",
+        "order": 8,
+        "earnedDate": "Earned Oct 25, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/%2FQCXEzViv64XY8tyFtMCHw7onppQaikKcCSnSEFbay0%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/73df5d73-6ca4-44de-8aba-849d5664c245/badges/29112500"
+      },
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Oct 25, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/L0e8u5bkhDYEvFV%2Bsx%2FfXsxQiz%2F%2FsAwAHrJOvwu9VJY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/73df5d73-6ca4-44de-8aba-849d5664c245/badges/29112266"
+      },
+      {
+        "name": "Build a Website on Google Cloud",
+        "normalizedName": "build a website on google cloud",
+        "order": 6,
+        "earnedDate": "Earned Oct 25, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/vLbCm9dqTGstk0Ck0nY4zU8Z0ALwJpXi2i4OzMZAMxY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/73df5d73-6ca4-44de-8aba-849d5664c245/badges/29112231"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 25, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/73df5d73-6ca4-44de-8aba-849d5664c245/badges/29111770"
+      },
+      {
+        "name": "Analyze Images with the Cloud Vision API",
+        "normalizedName": "analyze images with the cloud vision api",
+        "order": 5,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/73df5d73-6ca4-44de-8aba-849d5664c245/badges/29057513"
+      },
+      {
+        "name": "Develop AI-Powered Prototypes in Google AI Studio",
+        "normalizedName": "develop ai-powered prototypes in google ai studio",
+        "order": 4,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/73df5d73-6ca4-44de-8aba-849d5664c245/badges/29056417"
+      },
+      {
+        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+        "normalizedName": "implement speech and language solutions with pre-trained apis",
+        "order": 3,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/73df5d73-6ca4-44de-8aba-849d5664c245/badges/29055462"
+      },
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Oct 17, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/73df5d73-6ca4-44de-8aba-849d5664c245/badges/28932299"
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:28.920Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 28,
@@ -634,12 +778,16 @@
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 25, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/c8f8b198-2567-4a21-8eb3-9f01382841e4/badges/29113198"
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:40.399Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 30,
@@ -779,26 +927,34 @@
     "completedCount": 3,
     "completedBadges": [
       {
-        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
-        "normalizedName": "configure service accounts and iam roles for google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/702"
-      },
-      {
         "name": "Implement Speech and Language Solutions with Pre-trained APIs",
         "normalizedName": "implement speech and language solutions with pre-trained apis",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/700"
+        "order": 3,
+        "earnedDate": "Earned Oct 25, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8212e3af-0959-4130-9e2a-08392f79c070/badges/29107968"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 17, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8212e3af-0959-4130-9e2a-08392f79c070/badges/28932059"
       },
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 14, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8212e3af-0959-4130-9e2a-08392f79c070/badges/28854088"
       }
     ],
     "totalProfileBadges": 3,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:37.470Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 40,
@@ -1173,17 +1329,93 @@
     "accessCode": "6s-EDUCR-70::jY926Rc-O4NJ6LtKKkiuNA",
     "redemptionStatus": "Yes",
     "originalMilestone": "No Milestone",
-    "completedCount": 1,
+    "completedCount": 10,
     "completedBadges": [
+      {
+        "name": "Explore Generative AI in Agent Platform",
+        "normalizedName": "explore generative ai in agent platform",
+        "order": 10,
+        "earnedDate": "Earned Oct 31, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Ep488ur7qy53c%2Fwb0D1OS%2BeWzeTrNgXPu2ZbDDurm3E%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/11a2ac71-8aea-4e89-abb2-7c92f0b499dc/badges/29288999"
+      },
+      {
+        "name": "Using the Google Cloud Speech API",
+        "normalizedName": "using the google cloud speech api",
+        "order": 9,
+        "earnedDate": "Earned Oct 31, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/sugwT79SbI2u2hS9K4Pxd%2FXn7aFbHvZhTPhy4LaCMQg%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/11a2ac71-8aea-4e89-abb2-7c92f0b499dc/badges/29288676"
+      },
+      {
+        "name": "Store, Process, and Manage Data on Google Cloud - Console",
+        "normalizedName": "store, process, and manage data on google cloud - console",
+        "order": 8,
+        "earnedDate": "Earned Oct 30, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/%2FQCXEzViv64XY8tyFtMCHw7onppQaikKcCSnSEFbay0%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/11a2ac71-8aea-4e89-abb2-7c92f0b499dc/badges/29271978"
+      },
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Oct 30, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/L0e8u5bkhDYEvFV%2Bsx%2FfXsxQiz%2F%2FsAwAHrJOvwu9VJY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/11a2ac71-8aea-4e89-abb2-7c92f0b499dc/badges/29270854"
+      },
+      {
+        "name": "Build a Website on Google Cloud",
+        "normalizedName": "build a website on google cloud",
+        "order": 6,
+        "earnedDate": "Earned Oct 30, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/vLbCm9dqTGstk0Ck0nY4zU8Z0ALwJpXi2i4OzMZAMxY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/11a2ac71-8aea-4e89-abb2-7c92f0b499dc/badges/29270126"
+      },
+      {
+        "name": "Analyze Images with the Cloud Vision API",
+        "normalizedName": "analyze images with the cloud vision api",
+        "order": 5,
+        "earnedDate": "Earned Oct 30, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/11a2ac71-8aea-4e89-abb2-7c92f0b499dc/badges/29269326"
+      },
+      {
+        "name": "Develop AI-Powered Prototypes in Google AI Studio",
+        "normalizedName": "develop ai-powered prototypes in google ai studio",
+        "order": 4,
+        "earnedDate": "Earned Oct 30, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/11a2ac71-8aea-4e89-abb2-7c92f0b499dc/badges/29268198"
+      },
+      {
+        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+        "normalizedName": "implement speech and language solutions with pre-trained apis",
+        "order": 3,
+        "earnedDate": "Earned Oct 29, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/11a2ac71-8aea-4e89-abb2-7c92f0b499dc/badges/29234062"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 29, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/11a2ac71-8aea-4e89-abb2-7c92f0b499dc/badges/29233519"
+      },
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 28, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/11a2ac71-8aea-4e89-abb2-7c92f0b499dc/badges/29201584"
       }
     ],
-    "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "totalProfileBadges": 10,
+    "lastScrapedAt": "2026-10-31T16:06:41.663Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 67,
@@ -2221,12 +2453,16 @@
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 18, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/a6623d99-86e5-41bd-8d0c-39262e3ea614/badges/28938982"
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:42.465Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 141,
@@ -2298,12 +2534,16 @@
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 25, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/a8dc476c-9cc0-4aca-84db-a92e5425fa1b/badges/29114058"
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:43.203Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 146,
@@ -2681,62 +2921,90 @@
     "completedCount": 10,
     "completedBadges": [
       {
-        "name": "Analyze Images with the Cloud Vision API",
-        "normalizedName": "analyze images with the cloud vision api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/633"
-      },
-      {
-        "name": "Build a Website on Google Cloud",
-        "normalizedName": "build a website on google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/638"
-      },
-      {
-        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
-        "normalizedName": "configure service accounts and iam roles for google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/702"
-      },
-      {
-        "name": "Create Your First Gemini Enterprise Application",
-        "normalizedName": "create your first gemini enterprise application",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1586/"
-      },
-      {
-        "name": "Develop AI-Powered Prototypes in Google AI Studio",
-        "normalizedName": "develop ai-powered prototypes in google ai studio",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1426"
-      },
-      {
         "name": "Explore Generative AI in Agent Platform",
         "normalizedName": "explore generative ai in agent platform",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/959"
-      },
-      {
-        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
-        "normalizedName": "implement speech and language solutions with pre-trained apis",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/700"
-      },
-      {
-        "name": "The Basics of Google Cloud Compute",
-        "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 10,
+        "earnedDate": "Earned Oct 27, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Ep488ur7qy53c%2Fwb0D1OS%2BeWzeTrNgXPu2ZbDDurm3E%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/dae2e960-7a71-4f4c-a9a9-457668845a4d/badges/29171485"
       },
       {
         "name": "Using the Google Cloud Speech API",
         "normalizedName": "using the google cloud speech api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/756"
+        "order": 9,
+        "earnedDate": "Earned Oct 27, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/sugwT79SbI2u2hS9K4Pxd%2FXn7aFbHvZhTPhy4LaCMQg%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/dae2e960-7a71-4f4c-a9a9-457668845a4d/badges/29164477"
+      },
+      {
+        "name": "Store, Process, and Manage Data on Google Cloud - Console",
+        "normalizedName": "store, process, and manage data on google cloud - console",
+        "order": 8,
+        "earnedDate": "Earned Oct 26, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/%2FQCXEzViv64XY8tyFtMCHw7onppQaikKcCSnSEFbay0%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/dae2e960-7a71-4f4c-a9a9-457668845a4d/badges/29144080"
+      },
+      {
+        "name": "Build a Website on Google Cloud",
+        "normalizedName": "build a website on google cloud",
+        "order": 6,
+        "earnedDate": "Earned Oct 26, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/vLbCm9dqTGstk0Ck0nY4zU8Z0ALwJpXi2i4OzMZAMxY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/dae2e960-7a71-4f4c-a9a9-457668845a4d/badges/29141746"
+      },
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Oct 26, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/L0e8u5bkhDYEvFV%2Bsx%2FfXsxQiz%2F%2FsAwAHrJOvwu9VJY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/dae2e960-7a71-4f4c-a9a9-457668845a4d/badges/29141679"
+      },
+      {
+        "name": "Analyze Images with the Cloud Vision API",
+        "normalizedName": "analyze images with the cloud vision api",
+        "order": 5,
+        "earnedDate": "Earned Oct 25, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/dae2e960-7a71-4f4c-a9a9-457668845a4d/badges/29101284"
+      },
+      {
+        "name": "Develop AI-Powered Prototypes in Google AI Studio",
+        "normalizedName": "develop ai-powered prototypes in google ai studio",
+        "order": 4,
+        "earnedDate": "Earned Oct 24, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/dae2e960-7a71-4f4c-a9a9-457668845a4d/badges/29094737"
+      },
+      {
+        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+        "normalizedName": "implement speech and language solutions with pre-trained apis",
+        "order": 3,
+        "earnedDate": "Earned Oct 24, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/dae2e960-7a71-4f4c-a9a9-457668845a4d/badges/29082864"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/dae2e960-7a71-4f4c-a9a9-457668845a4d/badges/29056396"
+      },
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Oct 22, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/dae2e960-7a71-4f4c-a9a9-457668845a4d/badges/29049029"
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:30.421Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 173,
@@ -2766,12 +3034,16 @@
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 25, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/6f1e6bb1-5027-44f9-9f54-322de1981c62/badges/29110995"
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:43.986Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 175,
@@ -2927,12 +3199,16 @@
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 16, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/896aa756-1858-45c5-b326-60f5c5a8a3e3/badges/28903403"
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:44.839Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 186,
@@ -3097,41 +3373,61 @@
     "accessCode": "6s-EDUCR-70::RLdGFd3BGCNCX9LwMOcSFw",
     "redemptionStatus": "Yes",
     "originalMilestone": "Milestone 2",
-    "completedCount": 5,
+    "completedCount": 6,
     "completedBadges": [
       {
-        "name": "Analyze Images with the Cloud Vision API",
-        "normalizedName": "analyze images with the cloud vision api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/633"
-      },
-      {
-        "name": "Create Your First Gemini Enterprise Application",
-        "normalizedName": "create your first gemini enterprise application",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1586/"
+        "name": "Using the Google Cloud Speech API",
+        "normalizedName": "using the google cloud speech api",
+        "order": 9,
+        "earnedDate": "Earned Oct 30, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/sugwT79SbI2u2hS9K4Pxd%2FXn7aFbHvZhTPhy4LaCMQg%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8d8cb43a-83c0-4407-a857-5f2851b40a48/badges/29270810"
       },
       {
         "name": "Develop AI-Powered Prototypes in Google AI Studio",
         "normalizedName": "develop ai-powered prototypes in google ai studio",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1426"
+        "order": 4,
+        "earnedDate": "Earned Oct 28, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8d8cb43a-83c0-4407-a857-5f2851b40a48/badges/29186564"
+      },
+      {
+        "name": "Analyze Images with the Cloud Vision API",
+        "normalizedName": "analyze images with the cloud vision api",
+        "order": 5,
+        "earnedDate": "Earned Oct 27, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8d8cb43a-83c0-4407-a857-5f2851b40a48/badges/29160638"
       },
       {
         "name": "Implement Speech and Language Solutions with Pre-trained APIs",
         "normalizedName": "implement speech and language solutions with pre-trained apis",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/700"
+        "order": 3,
+        "earnedDate": "Earned Oct 26, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8d8cb43a-83c0-4407-a857-5f2851b40a48/badges/29141370"
       },
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 24, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8d8cb43a-83c0-4407-a857-5f2851b40a48/badges/29082740"
+      },
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Oct 19, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/ajd19cPiPee6d9M7LUQxm%2BnQ6VdHWkZ0G16%2F4SKfPa8%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8d8cb43a-83c0-4407-a857-5f2851b40a48/badges/28968570"
       }
     ],
-    "totalProfileBadges": 5,
-    "lastScrapedAt": null
+    "totalProfileBadges": 6,
+    "lastScrapedAt": "2026-10-31T16:06:32.819Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 198,
@@ -3147,12 +3443,16 @@
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 21, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/5b6b3f10-498c-40d8-aa89-f72c098d7123/badges/29014528"
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:45.703Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 199,
@@ -4456,12 +4756,16 @@
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 19, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/9fc7ee84-560b-436d-bb75-5227cd61dac9/badges/28970336"
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:46.624Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 292,
@@ -4685,62 +4989,90 @@
     "completedCount": 10,
     "completedBadges": [
       {
-        "name": "Analyze Images with the Cloud Vision API",
-        "normalizedName": "analyze images with the cloud vision api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/633"
-      },
-      {
-        "name": "Build a Website on Google Cloud",
-        "normalizedName": "build a website on google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/638"
-      },
-      {
-        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
-        "normalizedName": "configure service accounts and iam roles for google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/702"
-      },
-      {
-        "name": "Create Your First Gemini Enterprise Application",
-        "normalizedName": "create your first gemini enterprise application",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1586/"
-      },
-      {
-        "name": "Develop AI-Powered Prototypes in Google AI Studio",
-        "normalizedName": "develop ai-powered prototypes in google ai studio",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1426"
-      },
-      {
         "name": "Explore Generative AI in Agent Platform",
         "normalizedName": "explore generative ai in agent platform",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/959"
-      },
-      {
-        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
-        "normalizedName": "implement speech and language solutions with pre-trained apis",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/700"
-      },
-      {
-        "name": "The Basics of Google Cloud Compute",
-        "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 10,
+        "earnedDate": "Earned Oct 20, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Ep488ur7qy53c%2Fwb0D1OS%2BeWzeTrNgXPu2ZbDDurm3E%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3eb8f06f-54b4-4619-b21d-1addb85642ef/badges/28979971"
       },
       {
         "name": "Using the Google Cloud Speech API",
         "normalizedName": "using the google cloud speech api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/756"
+        "order": 9,
+        "earnedDate": "Earned Oct 20, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/sugwT79SbI2u2hS9K4Pxd%2FXn7aFbHvZhTPhy4LaCMQg%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3eb8f06f-54b4-4619-b21d-1addb85642ef/badges/28976462"
+      },
+      {
+        "name": "Store, Process, and Manage Data on Google Cloud - Console",
+        "normalizedName": "store, process, and manage data on google cloud - console",
+        "order": 8,
+        "earnedDate": "Earned Oct 20, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/%2FQCXEzViv64XY8tyFtMCHw7onppQaikKcCSnSEFbay0%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3eb8f06f-54b4-4619-b21d-1addb85642ef/badges/28975763"
+      },
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Oct 19, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/ajd19cPiPee6d9M7LUQxm%2BnQ6VdHWkZ0G16%2F4SKfPa8%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3eb8f06f-54b4-4619-b21d-1addb85642ef/badges/28970096"
+      },
+      {
+        "name": "Build a Website on Google Cloud",
+        "normalizedName": "build a website on google cloud",
+        "order": 6,
+        "earnedDate": "Earned Oct 19, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/vLbCm9dqTGstk0Ck0nY4zU8Z0ALwJpXi2i4OzMZAMxY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3eb8f06f-54b4-4619-b21d-1addb85642ef/badges/28970025"
+      },
+      {
+        "name": "Analyze Images with the Cloud Vision API",
+        "normalizedName": "analyze images with the cloud vision api",
+        "order": 5,
+        "earnedDate": "Earned Oct 19, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3eb8f06f-54b4-4619-b21d-1addb85642ef/badges/28963718"
+      },
+      {
+        "name": "Develop AI-Powered Prototypes in Google AI Studio",
+        "normalizedName": "develop ai-powered prototypes in google ai studio",
+        "order": 4,
+        "earnedDate": "Earned Oct 19, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3eb8f06f-54b4-4619-b21d-1addb85642ef/badges/28955194"
+      },
+      {
+        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+        "normalizedName": "implement speech and language solutions with pre-trained apis",
+        "order": 3,
+        "earnedDate": "Earned Oct 18, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3eb8f06f-54b4-4619-b21d-1addb85642ef/badges/28942542"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 17, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3eb8f06f-54b4-4619-b21d-1addb85642ef/badges/28932775"
+      },
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Oct 17, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/3eb8f06f-54b4-4619-b21d-1addb85642ef/badges/28929387"
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:31.797Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 308,
@@ -4798,12 +5130,16 @@
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 13, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/806de9ee-945f-401c-ac66-ec5f7d97705f/badges/28845462"
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:47.556Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 312,
@@ -5087,41 +5423,93 @@
     "accessCode": "6s-EDUCR-70::2mhbLDMI-dVwLp816I6z9Q",
     "redemptionStatus": "Yes",
     "originalMilestone": "Milestone 2",
-    "completedCount": 5,
+    "completedCount": 10,
     "completedBadges": [
+      {
+        "name": "Build a Website on Google Cloud",
+        "normalizedName": "build a website on google cloud",
+        "order": 6,
+        "earnedDate": "Earned Oct 29, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/vLbCm9dqTGstk0Ck0nY4zU8Z0ALwJpXi2i4OzMZAMxY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/03d6b1dc-005e-47f3-b920-9575ac55cbbd/badges/29241932"
+      },
+      {
+        "name": "Explore Generative AI in Agent Platform",
+        "normalizedName": "explore generative ai in agent platform",
+        "order": 10,
+        "earnedDate": "Earned Oct 28, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Ep488ur7qy53c%2Fwb0D1OS%2BeWzeTrNgXPu2ZbDDurm3E%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/03d6b1dc-005e-47f3-b920-9575ac55cbbd/badges/29208705"
+      },
+      {
+        "name": "Using the Google Cloud Speech API",
+        "normalizedName": "using the google cloud speech api",
+        "order": 9,
+        "earnedDate": "Earned Oct 28, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/sugwT79SbI2u2hS9K4Pxd%2FXn7aFbHvZhTPhy4LaCMQg%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/03d6b1dc-005e-47f3-b920-9575ac55cbbd/badges/29208595"
+      },
+      {
+        "name": "Store, Process, and Manage Data on Google Cloud - Console",
+        "normalizedName": "store, process, and manage data on google cloud - console",
+        "order": 8,
+        "earnedDate": "Earned Oct 28, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/%2FQCXEzViv64XY8tyFtMCHw7onppQaikKcCSnSEFbay0%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/03d6b1dc-005e-47f3-b920-9575ac55cbbd/badges/29208525"
+      },
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Oct 28, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/L0e8u5bkhDYEvFV%2Bsx%2FfXsxQiz%2F%2FsAwAHrJOvwu9VJY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/03d6b1dc-005e-47f3-b920-9575ac55cbbd/badges/29208425"
+      },
       {
         "name": "Analyze Images with the Cloud Vision API",
         "normalizedName": "analyze images with the cloud vision api",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/633"
-      },
-      {
-        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
-        "normalizedName": "configure service accounts and iam roles for google cloud",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/702"
+        "order": 5,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/03d6b1dc-005e-47f3-b920-9575ac55cbbd/badges/29081598"
       },
       {
         "name": "Develop AI-Powered Prototypes in Google AI Studio",
         "normalizedName": "develop ai-powered prototypes in google ai studio",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/1426"
+        "order": 4,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/03d6b1dc-005e-47f3-b920-9575ac55cbbd/badges/29081492"
       },
       {
         "name": "Implement Speech and Language Solutions with Pre-trained APIs",
         "normalizedName": "implement speech and language solutions with pre-trained apis",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/700"
+        "order": 3,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/03d6b1dc-005e-47f3-b920-9575ac55cbbd/badges/29081242"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/03d6b1dc-005e-47f3-b920-9575ac55cbbd/badges/29081194"
       },
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
-        "earnedDate": "Initial Record",
-        "url": "https://www.skills.google/course_templates/754"
+        "order": 1,
+        "earnedDate": "Earned Oct 23, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/03d6b1dc-005e-47f3-b920-9575ac55cbbd/badges/29080996"
       }
     ],
-    "totalProfileBadges": 5,
-    "lastScrapedAt": null
+    "totalProfileBadges": 10,
+    "lastScrapedAt": "2026-10-31T16:06:33.865Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   },
   {
     "id": 332,
@@ -5450,7 +5838,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:26.430Z"
   },
   {
     "id": 355,
@@ -5464,7 +5852,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:28.530Z"
   },
   {
     "id": 356,
@@ -5478,7 +5866,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:32.117Z"
   },
   {
     "id": 357,
@@ -5492,7 +5880,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:35.008Z"
   },
   {
     "id": 358,
@@ -5506,7 +5894,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:41.699Z"
   },
   {
     "id": 359,
@@ -5520,7 +5908,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:43.911Z"
   },
   {
     "id": 360,
@@ -5534,7 +5922,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": null
+    "lastScrapedAt": "2026-10-31T16:06:47.774Z"
   },
   {
     "id": 361,
