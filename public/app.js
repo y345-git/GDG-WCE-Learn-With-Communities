@@ -105,6 +105,16 @@ function startRealtimePolling() {
     }, 4000);
 }
 
+// Modern sports water bottle SVG (styled matching theme & campaign swag)
+function getBottleSvg(extraClass = 'w-3.5 h-3.5') {
+    return `<svg class="${extraClass} inline-block shrink-0 align-middle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 5.5C7.5 5.5 4.5 8 4.5 11.5C4.5 14.2 6.5 15.2 8 13.8C9.5 12.2 10.5 8.5 11 6.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+        <rect x="11.5" y="2" width="7" height="3" rx="0.75" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
+        <rect x="11" y="5" width="8" height="1.2" rx="0.6" fill="currentColor"/>
+        <path d="M13 6.2H17C17.8 6.2 19 7.2 19 9V20.5C19 21.3 18.3 22 17.5 22H12.5C11.7 22 11 21.3 11 20.5V9C11 7.2 12.2 6.2 13 6.2Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </svg>`;
+}
+
 // Swag Rewards Helper (Clean: Stage 2: T-Shirt at 10, Stage 1: Bottle at 5, strictly in Google Colors)
 function getSwagRewardInfo(count) {
     if (count >= 10) {
@@ -112,6 +122,7 @@ function getSwagRewardInfo(count) {
             stage: 'Stage 2',
             reward: 'T-Shirt',
             badgeClass: 'bg-blue-50 dark:bg-blue-950/70 text-[#1a73e8] dark:text-blue-300 border-blue-200 dark:border-blue-800',
+            pillHtml: `<span class="inline-flex items-center gap-1"><span>👕</span><span>T-Shirt</span></span>`,
             pillLabel: '👕 T-Shirt',
             isTShirt: true,
             isBottle: false
@@ -121,7 +132,8 @@ function getSwagRewardInfo(count) {
             stage: 'Stage 1',
             reward: 'Water Bottle',
             badgeClass: 'bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800',
-            pillLabel: '🍼 Bottle',
+            pillHtml: `<span class="inline-flex items-center gap-1.5">${getBottleSvg('w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400')}<span>Bottle</span></span>`,
+            pillLabel: 'Bottle',
             isTShirt: false,
             isBottle: true
         };
@@ -131,7 +143,8 @@ function getSwagRewardInfo(count) {
             stage: 'In Progress',
             reward: `Needs ${needed} for Bottle`,
             badgeClass: 'bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800',
-            pillLabel: `${needed} to Bottle 🍼`,
+            pillHtml: `<span class="inline-flex items-center gap-1"><span>${needed} to Bottle</span>${getBottleSvg('w-3.5 h-3.5 text-amber-600 dark:text-amber-400')}</span>`,
+            pillLabel: `${needed} to Bottle`,
             isTShirt: false,
             isBottle: false
         };
@@ -140,6 +153,7 @@ function getSwagRewardInfo(count) {
         stage: 'Not Started',
         reward: 'Needs 5 for Bottle',
         badgeClass: 'bg-slate-50 dark:bg-slate-800/40 text-slate-400 dark:text-slate-500 border-slate-200 dark:border-slate-700/60',
+        pillHtml: '<span>Not Started</span>',
         pillLabel: 'Not Started',
         isTShirt: false,
         isBottle: false
@@ -416,7 +430,7 @@ function renderTableRow(p, rank) {
             </td>
             <td class="py-3.5 px-3">
                 <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-black border ${swag.badgeClass}">
-                    <span>${swag.pillLabel}</span>
+                    ${swag.pillHtml || `<span>${swag.pillLabel}</span>`}
                 </span>
             </td>
             <td class="py-3.5 px-2 text-center">
@@ -506,7 +520,7 @@ function renderParticipantCard(p) {
                     </div>
                     <div class="shrink-0">
                         <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-black border ${swag.badgeClass}">
-                            <span>${swag.pillLabel}</span>
+                            ${swag.pillHtml || `<span>${swag.pillLabel}</span>`}
                         </span>
                     </div>
                 </div>
@@ -798,7 +812,7 @@ function updateFilterNotice(count) {
     const desc = [];
     if (state.searchQuery) desc.push(`"${state.searchQuery}"`);
     if (state.milestoneFilter === '10') desc.push('Stage 2: 👕 T-Shirt (10 Badges)');
-    else if (state.milestoneFilter === 'bottle_stage') desc.push('Stage 1: 🍼 Bottle (5-9 Badges)');
+    else if (state.milestoneFilter === 'bottle_stage') desc.push('Stage 1: Water Bottle (5-9 Badges)');
     else if (state.milestoneFilter === 'in_progress_total') desc.push('In Progress (1-4 Badges)');
     else if (state.milestoneFilter === 'not_started') desc.push('Not Started (0 Badges)');
 
