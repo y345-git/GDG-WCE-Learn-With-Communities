@@ -159,6 +159,13 @@ function getBottleSvg(extraClass = 'w-3.5 h-3.5') {
     </svg>`;
 }
 
+// Modern T-shirt SVG (styled matching theme & campaign swag)
+function getTShirtSvg(extraClass = 'w-3.5 h-3.5') {
+    return `<svg class="${extraClass} inline-block shrink-0 align-middle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`;
+}
+
 // Swag Rewards Helper (Clean: Stage 2: T-Shirt at 10, Stage 1: Bottle at 5, strictly in Google Colors)
 function getSwagRewardInfo(count) {
     if (count >= 10) {
@@ -166,8 +173,8 @@ function getSwagRewardInfo(count) {
             stage: 'Stage 2',
             reward: 'T-Shirt',
             badgeClass: 'bg-blue-50 dark:bg-blue-950/70 text-[#1a73e8] dark:text-blue-300 border-blue-200 dark:border-blue-800',
-            pillHtml: `<span class="inline-flex items-center gap-1"><span>👕</span><span>T-Shirt</span></span>`,
-            pillLabel: '👕 T-Shirt',
+            pillHtml: `<span class="inline-flex items-center gap-1.5">${getTShirtSvg('w-3.5 h-3.5 text-[#1a73e8] dark:text-blue-300')}<span>T-Shirt</span></span>`,
+            pillLabel: 'T-Shirt',
             isTShirt: true,
             isBottle: false
         };
@@ -863,7 +870,7 @@ function updateFilterNotice(count) {
 
     const desc = [];
     if (state.searchQuery) desc.push(`"${state.searchQuery}"`);
-    if (state.milestoneFilter === '10') desc.push('Stage 2: 👕 T-Shirt (10 Badges)');
+    if (state.milestoneFilter === '10') desc.push('Stage 2: Official T-Shirt (10 Badges)');
     else if (state.milestoneFilter === 'bottle_stage') desc.push('Stage 1: Water Bottle (5-9 Badges)');
     else if (state.milestoneFilter === 'in_progress_total') desc.push('In Progress (1-4 Badges)');
     else if (state.milestoneFilter === 'not_started') desc.push('Not Started (0 Badges)');

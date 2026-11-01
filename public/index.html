@@ -97,7 +97,9 @@
 
                 <!-- Stage 2 Pill -->
                 <div onclick="filterMilestone('10')" class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-0.5 rounded-full bg-blue-950/80 border border-blue-500/40 text-blue-300 text-[11px] sm:text-xs font-semibold cursor-pointer hover:bg-blue-900/50 hover:border-blue-400 transition-all shadow-2xs shrink-0">
-                    <span>👕</span>
+                    <svg class="w-3.5 h-3.5 text-blue-400 shrink-0 inline-block" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     <span>Stage 2 (10): <strong class="text-white">Official T-Shirt</strong></span>
                 </div>
             </div>
@@ -115,18 +117,18 @@
         <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <!-- Branding Section: College Crest + Divider + GDG Logo -->
-                <div class="flex items-center gap-2 sm:gap-4 min-w-0">
+                <div class="flex items-center gap-2 sm:gap-3.5 min-w-0 shrink-0">
                     <!-- WCE College Crest -->
                     <div class="shrink-0 flex items-center justify-center p-1 sm:p-1.5 rounded-xl sm:rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
-                        <img src="/images/wce_logo.png" alt="WCE Sangli" class="h-8 sm:h-11 w-auto object-contain">
+                        <img src="/images/wce_logo.png" alt="WCE Sangli" class="h-7 sm:h-11 w-auto object-contain">
                     </div>
 
                     <!-- Clean Vertical Divider -->
-                    <div class="h-6 sm:h-8 w-px bg-slate-200 dark:bg-slate-700 shrink-0"></div>
+                    <div class="h-5 sm:h-8 w-px bg-slate-200 dark:bg-slate-700 shrink-0"></div>
 
                     <!-- GDG WCE Logo -->
                     <div class="shrink-0 flex items-center justify-center p-1 sm:p-1.5 rounded-xl sm:rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
-                        <img src="/images/gdgwce.png" alt="GDG On Campus WCE" class="h-7 sm:h-9 w-auto object-contain">
+                        <img src="/images/gdgwce.png" alt="GDG On Campus WCE" class="h-6 sm:h-9 w-auto object-contain">
                     </div>
 
                     <!-- Institutional Info -->
@@ -141,25 +143,23 @@
                 </div>
 
                 <!-- Right Action Bar -->
-                <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+                <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
                     <!-- Dark / Light Mode Switcher -->
-                    <button onclick="toggleDarkMode()" title="Toggle Dark/Light Mode" class="p-1.5 sm:p-2 rounded-xl text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-2xs transition-all">
+                    <button onclick="toggleDarkMode()" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode" class="w-9 h-9 sm:w-auto sm:h-auto p-2 rounded-xl text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-2xs transition-all flex items-center justify-center shrink-0">
                         <svg id="themeIconSun" class="w-4 h-4 hidden dark:block text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                         <svg id="themeIconMoon" class="w-4 h-4 block dark:hidden text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     </button>
 
                     <!-- 10 Badges Syllabus Modal Trigger -->
-                    <button onclick="openCurriculumModal()" class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-2xs transition-all">
-                        <i data-lucide="award" class="w-3.5 h-3.5 text-[#4285f4]"></i>
+                    <button onclick="openCurriculumModal()" title="10 Badges Track Curriculum" aria-label="10 Badges Track Curriculum" class="w-9 h-9 sm:w-auto sm:h-auto p-2 sm:px-3.5 sm:py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-2xs transition-all flex items-center justify-center gap-1.5 shrink-0">
+                        <i data-lucide="award" class="w-4 h-4 sm:w-3.5 sm:h-3.5 text-[#4285f4]"></i>
                         <span class="hidden sm:inline">10 Badges Track</span>
-                        <span class="sm:hidden">Badges</span>
                     </button>
 
                     <!-- Export Excel Button -->
-                    <button onclick="exportToExcel()" class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-[#4285f4] hover:bg-slate-800 dark:hover:bg-blue-600 text-white shadow-2xs transition-all">
-                        <i data-lucide="download" class="w-3.5 h-3.5 text-slate-300 dark:text-white"></i>
+                    <button onclick="exportToExcel()" title="Export Excel" aria-label="Export Excel" class="w-9 h-9 sm:w-auto sm:h-auto p-2 sm:px-3.5 sm:py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-[#4285f4] hover:bg-slate-800 dark:hover:bg-blue-600 text-white shadow-2xs transition-all flex items-center justify-center gap-1.5 shrink-0">
+                        <i data-lucide="download" class="w-4 h-4 sm:w-3.5 sm:h-3.5 text-slate-200 dark:text-white"></i>
                         <span class="hidden sm:inline">Export Excel</span>
-                        <span class="sm:hidden">Export</span>
                     </button>
                 </div>
             </div>
@@ -228,7 +228,11 @@
                                     <span class="w-2 h-2 rounded-full bg-[#4285f4]"></span>
                                     <span>Stage 2 Reward</span>
                                 </span>
-                                <span class="text-xl sm:text-2xl group-hover:scale-110 transition-transform">👕</span>
+                                <div class="w-8 h-8 rounded-lg bg-blue-100/80 dark:bg-blue-900/60 border border-blue-200 dark:border-blue-700/60 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform text-[#1a73e8] dark:text-blue-300">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
                             </div>
                             <div class="text-base sm:text-lg font-black text-blue-950 dark:text-blue-100 mt-1 sm:mt-1.5">Official T-Shirt</div>
                             <div class="text-[11px] sm:text-xs text-blue-700 dark:text-blue-400 mt-0.5 font-medium group-hover:underline">
@@ -277,8 +281,10 @@
                 <div>
                     <div class="flex items-center justify-between gap-1.5 mb-2 sm:mb-2.5">
                         <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
-                            <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-blue-50 dark:bg-blue-950/70 text-xs sm:text-sm flex items-center justify-center shrink-0 border border-blue-100 dark:border-blue-900/60">
-                                👕
+                            <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-blue-50 dark:bg-blue-950/70 text-blue-600 dark:text-blue-300 flex items-center justify-center shrink-0 border border-blue-100 dark:border-blue-900/60">
+                                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1a73e8] dark:text-blue-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </div>
                             <span class="text-[10px] sm:text-[11px] font-extrabold text-slate-800 dark:text-slate-200 uppercase tracking-wider truncate">Stage 2</span>
                         </div>
@@ -383,7 +389,12 @@
                     <div class="w-full sm:w-auto overflow-x-auto no-scrollbar py-0.5 -mx-1 px-1">
                         <div class="inline-flex rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-1 text-[11px] sm:text-xs font-semibold text-slate-600 dark:text-slate-300 shrink-0">
                             <button onclick="filterMilestone('')" id="pillAll" class="filter-tab px-2.5 sm:px-3 py-1.5 rounded-lg sm:rounded-xl active-tab transition-all whitespace-nowrap">All (<span id="countPillAll">363</span>)</button>
-                            <button onclick="filterMilestone('10')" id="pillM3" class="filter-tab px-2.5 sm:px-3 py-1.5 rounded-lg sm:rounded-xl transition-all whitespace-nowrap">👕 T-Shirt (<span id="countPillM3">0</span>)</button>
+                            <button onclick="filterMilestone('10')" id="pillM3" class="filter-tab px-2.5 sm:px-3 py-1.5 rounded-lg sm:rounded-xl transition-all inline-flex items-center gap-1 whitespace-nowrap">
+                                <svg class="w-3.5 h-3.5 text-[#1a73e8] dark:text-blue-300 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>T-Shirt (<span id="countPillM3">0</span>)</span>
+                            </button>
                             <button onclick="filterMilestone('bottle_stage')" id="pillBottle" class="filter-tab px-2.5 sm:px-3 py-1.5 rounded-lg sm:rounded-xl transition-all inline-flex items-center gap-1 whitespace-nowrap">
                                 <svg class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11 5.5C7.5 5.5 4.5 8 4.5 11.5C4.5 14.2 6.5 15.2 8 13.8C9.5 12.2 10.5 8.5 11 6.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
@@ -621,8 +632,11 @@
                     <strong>Water Bottle</strong>
                 </span>
                 <span class="hidden sm:inline">•</span>
-                <span class="inline-flex items-center gap-1">
-                    <span>Stage 2 (10 Badges): 👕</span>
+                <span class="inline-flex items-center gap-1.5">
+                    <span>Stage 2 (10 Badges):</span>
+                    <svg class="w-3.5 h-3.5 text-blue-500 inline-block align-middle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     <strong>Official T-Shirt</strong>
                 </span>
             </div>
