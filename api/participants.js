@@ -13,10 +13,12 @@ export default async function handler(req, res) {
 
     // 1. If VPS backend is configured, proxy live real-time sync data
     const vpsUrl = process.env.VPS_BACKEND_URL || process.env.SYNC_BACKEND_URL || 'http://62.84.172.73:3000';
+    let vpsDebugInfo = null;
+
     if (vpsUrl) {
         try {
             const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 4500); // 4.5s timeout
+            const timeoutId = setTimeout(() => controller.abort(), 8000); // 8s timeout
             const cleanUrl = vpsUrl.replace(/\/$/, '');
             const vpsRes = await fetch(`${cleanUrl}/api/participants`, {
                 signal: controller.signal,
@@ -26,10 +28,12 @@ export default async function handler(req, res) {
 
             if (vpsRes.ok) {
                 const data = await vpsRes.json();
-                return res.status(200).json(data);
+                return res.status(200).json({ ...data, _source: 'vps_live' });
+            } else {
+                vpsDebugInfo = { status: vpsRes.status, statusText: vpsRes.statusText };
             }
         } catch (vpsErr) {
-            console.warn('[Vercel API] VPS sync unreachable, falling back to static snapshot:', vpsErr.message);
+            vpsDebugInfo = { error: vpsErr.message, name: vpsErr.name };
         }
     }
 
@@ -37,7 +41,7 @@ export default async function handler(req, res) {
     try {
         const filePath = path.join(process.cwd(), 'public', 'data', 'participants.json');
         if (!fs.existsSync(filePath)) {
-            return res.status(404).json({ success: false, error: 'Data not found' });
+            return res.status(404).json({ success: false, error: 'Data not found', _vpsDebug: vpsDebugInfo });
         }
 
         const data = fs.readFileSync(filePath, 'utf-8');
@@ -47,9 +51,11 @@ export default async function handler(req, res) {
             success: true,
             count: participants.length,
             participants,
-            timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString(),
+            _source: 'static_fallback',
+            _vpsDebug: vpsDebugInfo
         });
     } catch (err) {
-        return res.status(500).json({ success: false, error: err.message });
+        return res.status(500).json({ success: false, error: err.message, _vpsDebug: vpsDebugInfo });
     }
 }
