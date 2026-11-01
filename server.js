@@ -45,9 +45,57 @@ function saveStoreToDisk() {
     }, 4000);
 }
 
-// Server-Side Continuous Background Live Scraper
+// Server-Side Continuous Background Live Scraper (Parallel gentle workers)
+const CONCURRENCY = parseInt(process.env.SYNC_CONCURRENCY || '3', 10);
+let syncStats = {
+    totalSynced: 0,
+    cycleCount: 0,
+    lastCycleStarted: new Date().toISOString(),
+    lastCycleDurationSec: 0
+};
+
+async function scrapeSingleParticipant(p) {
+    if (!p.profileUrl) return;
+    currentlySyncingId = p.id;
+    return new Promise((resolve) => {
+        const timeout = setTimeout(() => resolve(), 7000); // 7s hard safety timeout
+
+        const mockReq = { query: { url: p.profileUrl, force: 'true' }, method: 'GET' };
+        const mockRes = {
+            setHeader: () => {},
+            status: () => ({
+                json: (data) => {
+                    clearTimeout(timeout);
+                    if (data && data.success) {
+                        const target = participantsStore.find(item => item.id === p.id);
+                        if (target) {
+                            target.completedCount = data.completedCount || 0;
+                            target.completedBadges = data.completedBadges || [];
+                            target.totalProfileBadges = data.totalBadgesOnProfile || target.completedCount;
+                            target.extraBadges = data.extraBadges || [];
+                            target.extraBadgesCount = data.extraBadgesCount || 0;
+                            target.lastScrapedAt = data.scrapedAt || new Date().toISOString();
+                            saveStoreToDisk();
+                        }
+                    }
+                    resolve();
+                },
+                end: () => {
+                    clearTimeout(timeout);
+                    resolve();
+                }
+            })
+        };
+
+        scrapeHandler(mockReq, mockRes).catch(() => {
+            clearTimeout(timeout);
+            resolve();
+        });
+    });
+}
+
 async function runServerBackgroundSync() {
-    console.log('[Server] Automated real-time background sync engine started.');
+    console.log(`[Server] Automated real-time background sync engine started (Concurrency: ${CONCURRENCY}).`);
 
     while (true) {
         if (!isBackgroundSyncActive || participantsStore.length === 0) {
@@ -55,55 +103,37 @@ async function runServerBackgroundSync() {
             continue;
         }
 
+        const cycleStart = Date.now();
+        syncStats.cycleCount++;
+        syncStats.lastCycleStarted = new Date().toISOString();
+
         // Prioritize active participants, then loop all
         const queue = [...participantsStore].sort((a, b) => (b.completedCount || 0) - (a.completedCount || 0));
 
-        for (const p of queue) {
-            if (!isBackgroundSyncActive) break;
-            if (!p.profileUrl) continue;
-
-            currentlySyncingId = p.id;
-
-            try {
-                // Mock request to internal scrapeHandler
-                await new Promise((resolve) => {
-                    const mockReq = { query: { url: p.profileUrl }, method: 'GET' };
-                    const mockRes = {
-                        setHeader: () => {},
-                        status: (code) => ({
-                            json: (data) => {
-                                if (data && data.success) {
-                                    const target = participantsStore.find(item => item.id === p.id);
-                                    if (target) {
-                                        target.completedCount = data.completedCount || 0;
-                                        target.completedBadges = data.completedBadges || [];
-                                        target.totalProfileBadges = data.totalBadgesOnProfile || target.completedCount;
-                                        target.extraBadges = data.extraBadges || [];
-                                        target.extraBadgesCount = data.extraBadgesCount || 0;
-                                        target.lastScrapedAt = data.scrapedAt || new Date().toISOString();
-                                        saveStoreToDisk();
-                                    }
-                                }
-                                resolve();
-                            },
-                            end: () => resolve()
-                        })
-                    };
-
-                    scrapeHandler(mockReq, mockRes).catch(() => resolve());
-                });
-            } catch (err) {
-                // Silent catch
-            } finally {
-                currentlySyncingId = null;
+        let index = 0;
+        async function worker() {
+            while (index < queue.length && isBackgroundSyncActive) {
+                const p = queue[index++];
+                try {
+                    await scrapeSingleParticipant(p);
+                    syncStats.totalSynced++;
+                } catch (e) {}
+                await new Promise(r => setTimeout(r, 150));
             }
-
-            // Stagger by 120ms to keep network and CPU fluid
-            await new Promise(r => setTimeout(r, 120));
         }
 
-        // Rest 30s before next cycle
-        await new Promise(r => setTimeout(r, 30000));
+        const workers = [];
+        for (let w = 0; w < CONCURRENCY; w++) {
+            workers.push(worker());
+        }
+        await Promise.all(workers);
+
+        currentlySyncingId = null;
+        syncStats.lastCycleDurationSec = Math.round((Date.now() - cycleStart) / 1000);
+        console.log(`[Server] Completed sync cycle #${syncStats.cycleCount} in ${syncStats.lastCycleDurationSec}s (~${Math.round(syncStats.lastCycleDurationSec / 60)} min). Pausing 20s before next cycle...`);
+
+        // Rest 20s before next cycle
+        await new Promise(r => setTimeout(r, 20000));
     }
 }
 
@@ -144,6 +174,20 @@ const server = http.createServer(async (req, res) => {
             currentlySyncingId,
             participants: participantsStore,
             timestamp: new Date().toISOString()
+        }));
+    }
+
+    // API: GET /api/health or /api/status (Health check & metrics for VPS and PM2)
+    if (pathname === '/api/health' || pathname === '/api/status') {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        return res.end(JSON.stringify({
+            status: 'healthy',
+            service: 'GDG WCE Cloud Sync Service',
+            uptimeSec: Math.round(process.uptime()),
+            participantsCount: participantsStore.length,
+            currentlySyncingId,
+            syncStats,
+            serverTime: new Date().toISOString()
         }));
     }
 
