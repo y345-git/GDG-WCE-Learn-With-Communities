@@ -12,11 +12,11 @@ export default async function handler(req, res) {
     if (req.method === 'OPTIONS') return res.status(200).end();
 
     // 1. If VPS backend is configured, proxy live real-time sync data
-    const vpsUrl = process.env.VPS_BACKEND_URL || process.env.SYNC_BACKEND_URL;
+    const vpsUrl = process.env.VPS_BACKEND_URL || process.env.SYNC_BACKEND_URL || 'http://62.84.172.73:3000';
     if (vpsUrl) {
         try {
             const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 3500); // 3.5s timeout
+            const timeoutId = setTimeout(() => controller.abort(), 4500); // 4.5s timeout
             const cleanUrl = vpsUrl.replace(/\/$/, '');
             const vpsRes = await fetch(`${cleanUrl}/api/participants`, {
                 signal: controller.signal,
