@@ -69,11 +69,11 @@
     </div>
 
     <!-- Start Top Bar: Stages Swag Requirements & Live Status -->
-    <div class="bg-slate-900/95 text-white px-4 py-2 text-xs border-b border-slate-800 relative z-10 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-            <!-- Stages Requirements with Google Colors -->
-            <div class="flex items-center gap-3 sm:gap-4 flex-wrap">
-                <div class="flex items-center gap-1.5 font-black uppercase text-[10px] tracking-wider text-slate-400">
+    <div class="bg-slate-900/95 text-white px-3 sm:px-4 py-2 text-xs border-b border-slate-800 relative z-10 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
+            <!-- Stages Requirements with Google Colors (Touch Scrollable on Mobile) -->
+            <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+                <div class="hidden md:flex items-center gap-1.5 font-black uppercase text-[10px] tracking-wider text-slate-400">
                     <span class="flex gap-1">
                         <span class="w-1.5 h-1.5 rounded-full bg-[#4285f4]"></span>
                         <span class="w-1.5 h-1.5 rounded-full bg-[#ea4335]"></span>
@@ -84,7 +84,7 @@
                 </div>
                 
                 <!-- Stage 1 Pill -->
-                <div onclick="filterMilestone('bottle_stage')" class="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 font-semibold cursor-pointer hover:bg-emerald-900/50 hover:border-emerald-400 transition-all shadow-2xs">
+                <div onclick="filterMilestone('bottle_stage')" class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-[11px] sm:text-xs font-semibold cursor-pointer hover:bg-emerald-900/50 hover:border-emerald-400 transition-all shadow-2xs shrink-0">
                     <svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 inline-block" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 5.5C7.5 5.5 4.5 8 4.5 11.5C4.5 14.2 6.5 15.2 8 13.8C9.5 12.2 10.5 8.5 11 6.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
                         <rect x="11.5" y="2" width="7" height="3" rx="0.75" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
@@ -92,41 +92,41 @@
                         <path d="M13 6.2H17C17.8 6.2 19 7.2 19 9V20.5C19 21.3 18.3 22 17.5 22H12.5C11.7 22 11 21.3 11 20.5V9C11 7.2 12.2 6.2 13 6.2Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
                         <line x1="13" y1="10" x2="17" y2="10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="0.8 1.5" opacity="0.6"/>
                     </svg>
-                    <span>Stage 1 (5 Badges): <strong class="text-white">Water Bottle</strong></span>
+                    <span>Stage 1 (5): <strong class="text-white">Water Bottle</strong></span>
                 </div>
 
                 <!-- Stage 2 Pill -->
-                <div onclick="filterMilestone('10')" class="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-blue-950/80 border border-blue-500/40 text-blue-300 font-semibold cursor-pointer hover:bg-blue-900/50 hover:border-blue-400 transition-all shadow-2xs">
+                <div onclick="filterMilestone('10')" class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-0.5 rounded-full bg-blue-950/80 border border-blue-500/40 text-blue-300 text-[11px] sm:text-xs font-semibold cursor-pointer hover:bg-blue-900/50 hover:border-blue-400 transition-all shadow-2xs shrink-0">
                     <span>👕</span>
-                    <span>Stage 2 (10 Badges): <strong class="text-white">Official T-Shirt</strong></span>
+                    <span>Stage 2 (10): <strong class="text-white">Official T-Shirt</strong></span>
                 </div>
             </div>
 
             <!-- Server Sync Real-Time Indicator -->
-            <div class="flex items-center gap-2 text-[11px] text-slate-300">
+            <div class="flex items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-300 shrink-0">
                 <span class="w-2 h-2 rounded-full bg-[#34a853] radar-dot"></span>
-                <span class="font-semibold text-emerald-400">Live Global Sync</span>
+                <span class="font-semibold text-emerald-400 whitespace-nowrap">Live Sync</span>
             </div>
         </div>
     </div>
 
     <!-- Main Navigation Header (Clean, Aligned, Institutional Logos) -->
     <header class="glass-header border-b border-slate-200/80 dark:border-slate-800/80 sticky top-0 z-30 transition-colors">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
                 <!-- Branding Section: College Crest + Divider + GDG Logo -->
-                <div class="flex items-center gap-3.5 sm:gap-5 min-w-0">
+                <div class="flex items-center gap-2 sm:gap-4 min-w-0">
                     <!-- WCE College Crest -->
-                    <div class="shrink-0 flex items-center justify-center p-1.5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
-                        <img src="/images/wce_logo.png" alt="WCE Sangli" class="h-11 sm:h-12 w-auto object-contain">
+                    <div class="shrink-0 flex items-center justify-center p-1 sm:p-1.5 rounded-xl sm:rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
+                        <img src="/images/wce_logo.png" alt="WCE Sangli" class="h-8 sm:h-11 w-auto object-contain">
                     </div>
 
                     <!-- Clean Vertical Divider -->
-                    <div class="h-8 w-px bg-slate-200 dark:bg-slate-700 shrink-0"></div>
+                    <div class="h-6 sm:h-8 w-px bg-slate-200 dark:bg-slate-700 shrink-0"></div>
 
                     <!-- GDG WCE Logo -->
-                    <div class="shrink-0 flex items-center justify-center p-1.5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
-                        <img src="/images/gdgwce.png" alt="GDG On Campus WCE" class="h-9 sm:h-10 w-auto object-contain">
+                    <div class="shrink-0 flex items-center justify-center p-1 sm:p-1.5 rounded-xl sm:rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
+                        <img src="/images/gdgwce.png" alt="GDG On Campus WCE" class="h-7 sm:h-9 w-auto object-contain">
                     </div>
 
                     <!-- Institutional Info -->
@@ -141,22 +141,22 @@
                 </div>
 
                 <!-- Right Action Bar -->
-                <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+                <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
                     <!-- Dark / Light Mode Switcher -->
-                    <button onclick="toggleDarkMode()" title="Toggle Dark/Light Mode" class="p-2 rounded-xl text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-2xs transition-all">
+                    <button onclick="toggleDarkMode()" title="Toggle Dark/Light Mode" class="p-1.5 sm:p-2 rounded-xl text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-2xs transition-all">
                         <svg id="themeIconSun" class="w-4 h-4 hidden dark:block text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                         <svg id="themeIconMoon" class="w-4 h-4 block dark:hidden text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     </button>
 
                     <!-- 10 Badges Syllabus Modal Trigger -->
-                    <button onclick="openCurriculumModal()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-2xs transition-all">
+                    <button onclick="openCurriculumModal()" class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-2xs transition-all">
                         <i data-lucide="award" class="w-3.5 h-3.5 text-[#4285f4]"></i>
                         <span class="hidden sm:inline">10 Badges Track</span>
                         <span class="sm:hidden">Badges</span>
                     </button>
 
                     <!-- Export Excel Button -->
-                    <button onclick="exportToExcel()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-[#4285f4] hover:bg-slate-800 dark:hover:bg-blue-600 text-white shadow-2xs transition-all">
+                    <button onclick="exportToExcel()" class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-[#4285f4] hover:bg-slate-800 dark:hover:bg-blue-600 text-white shadow-2xs transition-all">
                         <i data-lucide="download" class="w-3.5 h-3.5 text-slate-300 dark:text-white"></i>
                         <span class="hidden sm:inline">Export Excel</span>
                         <span class="sm:hidden">Export</span>
@@ -167,39 +167,39 @@
     </header>
 
     <!-- Main Container -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6 relative z-10">
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 flex-1 w-full space-y-4 sm:space-y-6 relative z-10">
 
         <!-- Awwwards Hero Showcase (Google Colors Themed) -->
-        <section class="aww-card rounded-3xl p-6 sm:p-8 relative overflow-hidden bg-white/95 dark:bg-[#111726]/90">
+        <section class="aww-card rounded-2xl sm:rounded-3xl p-4 sm:p-8 relative overflow-hidden bg-white/95 dark:bg-[#111726]/90">
             <!-- Subtle Multi-Color Ambient Backlight -->
             <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-gradient-to-br from-[#4285f4]/15 via-[#fbbc05]/10 to-[#34a853]/15 dark:from-[#4285f4]/20 dark:via-[#ea4335]/15 dark:to-[#34a853]/20 blur-3xl pointer-events-none"></div>
             <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-gradient-to-tr from-[#ea4335]/10 via-transparent to-transparent blur-3xl pointer-events-none"></div>
 
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 relative z-10">
                 <!-- Left Column: Title & Swag Goal Cards -->
-                <div class="flex-1 space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-blue-50 dark:bg-blue-950/60 text-[#1a73e8] dark:text-blue-300 border border-blue-200 dark:border-blue-800 shadow-2xs">
+                <div class="flex-1 space-y-3 sm:space-y-4 w-full">
+                    <div class="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold bg-blue-50 dark:bg-blue-950/60 text-[#1a73e8] dark:text-blue-300 border border-blue-200 dark:border-blue-800 shadow-2xs">
                         <span class="flex gap-1 items-center">
-                            <span class="w-2 h-2 rounded-full bg-[#4285f4]"></span>
-                            <span class="w-2 h-2 rounded-full bg-[#ea4335]"></span>
-                            <span class="w-2 h-2 rounded-full bg-[#fbbc05]"></span>
-                            <span class="w-2 h-2 rounded-full bg-[#34a853]"></span>
+                            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#4285f4]"></span>
+                            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#ea4335]"></span>
+                            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#fbbc05]"></span>
+                            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#34a853]"></span>
                         </span>
                         <span>Google Cloud Community Track • WCE Sangli</span>
                     </div>
 
-                    <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                    <h1 class="text-2xl sm:text-4xl lg:text-[42px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.2] sm:leading-[1.15]">
                         Google Cloud <span class="text-[#4285f4]">Learn</span> <span class="text-[#ea4335]">With</span> <span class="text-[#fbbc05]">Communities</span> <span class="text-[#34a853]">2026</span>
                     </h1>
 
-                    <p class="text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
                         Real-time live milestone portal tracking all 363 WCE participants on their journey to complete 10 official Google Cloud skill badges and unlock official community swag.
                     </p>
 
                     <!-- Interactive Swag Cards -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5 pt-1 sm:pt-2">
                         <!-- Stage 1 Reward Card (Google Green Themed) -->
-                        <div onclick="filterMilestone('bottle_stage')" class="p-4 rounded-2xl bg-gradient-to-br from-emerald-50/90 to-emerald-100/40 dark:from-emerald-950/40 dark:to-emerald-900/20 border border-emerald-200 dark:border-emerald-800 hover:border-emerald-400 dark:hover:border-emerald-600 transition-all cursor-pointer group shadow-2xs hover:shadow-md">
+                        <div onclick="filterMilestone('bottle_stage')" class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-br from-emerald-50/90 to-emerald-100/40 dark:from-emerald-950/40 dark:to-emerald-900/20 border border-emerald-200 dark:border-emerald-800 hover:border-emerald-400 dark:hover:border-emerald-600 transition-all cursor-pointer group shadow-2xs hover:shadow-md">
                             <div class="flex items-center justify-between">
                                 <span class="text-xs font-black uppercase tracking-wider text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
                                     <span class="w-2 h-2 rounded-full bg-[#34a853]"></span>
@@ -215,23 +215,23 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="text-lg font-black text-emerald-950 dark:text-emerald-100 mt-1.5">Water Bottle</div>
-                            <div class="text-xs text-emerald-700 dark:text-emerald-400 mt-0.5 font-medium group-hover:underline">
+                            <div class="text-base sm:text-lg font-black text-emerald-950 dark:text-emerald-100 mt-1 sm:mt-1.5">Water Bottle</div>
+                            <div class="text-[11px] sm:text-xs text-emerald-700 dark:text-emerald-400 mt-0.5 font-medium group-hover:underline">
                                 Complete <strong>5 Badges</strong> to qualify
                             </div>
                         </div>
 
                         <!-- Stage 2 Reward Card (Google Blue Themed) -->
-                        <div onclick="filterMilestone('10')" class="p-4 rounded-2xl bg-gradient-to-br from-blue-50/90 to-blue-100/40 dark:from-blue-950/40 dark:to-blue-900/20 border border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-all cursor-pointer group shadow-2xs hover:shadow-md">
+                        <div onclick="filterMilestone('10')" class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-br from-blue-50/90 to-blue-100/40 dark:from-blue-950/40 dark:to-blue-900/20 border border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-all cursor-pointer group shadow-2xs hover:shadow-md">
                             <div class="flex items-center justify-between">
                                 <span class="text-xs font-black uppercase tracking-wider text-blue-800 dark:text-blue-300 flex items-center gap-1.5">
                                     <span class="w-2 h-2 rounded-full bg-[#4285f4]"></span>
                                     <span>Stage 2 Reward</span>
                                 </span>
-                                <span class="text-2xl group-hover:scale-110 transition-transform">👕</span>
+                                <span class="text-xl sm:text-2xl group-hover:scale-110 transition-transform">👕</span>
                             </div>
-                            <div class="text-lg font-black text-blue-950 dark:text-blue-100 mt-1.5">Official T-Shirt</div>
-                            <div class="text-xs text-blue-700 dark:text-blue-400 mt-0.5 font-medium group-hover:underline">
+                            <div class="text-base sm:text-lg font-black text-blue-950 dark:text-blue-100 mt-1 sm:mt-1.5">Official T-Shirt</div>
+                            <div class="text-[11px] sm:text-xs text-blue-700 dark:text-blue-400 mt-0.5 font-medium group-hover:underline">
                                 Complete <strong>10 Badges</strong> to qualify
                             </div>
                         </div>
@@ -239,10 +239,10 @@
                 </div>
 
                 <!-- Right Column: Cloud N Beyond Workshop Artwork Showcase with Google 4-Color Ambient Border -->
-                <div class="shrink-0 relative group">
-                    <div class="p-0.5 rounded-[26px] bg-gradient-to-tr from-[#4285f4] via-[#ea4335] via-[#fbbc05] to-[#34a853] shadow-lg group-hover:shadow-xl transition-all">
-                        <div class="w-48 sm:w-56 h-48 sm:h-56 rounded-3xl bg-white dark:bg-slate-900 p-2.5 overflow-hidden flex flex-col items-center justify-center">
-                            <img src="/images/cloud_n_beyond.png" alt="Cloud N Beyond Official Artwork" class="w-full h-full object-contain rounded-2xl">
+                <div class="shrink-0 relative group flex justify-center w-full lg:w-auto">
+                    <div class="p-0.5 rounded-[22px] sm:rounded-[26px] bg-gradient-to-tr from-[#4285f4] via-[#ea4335] via-[#fbbc05] to-[#34a853] shadow-md group-hover:shadow-xl transition-all">
+                        <div class="w-36 sm:w-56 h-36 sm:h-56 rounded-[20px] sm:rounded-3xl bg-white dark:bg-slate-900 p-2 sm:p-2.5 overflow-hidden flex flex-col items-center justify-center">
+                            <img src="/images/cloud_n_beyond.png" alt="Cloud N Beyond Official Artwork" class="w-full h-full object-contain rounded-xl sm:rounded-2xl">
                         </div>
                     </div>
                 </div>
@@ -250,56 +250,56 @@
         </section>
 
         <!-- Executive Metrics KPI Summary (Google 4 Colors Balanced Cards) -->
-        <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
+        <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3.5">
             <!-- 1. Total Enrolled (Google Blue) -->
-            <div class="aww-card rounded-2xl p-4 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-800 transition-all relative overflow-hidden flex flex-col justify-between">
+            <div class="aww-card rounded-2xl p-3.5 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-800 transition-all relative overflow-hidden flex flex-col justify-between">
                 <div class="absolute top-0 left-0 right-0 h-1 bg-[#4285f4]"></div>
                 <div>
-                    <div class="flex items-center justify-between gap-1.5 mb-2.5">
-                        <div class="flex items-center gap-2 min-w-0">
-                            <div class="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-950/70 text-[#1a73e8] dark:text-blue-300 flex items-center justify-center shrink-0 border border-blue-100 dark:border-blue-900/60">
+                    <div class="flex items-center justify-between gap-1.5 mb-2 sm:mb-2.5">
+                        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                            <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-blue-50 dark:bg-blue-950/70 text-[#1a73e8] dark:text-blue-300 flex items-center justify-center shrink-0 border border-blue-100 dark:border-blue-900/60">
                                 <i data-lucide="users" class="w-3.5 h-3.5"></i>
                             </div>
-                            <span class="text-[11px] font-extrabold text-slate-600 dark:text-slate-400 uppercase tracking-wider truncate">Enrolled</span>
+                            <span class="text-[10px] sm:text-[11px] font-extrabold text-slate-600 dark:text-slate-400 uppercase tracking-wider truncate">Enrolled</span>
                         </div>
                     </div>
-                    <div class="text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiTotal">363</div>
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiTotal">363</div>
                 </div>
-                <div class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium flex items-center gap-1.5">
+                <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1.5 sm:mt-2 font-medium flex items-center gap-1.5">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#4285f4] shrink-0"></span>
                     <span class="truncate">WCE Students</span>
                 </div>
             </div>
 
             <!-- 2. Stage 2: T-Shirt Winner (Google Blue) -->
-            <div onclick="filterMilestone('10')" class="aww-card rounded-2xl p-4 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-blue-400 dark:hover:border-blue-700 hover:-translate-y-0.5 transition-all cursor-pointer group relative overflow-hidden flex flex-col justify-between">
+            <div onclick="filterMilestone('10')" class="aww-card rounded-2xl p-3.5 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-blue-400 dark:hover:border-blue-700 hover:-translate-y-0.5 transition-all cursor-pointer group relative overflow-hidden flex flex-col justify-between">
                 <div class="absolute top-0 left-0 right-0 h-1 bg-[#4285f4]"></div>
                 <div>
-                    <div class="flex items-center justify-between gap-1.5 mb-2.5">
-                        <div class="flex items-center gap-2 min-w-0">
-                            <div class="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-950/70 text-sm flex items-center justify-center shrink-0 border border-blue-100 dark:border-blue-900/60">
+                    <div class="flex items-center justify-between gap-1.5 mb-2 sm:mb-2.5">
+                        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                            <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-blue-50 dark:bg-blue-950/70 text-xs sm:text-sm flex items-center justify-center shrink-0 border border-blue-100 dark:border-blue-900/60">
                                 👕
                             </div>
-                            <span class="text-[11px] font-extrabold text-slate-800 dark:text-slate-200 uppercase tracking-wider truncate">Stage 2</span>
+                            <span class="text-[10px] sm:text-[11px] font-extrabold text-slate-800 dark:text-slate-200 uppercase tracking-wider truncate">Stage 2</span>
                         </div>
-                        <span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-blue-100 dark:bg-blue-900/70 text-[#1a73e8] dark:text-blue-300 border border-blue-200 dark:border-blue-800 shrink-0">10 Badges</span>
+                        <span class="px-1.5 sm:px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-black bg-blue-100 dark:bg-blue-900/70 text-[#1a73e8] dark:text-blue-300 border border-blue-200 dark:border-blue-800 shrink-0">10 Badges</span>
                     </div>
-                    <div class="text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiTShirt">0</div>
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiTShirt">0</div>
                 </div>
-                <div class="text-xs text-[#1a73e8] dark:text-blue-400 mt-2 font-bold flex items-center gap-1.5 group-hover:underline">
+                <div class="text-[11px] sm:text-xs text-[#1a73e8] dark:text-blue-400 mt-1.5 sm:mt-2 font-bold flex items-center gap-1.5 group-hover:underline">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#4285f4] shrink-0"></span>
-                    <span class="truncate">Official T-Shirt Achieved</span>
+                    <span class="truncate">T-Shirt Achieved</span>
                 </div>
             </div>
 
             <!-- 3. Stage 1: Bottle Winner (Google Green) -->
-            <div onclick="filterMilestone('bottle_stage')" class="aww-card rounded-2xl p-4 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-emerald-400 dark:hover:border-emerald-700 hover:-translate-y-0.5 transition-all cursor-pointer group relative overflow-hidden flex flex-col justify-between">
+            <div onclick="filterMilestone('bottle_stage')" class="aww-card rounded-2xl p-3.5 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-emerald-400 dark:hover:border-emerald-700 hover:-translate-y-0.5 transition-all cursor-pointer group relative overflow-hidden flex flex-col justify-between">
                 <div class="absolute top-0 left-0 right-0 h-1 bg-[#34a853]"></div>
                 <div>
-                    <div class="flex items-center justify-between gap-1.5 mb-2.5">
-                        <div class="flex items-center gap-2 min-w-0">
-                            <div class="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-950/70 text-emerald-600 dark:text-emerald-300 flex items-center justify-center shrink-0 border border-emerald-100 dark:border-emerald-900/60">
-                                <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="flex items-center justify-between gap-1.5 mb-2 sm:mb-2.5">
+                        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                            <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-emerald-50 dark:bg-emerald-950/70 text-emerald-600 dark:text-emerald-300 flex items-center justify-center shrink-0 border border-emerald-100 dark:border-emerald-900/60">
+                                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11 5.5C7.5 5.5 4.5 8 4.5 11.5C4.5 14.2 6.5 15.2 8 13.8C9.5 12.2 10.5 8.5 11 6.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
                                     <rect x="11.5" y="2" width="7" height="3" rx="0.75" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
                                     <rect x="11" y="5" width="8" height="1.2" rx="0.6" fill="currentColor"/>
@@ -307,55 +307,55 @@
                                     <line x1="13" y1="10" x2="17" y2="10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="0.8 1.5" opacity="0.6"/>
                                 </svg>
                             </div>
-                            <span class="text-[11px] font-extrabold text-slate-800 dark:text-slate-200 uppercase tracking-wider truncate">Stage 1</span>
+                            <span class="text-[10px] sm:text-[11px] font-extrabold text-slate-800 dark:text-slate-200 uppercase tracking-wider truncate">Stage 1</span>
                         </div>
-                        <span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-emerald-100 dark:bg-emerald-900/70 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 shrink-0">5-9 Badges</span>
+                        <span class="px-1.5 sm:px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-black bg-emerald-100 dark:bg-emerald-900/70 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 shrink-0">5-9 Badges</span>
                     </div>
-                    <div class="text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiBottle">0</div>
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiBottle">0</div>
                 </div>
-                <div class="text-xs text-[#1e8e3e] dark:text-emerald-400 mt-2 font-bold flex items-center gap-1.5 group-hover:underline">
+                <div class="text-[11px] sm:text-xs text-[#1e8e3e] dark:text-emerald-400 mt-1.5 sm:mt-2 font-bold flex items-center gap-1.5 group-hover:underline">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#34a853] shrink-0"></span>
-                    <span class="truncate">Water Bottle Achieved</span>
+                    <span class="truncate">Bottle Achieved</span>
                 </div>
             </div>
 
             <!-- 4. In Progress: 1-4 Badges (Google Yellow) -->
-            <div onclick="filterMilestone('in_progress_total')" class="aww-card rounded-2xl p-4 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-amber-400 dark:hover:border-amber-700 hover:-translate-y-0.5 transition-all cursor-pointer group relative overflow-hidden flex flex-col justify-between">
+            <div onclick="filterMilestone('in_progress_total')" class="aww-card rounded-2xl p-3.5 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-amber-400 dark:hover:border-amber-700 hover:-translate-y-0.5 transition-all cursor-pointer group relative overflow-hidden flex flex-col justify-between">
                 <div class="absolute top-0 left-0 right-0 h-1 bg-[#fbbc05]"></div>
                 <div>
-                    <div class="flex items-center justify-between gap-1.5 mb-2.5">
-                        <div class="flex items-center gap-2 min-w-0">
-                            <div class="w-7 h-7 rounded-lg bg-amber-50 dark:bg-amber-950/70 text-sm flex items-center justify-center shrink-0 border border-amber-100 dark:border-amber-900/60">
+                    <div class="flex items-center justify-between gap-1.5 mb-2 sm:mb-2.5">
+                        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                            <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-amber-50 dark:bg-amber-950/70 text-[#b06000] dark:text-amber-300 flex items-center justify-center shrink-0 border border-amber-100 dark:border-amber-900/60">
                                 ⚡
                             </div>
-                            <span class="text-[11px] font-extrabold text-slate-800 dark:text-slate-200 uppercase tracking-wider truncate">In Progress</span>
+                            <span class="text-[10px] sm:text-[11px] font-extrabold text-slate-800 dark:text-slate-200 uppercase tracking-wider truncate">In Progress</span>
                         </div>
-                        <span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-amber-100 dark:bg-amber-900/70 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800 shrink-0">1-4 Badges</span>
+                        <span class="px-1.5 sm:px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-black bg-amber-100 dark:bg-amber-900/70 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800 shrink-0">1-4 Badges</span>
                     </div>
-                    <div class="text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiInProg">0</div>
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiInProg">0</div>
                 </div>
-                <div class="text-xs text-amber-700 dark:text-amber-400 mt-2 font-bold flex items-center gap-1.5 group-hover:underline">
+                <div class="text-[11px] sm:text-xs text-amber-700 dark:text-amber-400 mt-1.5 sm:mt-2 font-bold flex items-center gap-1.5 group-hover:underline">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#fbbc05] shrink-0"></span>
                     <span class="truncate">Working to Bottle</span>
                 </div>
             </div>
 
-            <!-- 5. Overall Track Completion Rate (Google Red) -->
-            <div class="aww-card rounded-2xl p-4 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-rose-300 dark:hover:border-rose-800 transition-all relative overflow-hidden flex flex-col justify-between">
+            <!-- 5. Overall Track Completion Rate (Google Red) - Spans 2 cols on mobile for balanced layout -->
+            <div class="aww-card col-span-2 sm:col-span-1 rounded-2xl p-3.5 sm:p-4.5 bg-white dark:bg-[#111726] border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-rose-300 dark:hover:border-rose-800 transition-all relative overflow-hidden flex flex-col justify-between">
                 <div class="absolute top-0 left-0 right-0 h-1 bg-[#ea4335]"></div>
                 <div>
-                    <div class="flex items-center justify-between gap-1.5 mb-2.5">
-                        <div class="flex items-center gap-2 min-w-0">
-                            <div class="w-7 h-7 rounded-lg bg-rose-50 dark:bg-rose-950/70 text-[#d93025] dark:text-rose-300 flex items-center justify-center shrink-0 border border-rose-100 dark:border-rose-900/60">
+                    <div class="flex items-center justify-between gap-1.5 mb-2 sm:mb-2.5">
+                        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                            <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-rose-50 dark:bg-rose-950/70 text-[#d93025] dark:text-rose-300 flex items-center justify-center shrink-0 border border-rose-100 dark:border-rose-900/60">
                                 <i data-lucide="award" class="w-3.5 h-3.5"></i>
                             </div>
-                            <span class="text-[11px] font-extrabold text-slate-600 dark:text-slate-400 uppercase tracking-wider truncate">Completion</span>
+                            <span class="text-[10px] sm:text-[11px] font-extrabold text-slate-600 dark:text-slate-400 uppercase tracking-wider truncate">Completion</span>
                         </div>
-                        <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-rose-50 dark:bg-rose-950/60 text-[#d93025] dark:text-rose-300 border border-rose-200/60 dark:border-rose-800 shrink-0">Track</span>
+                        <span class="px-1.5 sm:px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-extrabold bg-rose-50 dark:bg-rose-950/60 text-[#d93025] dark:text-rose-300 border border-rose-200/60 dark:border-rose-800 shrink-0">Track</span>
                     </div>
-                    <div class="text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiCompletionRate">0%</div>
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight" id="kpiCompletionRate">0%</div>
                 </div>
-                <div class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-semibold flex items-center gap-1.5">
+                <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1.5 sm:mt-2 font-semibold flex items-center gap-1.5">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#ea4335] shrink-0"></span>
                     <span class="truncate" id="kpiTotalBadges">0 total badges</span>
                 </div>
@@ -363,61 +363,66 @@
         </section>
 
         <!-- Participants Directory Section (Toolbar, Swag Filters, Leaderboard) -->
-        <section class="space-y-4">
+        <section class="space-y-3 sm:space-y-4">
             <!-- Modern Toolbar -->
-            <div class="aww-card rounded-3xl p-4 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
-                <!-- Search Box -->
-                <div class="relative flex-1 max-w-md">
+            <div class="aww-card rounded-2xl sm:rounded-3xl p-3 sm:p-4 flex flex-col gap-3">
+                <!-- Row 1: Search Box -->
+                <div class="relative w-full">
                     <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
                     <input type="text" id="searchInput" placeholder="Search by student name or email..." 
-                           class="w-full pl-10 pr-9 py-2 text-xs bg-slate-50 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 focus:bg-white dark:focus:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 focus:border-[#4285f4] transition-all"
+                           class="w-full pl-10 pr-9 py-2 text-xs bg-slate-50 dark:bg-slate-800/80 hover:bg-white dark:focus:bg-slate-800 focus:bg-white border border-slate-200 dark:border-slate-700 rounded-xl sm:rounded-2xl text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 focus:border-[#4285f4] transition-all"
                            oninput="onSearchChange()">
                     <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
                         <i data-lucide="x" class="w-3.5 h-3.5"></i>
                     </button>
                 </div>
 
-                <!-- Swag Stage Filters & Views -->
-                <div class="flex flex-wrap items-center gap-2">
-                    <!-- Filter Pills -->
-                    <div class="inline-flex rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-1 text-xs font-semibold text-slate-600 dark:text-slate-300">
-                        <button onclick="filterMilestone('')" id="pillAll" class="filter-tab px-3 py-1.5 rounded-xl active-tab transition-all">All (<span id="countPillAll">363</span>)</button>
-                        <button onclick="filterMilestone('10')" id="pillM3" class="filter-tab px-3 py-1.5 rounded-xl transition-all">👕 T-Shirt (<span id="countPillM3">0</span>)</button>
-                        <button onclick="filterMilestone('bottle_stage')" id="pillBottle" class="filter-tab px-3 py-1.5 rounded-xl transition-all inline-flex items-center gap-1.5">
-                            <svg class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11 5.5C7.5 5.5 4.5 8 4.5 11.5C4.5 14.2 6.5 15.2 8 13.8C9.5 12.2 10.5 8.5 11 6.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
-                                <rect x="11.5" y="2" width="7" height="3" rx="0.75" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
-                                <rect x="11" y="5" width="8" height="1.2" rx="0.6" fill="currentColor"/>
-                                <path d="M13 6.2H17C17.8 6.2 19 7.2 19 9V20.5C19 21.3 18.3 22 17.5 22H12.5C11.7 22 11 21.3 11 20.5V9C11 7.2 12.2 6.2 13 6.2Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-                            </svg>
-                            <span>Bottle (<span id="countPillBottle">0</span>)</span>
-                        </button>
-                        <button onclick="filterMilestone('in_progress_total')" id="pillInProg" class="filter-tab px-3 py-1.5 rounded-xl transition-all">⚡ 1-4 (<span id="countPillInProg">0</span>)</button>
-                        <button onclick="filterMilestone('not_started')" id="pillZero" class="filter-tab px-3 py-1.5 rounded-xl transition-all">💤 0 (<span id="countPillZero">0</span>)</button>
+                <!-- Row 2: Touch-Scrollable Filter Pills & Actions Bar -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
+                    <!-- Touch Scrollable Filter Pills Container -->
+                    <div class="w-full sm:w-auto overflow-x-auto no-scrollbar py-0.5 -mx-1 px-1">
+                        <div class="inline-flex rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-1 text-[11px] sm:text-xs font-semibold text-slate-600 dark:text-slate-300 shrink-0">
+                            <button onclick="filterMilestone('')" id="pillAll" class="filter-tab px-2.5 sm:px-3 py-1.5 rounded-lg sm:rounded-xl active-tab transition-all whitespace-nowrap">All (<span id="countPillAll">363</span>)</button>
+                            <button onclick="filterMilestone('10')" id="pillM3" class="filter-tab px-2.5 sm:px-3 py-1.5 rounded-lg sm:rounded-xl transition-all whitespace-nowrap">👕 T-Shirt (<span id="countPillM3">0</span>)</button>
+                            <button onclick="filterMilestone('bottle_stage')" id="pillBottle" class="filter-tab px-2.5 sm:px-3 py-1.5 rounded-lg sm:rounded-xl transition-all inline-flex items-center gap-1 whitespace-nowrap">
+                                <svg class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 5.5C7.5 5.5 4.5 8 4.5 11.5C4.5 14.2 6.5 15.2 8 13.8C9.5 12.2 10.5 8.5 11 6.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                                    <rect x="11.5" y="2" width="7" height="3" rx="0.75" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect x="11" y="5" width="8" height="1.2" rx="0.6" fill="currentColor"/>
+                                    <path d="M13 6.2H17C17.8 6.2 19 7.2 19 9V20.5C19 21.3 18.3 22 17.5 22H12.5C11.7 22 11 21.3 11 20.5V9C11 7.2 12.2 6.2 13 6.2Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Bottle (<span id="countPillBottle">0</span>)</span>
+                            </button>
+                            <button onclick="filterMilestone('in_progress_total')" id="pillInProg" class="filter-tab px-2.5 sm:px-3 py-1.5 rounded-lg sm:rounded-xl transition-all whitespace-nowrap">⚡ 1-4 (<span id="countPillInProg">0</span>)</button>
+                            <button onclick="filterMilestone('not_started')" id="pillZero" class="filter-tab px-2.5 sm:px-3 py-1.5 rounded-lg sm:rounded-xl transition-all whitespace-nowrap">💤 0 (<span id="countPillZero">0</span>)</button>
+                        </div>
                     </div>
 
-                    <!-- Sort Selector -->
-                    <select id="sortSelect" onchange="onSortChange()" class="py-2 px-3 text-xs font-semibold bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-200">
-                        <option value="count_desc">Rank / Most Badges</option>
-                        <option value="count_asc">Lowest Badges First</option>
-                        <option value="name_asc">Name (A to Z)</option>
-                        <option value="name_desc">Name (Z to A)</option>
-                    </select>
+                    <!-- Sort Selector & View Toggle (Stacked on Mobile, Side by Side on Desktop) -->
+                    <div class="flex items-center justify-between sm:justify-end gap-2 shrink-0">
+                        <!-- Sort Selector -->
+                        <select id="sortSelect" onchange="onSortChange()" class="flex-1 sm:flex-none py-1.5 sm:py-2 px-2.5 sm:px-3 text-xs font-semibold bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl sm:rounded-2xl text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-200">
+                            <option value="count_desc">Rank / Most Badges</option>
+                            <option value="count_asc">Lowest Badges First</option>
+                            <option value="name_asc">Name (A to Z)</option>
+                            <option value="name_desc">Name (Z to A)</option>
+                        </select>
 
-                    <!-- View Switcher -->
-                    <div class="inline-flex rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-1">
-                        <button id="btnViewTable" onclick="setViewMode('table')" title="Ranked Leaderboard Table" class="p-1.5 rounded-xl bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-2xs">
-                            <i data-lucide="list-ordered" class="w-4 h-4"></i>
-                        </button>
-                        <button id="btnViewGrid" onclick="setViewMode('grid')" title="Card Grid View" class="p-1.5 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
-                            <i data-lucide="layout-grid" class="w-4 h-4"></i>
-                        </button>
+                        <!-- View Switcher -->
+                        <div class="inline-flex rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-1 shrink-0">
+                            <button id="btnViewTable" onclick="setViewMode('table')" title="Ranked Leaderboard Table" class="p-1.5 rounded-lg sm:rounded-xl bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-2xs">
+                                <i data-lucide="list-ordered" class="w-4 h-4"></i>
+                            </button>
+                            <button id="btnViewGrid" onclick="setViewMode('grid')" title="Card Grid View" class="p-1.5 rounded-lg sm:rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
+                                <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Active Filter Notification -->
-            <div id="activeFilterNotice" class="hidden items-center justify-between bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 rounded-2xl px-4 py-2 text-xs text-blue-900 dark:text-blue-200">
+            <div id="activeFilterNotice" class="hidden items-center justify-between bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 rounded-2xl px-3.5 py-2 text-xs text-blue-900 dark:text-blue-200">
                 <div class="flex items-center gap-2">
                     <i data-lucide="filter" class="w-4 h-4 text-[#4285f4]"></i>
                     <span id="activeFilterNoticeText">Filter active</span>
@@ -427,18 +432,18 @@
                 </button>
             </div>
 
-            <!-- Ranked Leaderboard Table View (Default) -->
-            <div id="participantTableWrapper" class="aww-card rounded-3xl overflow-hidden">
+            <!-- Ranked Leaderboard Table View (Default, Mobile Optimized & Zero Overflow) -->
+            <div id="participantTableWrapper" class="aww-card rounded-2xl sm:rounded-3xl overflow-hidden">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse text-xs">
-                        <thead class="bg-slate-100/80 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300 font-extrabold uppercase tracking-wider text-[11px]">
+                        <thead class="bg-slate-100/80 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300 font-extrabold uppercase tracking-wider text-[10px] sm:text-[11px]">
                             <tr>
-                                <th class="py-3.5 px-4 w-14 text-center">Rank</th>
-                                <th class="py-3.5 px-4">Participant</th>
-                                <th class="py-3.5 px-3">Progress</th>
-                                <th class="py-3.5 px-3">Swag Stage</th>
-                                <th class="py-3.5 px-2 text-center" title="10 Official Badges Track">10-Badge Track Checklist</th>
-                                <th class="py-3.5 px-4 text-right">Actions</th>
+                                <th class="py-3 px-2 sm:px-4 w-10 sm:w-14 text-center">Rank</th>
+                                <th class="py-3 px-2 sm:px-4">Participant</th>
+                                <th class="py-3 px-2 sm:px-3">Progress</th>
+                                <th class="py-3 px-3 hidden sm:table-cell">Swag Stage</th>
+                                <th class="py-3 px-2 text-center hidden lg:table-cell" title="10 Official Badges Track">10-Badge Track</th>
+                                <th class="py-3 px-2 sm:px-4 text-right">Action</th>
                             </tr>
                         </thead>
                         <tbody id="participantTableBody" class="divide-y divide-slate-100 dark:divide-slate-800">
@@ -466,17 +471,17 @@
     </main>
 
     <!-- Modal: Official 10-Badge Syllabus -->
-    <div id="curriculumModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/50 dark:bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-        <div class="relative bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden my-8 max-h-[88vh] flex flex-col">
+    <div id="curriculumModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/50 dark:bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
+        <div class="relative bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden my-4 sm:my-8 max-h-[92vh] flex flex-col">
             <!-- Modal Header -->
-            <div class="p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/70 dark:bg-slate-800/50">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-2xl bg-blue-50 dark:bg-blue-950/60 text-[#1a73e8] dark:text-blue-300 flex items-center justify-center border border-blue-100 dark:border-blue-800 font-black">
-                        <i data-lucide="award" class="w-5 h-5"></i>
+            <div class="p-4 sm:p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/70 dark:bg-slate-800/50">
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-blue-50 dark:bg-blue-950/60 text-[#1a73e8] dark:text-blue-300 flex items-center justify-center border border-blue-100 dark:border-blue-800 font-black">
+                        <i data-lucide="award" class="w-4 h-4 sm:w-5 sm:h-5"></i>
                     </div>
                     <div>
-                        <h3 class="text-sm font-extrabold text-slate-900 dark:text-white leading-tight">Google Cloud 10 Required Badges</h3>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">Google Cloud Learn With Communities 2026 Syllabus</p>
+                        <h3 class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white leading-tight">Google Cloud 10 Required Badges</h3>
+                        <p class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">Google Cloud Learn With Communities 2026 Syllabus</p>
                     </div>
                 </div>
                 <button onclick="closeCurriculumModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
@@ -485,17 +490,17 @@
             </div>
 
             <!-- Badges List -->
-            <div class="p-6 overflow-y-auto space-y-3 flex-1 text-xs" id="curriculumBadgesList">
+            <div class="p-3.5 sm:p-6 overflow-y-auto space-y-2.5 sm:space-y-3 flex-1 text-xs" id="curriculumBadgesList">
                 <!-- Dynamically loaded badge cards -->
             </div>
 
             <!-- Modal Footer -->
-            <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTVMEFW24yi5IVcBblZFEK5xMdQyeF9pndf-wxE37BKu5hyOghhSkYiCHW6rSLjNJd5U3OI_E_I9vZi/pubhtml?gid=411469390&single=true" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1a73e8] dark:text-blue-400 hover:underline">
+            <div class="p-3.5 sm:p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2">
+                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTVMEFW24yi5IVcBblZFEK5xMdQyeF9pndf-wxE37BKu5hyOghhSkYiCHW6rSLjNJd5U3OI_E_I9vZi/pubhtml?gid=411469390&single=true" target="_blank" class="inline-flex items-center justify-center sm:justify-start gap-1.5 text-xs font-semibold text-[#1a73e8] dark:text-blue-400 hover:underline">
                     <span>Published Google Sheet Syllabus</span>
                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                 </a>
-                <button onclick="closeCurriculumModal()" class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 text-xs font-bold">
+                <button onclick="closeCurriculumModal()" class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 text-xs font-bold text-center">
                     Close
                 </button>
             </div>
@@ -503,42 +508,42 @@
     </div>
 
     <!-- Modal: Individual Student Dossier -->
-    <div id="studentModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/50 dark:bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-        <div class="relative bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden my-8 max-h-[90vh] flex flex-col">
+    <div id="studentModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/50 dark:bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
+        <div class="relative bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden my-4 sm:my-8 max-h-[92vh] flex flex-col">
             <!-- Modal Header -->
-            <div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-start justify-between bg-slate-50/70 dark:bg-slate-800/50">
-                <div class="flex items-center gap-3.5">
-                    <div id="modalAvatar" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#4285f4] to-[#1557b0] text-white font-black text-sm flex items-center justify-center shadow-xs">
+            <div class="p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex items-start justify-between bg-slate-50/70 dark:bg-slate-800/50">
+                <div class="flex items-center gap-3 sm:gap-3.5 min-w-0">
+                    <div id="modalAvatar" class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-[#4285f4] to-[#1557b0] text-white font-black text-xs sm:text-sm flex items-center justify-center shadow-xs shrink-0">
                         WCE
                     </div>
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <h3 id="modalName" class="text-base font-extrabold text-slate-900 dark:text-white leading-tight">Student Name</h3>
-                            <span id="modalSwagBadge" class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-blue-100 text-blue-900 border border-blue-200">Stage 2: T-Shirt</span>
+                    <div class="min-w-0">
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                            <h3 id="modalName" class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white leading-tight truncate">Student Name</h3>
+                            <span id="modalSwagBadge" class="self-start px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-black bg-blue-100 text-blue-900 border border-blue-200 shrink-0">Stage 2: T-Shirt</span>
                         </div>
-                        <p id="modalEmail" class="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">student@wce.ac.in</p>
+                        <p id="modalEmail" class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5 truncate">student@wce.ac.in</p>
                     </div>
                 </div>
-                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1.5 sm:p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all shrink-0">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
 
             <!-- Modal Body (Scrollable) -->
-            <div class="p-6 overflow-y-auto space-y-5 flex-1 text-xs">
+            <div class="p-4 sm:p-6 overflow-y-auto space-y-4 sm:space-y-5 flex-1 text-xs">
                 <!-- Info Summary Row -->
-                <div class="grid grid-cols-3 gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+                <div class="grid grid-cols-3 gap-2 sm:gap-3 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center sm:text-left">
                     <div>
-                        <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Completed Track</span>
-                        <div class="text-lg font-black text-slate-900 dark:text-white mt-0.5" id="modalCount">0 / 10</div>
+                        <span class="text-[9px] sm:text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Completed</span>
+                        <div class="text-base sm:text-lg font-black text-slate-900 dark:text-white mt-0.5" id="modalCount">0 / 10</div>
                     </div>
                     <div>
-                        <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Swag Status</span>
+                        <span class="text-[9px] sm:text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Swag Status</span>
                         <div class="text-xs font-bold text-blue-900 dark:text-blue-300 mt-1 truncate" id="modalRewardStatus">T-Shirt</div>
                     </div>
                     <div>
-                        <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Live Verified</span>
-                        <div class="text-xs text-slate-800 dark:text-slate-200 mt-1" id="modalScrapedAt">Just now</div>
+                        <span class="text-[9px] sm:text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Live Verified</span>
+                        <div class="text-xs text-slate-800 dark:text-slate-200 mt-1 truncate" id="modalScrapedAt">Just now</div>
                     </div>
                 </div>
 
@@ -547,7 +552,7 @@
                     <div class="flex items-center justify-between mb-2">
                         <h4 class="font-extrabold text-slate-900 dark:text-white text-xs flex items-center gap-1.5">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-[#4285f4]"></i>
-                            <span>Workshop 10-Badge Completion Status</span>
+                            <span>Workshop 10-Badge Track</span>
                         </h4>
                         <span class="text-[11px] font-bold text-slate-600 dark:text-slate-300" id="modalPercent">0%</span>
                     </div>
@@ -564,7 +569,7 @@
                 </div>
 
                 <!-- Ignored Badges Notice -->
-                <div id="modalExtraBadgesBox" class="hidden p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300">
+                <div id="modalExtraBadgesBox" class="hidden p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300">
                     <div class="flex items-center gap-2 font-bold text-xs text-slate-800 dark:text-slate-200">
                         <i data-lucide="info" class="w-4 h-4 text-slate-400"></i>
                         <span>Additional Profile Badges</span>
@@ -576,14 +581,14 @@
             </div>
 
             <!-- Modal Footer -->
-            <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                <a id="modalProfileLink" href="#" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 text-xs font-bold shadow-2xs">
+            <div class="p-3.5 sm:p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
+                <a id="modalProfileLink" href="#" target="_blank" class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 text-xs font-bold shadow-2xs">
                     <span>Google Skills Public Profile</span>
                     <i data-lucide="external-link" class="w-3.5 h-3.5 text-slate-400"></i>
                 </a>
 
                 <div class="flex items-center gap-2">
-                    <button id="modalSyncNowBtn" onclick="syncCurrentModalStudent()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#4285f4] hover:bg-blue-600 text-white text-xs font-bold shadow-xs">
+                    <button id="modalSyncNowBtn" onclick="syncCurrentModalStudent()" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-[#4285f4] hover:bg-blue-600 text-white text-xs font-bold shadow-xs">
                         <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
                         <span>Live Sync Now</span>
                     </button>
@@ -597,14 +602,14 @@
 
     <!-- Footer Branding -->
     <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500 dark:text-slate-400 mt-auto transition-colors relative z-10">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div class="flex items-center gap-3">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-between gap-3 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
                 <img src="/images/wce_logo.png" alt="WCE" class="h-6 w-auto object-contain">
                 <span class="font-extrabold text-slate-800 dark:text-white">Walchand College of Engineering, Sangli</span>
-                <span>•</span>
+                <span class="hidden sm:inline">•</span>
                 <span class="font-semibold text-slate-600 dark:text-slate-300">GDG On Campus — Google Cloud Learn With Communities 2026</span>
             </div>
-            <div class="text-[11px] text-slate-400 font-mono flex items-center gap-2">
+            <div class="text-[11px] text-slate-400 font-mono flex flex-col sm:flex-row items-center gap-1.5 sm:gap-2">
                 <span class="inline-flex items-center gap-1.5">
                     <span>Stage 1 (5 Badges):</span>
                     <svg class="w-3.5 h-3.5 text-emerald-500 inline-block align-middle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -615,7 +620,7 @@
                     </svg>
                     <strong>Water Bottle</strong>
                 </span>
-                <span>•</span>
+                <span class="hidden sm:inline">•</span>
                 <span class="inline-flex items-center gap-1">
                     <span>Stage 2 (10 Badges): 👕</span>
                     <strong>Official T-Shirt</strong>

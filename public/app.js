@@ -435,59 +435,67 @@ function renderTableRow(p, rank) {
 
     return `
         <tr id="row-p-${p.id}" class="hover:bg-blue-50/50 dark:hover:bg-slate-800/50 transition-colors">
-            <td class="py-3.5 px-4 text-center">
+            <td class="py-2.5 sm:py-3.5 px-2 sm:px-4 text-center">
                 ${rankDisplay}
             </td>
-            <td class="py-3.5 px-4">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-8 h-8 rounded-xl ${avatarStyle} font-black text-xs flex items-center justify-center shrink-0 border">
+            <td class="py-2.5 sm:py-3.5 px-2 sm:px-4 min-w-[130px] sm:min-w-0">
+                <div class="flex items-center gap-2 sm:gap-2.5">
+                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl ${avatarStyle} font-black text-[10px] sm:text-xs flex items-center justify-center shrink-0 border">
                         ${getInitials(p.name)}
                     </div>
-                    <div class="min-w-0">
-                        <div class="font-extrabold text-slate-900 dark:text-white truncate leading-snug flex items-center gap-1.5">
+                    <div class="min-w-0 flex-1">
+                        <div class="font-extrabold text-slate-900 dark:text-white text-xs truncate leading-snug flex items-center gap-1">
                             <span class="truncate">${escapeHtml(p.name)}</span>
                             <!-- Sync spinning icon appears ONLY if currently syncing -->
                             ${isCurrentlySyncing ? `
-                                <svg class="animate-spin h-3.5 w-3.5 text-[#4285f4] shrink-0 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <svg class="animate-spin h-3 w-3 text-[#4285f4] shrink-0 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
                             ` : ''}
                         </div>
-                        <div class="text-[11px] text-slate-400 dark:text-slate-500 font-mono truncate">${escapeHtml(p.email)}</div>
+                        <div class="text-[10px] sm:text-[11px] text-slate-400 dark:text-slate-500 font-mono truncate max-w-[125px] sm:max-w-none">${escapeHtml(p.email)}</div>
+                        <!-- On Mobile: Swag Pill directly under email -->
+                        <div class="sm:hidden mt-1">
+                            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[9px] font-black border ${swag.badgeClass}">
+                                ${swag.pillHtml || `<span>${swag.pillLabel}</span>`}
+                            </span>
+                        </div>
                     </div>
                 </div>
             </td>
-            <td class="py-3.5 px-3">
-                <div class="w-32">
-                    <div class="flex items-center justify-between text-[11px] mb-1">
+            <td class="py-2.5 sm:py-3.5 px-2 sm:px-3">
+                <div class="w-20 sm:w-32">
+                    <div class="flex items-center justify-between text-[10px] sm:text-[11px] mb-1">
                         <span class="font-black text-slate-800 dark:text-slate-200 font-mono">${count}/10</span>
                         ${isCompletedAll 
-                            ? `<span class="font-extrabold text-[11px] google-gradient-text">100% Complete</span>`
-                            : `<span class="text-slate-400 dark:text-slate-500 font-semibold">${pct}%</span>`
+                            ? `<span class="font-extrabold text-[10px] sm:text-[11px] google-gradient-text">100%</span>`
+                            : `<span class="text-slate-400 dark:text-slate-500 font-semibold text-[10px] sm:text-[11px]">${pct}%</span>`
                         }
                     </div>
-                    <div class="w-full ${isCompletedAll ? 'bg-blue-100/70 dark:bg-slate-700 ring-1 ring-blue-400/50 shadow-xs' : 'bg-slate-100 dark:bg-slate-700'} h-2 rounded-full overflow-hidden">
-                        <div class="h-2 rounded-full ${progressBarClass} smooth-progress" style="width: ${pct}%"></div>
+                    <div class="w-full ${isCompletedAll ? 'bg-blue-100/70 dark:bg-slate-700 ring-1 ring-blue-400/50 shadow-xs' : 'bg-slate-100 dark:bg-slate-700'} h-1.5 sm:h-2 rounded-full overflow-hidden">
+                        <div class="h-1.5 sm:h-2 rounded-full ${progressBarClass} smooth-progress" style="width: ${pct}%"></div>
                     </div>
                 </div>
             </td>
-            <td class="py-3.5 px-3">
+            <!-- Desktop / Tablet Only: Swag Stage Column -->
+            <td class="py-3.5 px-3 hidden sm:table-cell">
                 <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-black border ${swag.badgeClass}">
                     ${swag.pillHtml || `<span>${swag.pillLabel}</span>`}
                 </span>
             </td>
-            <td class="py-3.5 px-2 text-center">
+            <!-- Large Desktop Only: 10 Badge Checklist Column -->
+            <td class="py-3.5 px-2 text-center hidden lg:table-cell">
                 <div class="inline-flex items-center gap-1 bg-slate-50 dark:bg-slate-800 p-1 rounded-xl border border-slate-200/60 dark:border-slate-700/60">
                     ${dotsHtml}
                 </div>
             </td>
-            <td class="py-3.5 px-4 text-right">
-                <div class="flex items-center justify-end gap-1.5">
-                    <a href="${p.profileUrl}" target="_blank" title="Skills Profile" class="p-1.5 rounded-lg text-slate-400 hover:text-[#4285f4] dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-flex items-center">
+            <td class="py-2.5 sm:py-3.5 px-2 sm:px-4 text-right">
+                <div class="flex items-center justify-end gap-1 sm:gap-1.5">
+                    <a href="${p.profileUrl}" target="_blank" title="Skills Profile" class="hidden sm:inline-flex p-1.5 rounded-lg text-slate-400 hover:text-[#4285f4] dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors items-center">
                         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     </a>
-                    <button onclick="openModal(${p.id})" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 dark:bg-slate-800 hover:bg-[#4285f4] hover:text-white dark:hover:bg-[#4285f4] text-slate-700 dark:text-slate-200 transition-all">
+                    <button onclick="openModal(${p.id})" class="px-2 sm:px-2.5 py-1 rounded-lg text-[10px] sm:text-[11px] font-bold bg-slate-100 dark:bg-slate-800 hover:bg-[#4285f4] hover:text-white dark:hover:bg-[#4285f4] text-slate-700 dark:text-slate-200 transition-all">
                         Details
                     </button>
                 </div>
