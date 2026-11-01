@@ -50,9 +50,9 @@ async function loadInitialData() {
 async function fetchCentralizedParticipants() {
     let loaded = false;
 
-    // 1. Try real-time API endpoint first
+    // 1. Try real-time API endpoint first (with cache-busting)
     try {
-        const pResp = await fetch('/api/participants');
+        const pResp = await fetch('/api/participants?_t=' + Date.now());
         if (pResp.ok) {
             const data = await pResp.json();
             if (data && data.success && Array.isArray(data.participants) && data.participants.length > 0) {
@@ -94,9 +94,9 @@ function startRealtimePolling() {
             let newParticipants = null;
             let syncId = null;
 
-            // Try API first
+            // Try API first (with cache-busting)
             try {
-                const pResp = await fetch('/api/participants');
+                const pResp = await fetch('/api/participants?_t=' + Date.now());
                 if (pResp.ok) {
                     const data = await pResp.json();
                     if (data && data.success && Array.isArray(data.participants)) {
@@ -123,7 +123,8 @@ function startRealtimePolling() {
                     hasChanges = true;
                 } else {
                     for (let i = 0; i < newParticipants.length; i++) {
-                        if (state.participants[i].completedCount !== newParticipants[i].completedCount) {
+                        if (state.participants[i].completedCount !== newParticipants[i].completedCount ||
+                            state.participants[i].lastScrapedAt !== newParticipants[i].lastScrapedAt) {
                             hasChanges = true;
                             break;
                         }
@@ -138,7 +139,7 @@ function startRealtimePolling() {
                     updateStats();
                     renderParticipants();
 
-                    // If modal is open for a changed student, update modal
+                    // If modal is open, keep its details and verified timestamp 100% reactive
                     if (state.modalParticipantId) {
                         const cur = state.participants.find(p => p.id === state.modalParticipantId);
                         if (cur) renderModalContent(cur);

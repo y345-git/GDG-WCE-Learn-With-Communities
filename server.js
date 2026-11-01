@@ -137,8 +137,15 @@ async function runServerBackgroundSync() {
     }
 }
 
-// Start background worker
-setTimeout(runServerBackgroundSync, 1000);
+const IS_VERCEL = !!(process.env.VERCEL || process.env.NOW_REGION);
+const VPS_URL = process.env.VPS_BACKEND_URL || process.env.SYNC_BACKEND_URL || 'http://62.84.172.73:3000';
+
+// Start background worker (ONLY on standalone VPS / local server, NEVER in short-lived Vercel lambda)
+if (!IS_VERCEL) {
+    setTimeout(runServerBackgroundSync, 1000);
+} else {
+    console.log(`[Vercel Server] Running in cloud proxy mode -> Forwarding live sync to VPS at ${VPS_URL}`);
+}
 
 const MIME_TYPES = {
     '.html': 'text/html; charset=utf-8',
@@ -165,9 +172,38 @@ const server = http.createServer(async (req, res) => {
         return res.end();
     }
 
-    // API: GET /api/participants (Returns real-time centralized state)
+    // API: GET /api/participants (Returns real-time centralized state from VPS or local store)
     if (pathname === '/api/participants') {
-        res.writeHead(200, { 'Content-Type': 'application/json' });
+        // 1. If running on Vercel, proxy directly from the 24/7 PM2 VPS sync daemon!
+        if (IS_VERCEL && VPS_URL) {
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 4500);
+                const cleanUrl = VPS_URL.replace(/\/$/, '');
+                const vpsRes = await fetch(`${cleanUrl}/api/participants?_t=${Date.now()}`, {
+                    signal: controller.signal,
+                    headers: { 'Accept': 'application/json' }
+                });
+                clearTimeout(timeoutId);
+
+                if (vpsRes.ok) {
+                    const data = await vpsRes.text();
+                    res.writeHead(200, {
+                        'Content-Type': 'application/json',
+                        'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0'
+                    });
+                    return res.end(data);
+                }
+            } catch (err) {
+                console.warn('[Vercel Server] VPS sync fetch failed, falling back to local store:', err.message);
+            }
+        }
+
+        // 2. On VPS (or fallback on Vercel): Serve store with strict no-cache headers
+        res.writeHead(200, {
+            'Content-Type': 'application/json',
+            'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0'
+        });
         return res.end(JSON.stringify({
             success: true,
             count: participantsStore.length,
@@ -179,6 +215,18 @@ const server = http.createServer(async (req, res) => {
 
     // API: GET /api/health or /api/status (Health check & metrics for VPS and PM2)
     if (pathname === '/api/health' || pathname === '/api/status') {
+        if (IS_VERCEL && VPS_URL) {
+            try {
+                const cleanUrl = VPS_URL.replace(/\/$/, '');
+                const vpsRes = await fetch(`${cleanUrl}/api/health`, { signal: AbortSignal.timeout(3000) });
+                if (vpsRes.ok) {
+                    const text = await vpsRes.text();
+                    res.writeHead(200, { 'Content-Type': 'application/json' });
+                    return res.end(text);
+                }
+            } catch (e) {}
+        }
+
         res.writeHead(200, { 'Content-Type': 'application/json' });
         return res.end(JSON.stringify({
             status: 'healthy',
