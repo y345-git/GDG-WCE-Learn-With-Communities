@@ -11,7 +11,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:11.129Z",
+    "lastScrapedAt": "2026-11-01T04:41:44.388Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -27,7 +27,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:11.157Z",
+    "lastScrapedAt": "2026-11-01T04:41:44.867Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -76,7 +76,7 @@
       }
     ],
     "totalProfileBadges": 4,
-    "lastScrapedAt": "2026-11-01T03:18:02.969Z",
+    "lastScrapedAt": "2026-11-01T04:41:37.319Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -92,7 +92,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:13.093Z",
+    "lastScrapedAt": "2026-11-01T04:41:44.894Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -108,7 +108,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:15:18.653Z",
+    "lastScrapedAt": "2026-11-01T04:41:45.962Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -124,7 +124,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:14.964Z",
+    "lastScrapedAt": "2026-11-01T04:41:45.636Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -140,7 +140,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:14.634Z",
+    "lastScrapedAt": "2026-11-01T04:41:45.588Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -156,7 +156,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:15.510Z",
+    "lastScrapedAt": "2026-11-01T04:41:46.394Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -253,7 +253,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-11-01T03:17:58.776Z",
+    "lastScrapedAt": "2026-11-01T04:41:34.051Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -269,7 +269,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:16.115Z",
+    "lastScrapedAt": "2026-11-01T04:41:46.476Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -285,7 +285,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:16.331Z",
+    "lastScrapedAt": "2026-11-01T04:41:46.770Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -301,7 +301,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:16.982Z",
+    "lastScrapedAt": "2026-11-01T04:41:47.195Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -342,7 +342,7 @@
       }
     ],
     "totalProfileBadges": 3,
-    "lastScrapedAt": "2026-11-01T03:18:03.738Z",
+    "lastScrapedAt": "2026-11-01T04:41:37.577Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -439,7 +439,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-11-01T03:18:00.065Z",
+    "lastScrapedAt": "2026-11-01T04:41:33.948Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -455,7 +455,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:17.119Z",
+    "lastScrapedAt": "2026-11-01T04:41:47.226Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -468,8 +468,56 @@
     "accessCode": "6s-EDUCR-70::7aWPTU62VATesKeoQzSjsA",
     "redemptionStatus": "Yes",
     "originalMilestone": "No Milestone",
-    "completedCount": 1,
+    "completedCount": 7,
     "completedBadges": [
+      {
+        "name": "Build a Website on Google Cloud",
+        "normalizedName": "build a website on google cloud",
+        "order": 6,
+        "earnedDate": "Earned Nov  1, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/vLbCm9dqTGstk0Ck0nY4zU8Z0ALwJpXi2i4OzMZAMxY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8fe62a16-b94b-4458-9bab-cabb3d4e2892/badges/29303276"
+      },
+      {
+        "name": "Analyze Images with the Cloud Vision API",
+        "normalizedName": "analyze images with the cloud vision api",
+        "order": 5,
+        "earnedDate": "Earned Nov  1, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8fe62a16-b94b-4458-9bab-cabb3d4e2892/badges/29303270"
+      },
+      {
+        "name": "Develop AI-Powered Prototypes in Google AI Studio",
+        "normalizedName": "develop ai-powered prototypes in google ai studio",
+        "order": 4,
+        "earnedDate": "Earned Nov  1, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8fe62a16-b94b-4458-9bab-cabb3d4e2892/badges/29303262"
+      },
+      {
+        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+        "normalizedName": "implement speech and language solutions with pre-trained apis",
+        "order": 3,
+        "earnedDate": "Earned Nov  1, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8fe62a16-b94b-4458-9bab-cabb3d4e2892/badges/29303257"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Nov  1, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8fe62a16-b94b-4458-9bab-cabb3d4e2892/badges/29303242"
+      },
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Nov  1, 2026 EDT",
+        "imageUrl": "https://cdn.qwiklabs.com/L0e8u5bkhDYEvFV%2Bsx%2FfXsxQiz%2F%2FsAwAHrJOvwu9VJY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/8fe62a16-b94b-4458-9bab-cabb3d4e2892/badges/29303230"
+      },
       {
         "name": "The Basics of Google Cloud Compute",
         "normalizedName": "the basics of google cloud compute",
@@ -479,8 +527,8 @@
         "badgeUrl": "https://www.skills.google/public_profiles/8fe62a16-b94b-4458-9bab-cabb3d4e2892/badges/29302495"
       }
     ],
-    "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:06.549Z",
+    "totalProfileBadges": 7,
+    "lastScrapedAt": "2026-11-01T04:41:40.045Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -545,7 +593,7 @@
       }
     ],
     "totalProfileBadges": 6,
-    "lastScrapedAt": "2026-11-01T03:18:02.571Z",
+    "lastScrapedAt": "2026-11-01T04:41:36.365Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -570,7 +618,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:06.098Z",
+    "lastScrapedAt": "2026-11-01T04:41:40.515Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -586,7 +634,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:17.660Z",
+    "lastScrapedAt": "2026-11-01T04:41:48.355Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -602,7 +650,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:17.924Z",
+    "lastScrapedAt": "2026-11-01T04:41:48.036Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -618,7 +666,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:17.948Z",
+    "lastScrapedAt": "2026-11-01T04:41:48.029Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -634,7 +682,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:18.563Z",
+    "lastScrapedAt": "2026-11-01T04:41:48.800Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -650,7 +698,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:18.853Z",
+    "lastScrapedAt": "2026-11-01T04:41:48.786Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -666,7 +714,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:18.765Z",
+    "lastScrapedAt": "2026-11-01T04:41:49.171Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -682,7 +730,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:19.543Z",
+    "lastScrapedAt": "2026-11-01T04:41:49.550Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -707,7 +755,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:06.928Z",
+    "lastScrapedAt": "2026-11-01T04:41:40.693Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -804,7 +852,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-11-01T03:17:58.512Z",
+    "lastScrapedAt": "2026-11-01T04:41:34.154Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -820,7 +868,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:19.706Z",
+    "lastScrapedAt": "2026-11-01T04:41:49.583Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -845,7 +893,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:07.438Z",
+    "lastScrapedAt": "2026-11-01T04:41:40.903Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -861,7 +909,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:19.646Z",
+    "lastScrapedAt": "2026-11-01T04:41:49.963Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -877,7 +925,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:20.682Z",
+    "lastScrapedAt": "2026-11-01T04:41:50.317Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -893,7 +941,7 @@
     "completedCount": 0,
     "completedBadges": [],
     "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:18:20.686Z",
+    "lastScrapedAt": "2026-11-01T04:41:50.315Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -1030,7 +1078,7 @@
       }
     ],
     "totalProfileBadges": 3,
-    "lastScrapedAt": "2026-11-01T03:18:03.473Z",
+    "lastScrapedAt": "2026-11-01T04:41:38.190Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -1183,7 +1231,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:07.798Z",
+    "lastScrapedAt": "2026-11-01T04:41:41.355Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -1352,7 +1400,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:08.392Z",
+    "lastScrapedAt": "2026-11-01T04:41:41.578Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -1561,7 +1609,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-11-01T03:18:00.832Z",
+    "lastScrapedAt": "2026-11-01T04:41:35.219Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -2762,7 +2810,7 @@
       }
     ],
     "totalProfileBadges": 2,
-    "lastScrapedAt": "2026-11-01T03:18:05.176Z",
+    "lastScrapedAt": "2026-11-01T04:41:39.016Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -2851,7 +2899,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:08.287Z",
+    "lastScrapedAt": "2026-11-01T04:41:41.715Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -3364,7 +3412,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-11-01T03:18:01.620Z",
+    "lastScrapedAt": "2026-11-01T04:41:35.229Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -3405,7 +3453,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:08.631Z",
+    "lastScrapedAt": "2026-11-01T04:41:42.143Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -3590,7 +3638,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:09.219Z",
+    "lastScrapedAt": "2026-11-01T04:41:42.379Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -3831,7 +3879,7 @@
       }
     ],
     "totalProfileBadges": 6,
-    "lastScrapedAt": "2026-11-01T03:18:02.579Z",
+    "lastScrapedAt": "2026-11-01T04:41:36.589Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -3856,7 +3904,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:09.173Z",
+    "lastScrapedAt": "2026-11-01T04:41:42.519Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -5353,7 +5401,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:10.370Z",
+    "lastScrapedAt": "2026-11-01T04:41:43.943Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -5690,7 +5738,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-11-01T03:18:01.584Z",
+    "lastScrapedAt": "2026-11-01T04:41:35.529Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -5763,7 +5811,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:10.095Z",
+    "lastScrapedAt": "2026-11-01T04:41:43.165Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -6036,7 +6084,7 @@
       }
     ],
     "totalProfileBadges": 2,
-    "lastScrapedAt": "2026-11-01T03:18:04.697Z",
+    "lastScrapedAt": "2026-11-01T04:41:39.894Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -6181,7 +6229,7 @@
       }
     ],
     "totalProfileBadges": 10,
-    "lastScrapedAt": "2026-11-01T03:18:02.095Z",
+    "lastScrapedAt": "2026-11-01T04:41:39.651Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -6350,7 +6398,7 @@
       }
     ],
     "totalProfileBadges": 2,
-    "lastScrapedAt": "2026-11-01T03:18:10.342Z",
+    "lastScrapedAt": "2026-11-01T04:41:43.465Z",
     "extraBadges": [],
     "extraBadgesCount": 1
   },
@@ -6375,7 +6423,7 @@
       }
     ],
     "totalProfileBadges": 1,
-    "lastScrapedAt": "2026-11-01T03:18:11.050Z",
+    "lastScrapedAt": "2026-11-01T04:41:44.041Z",
     "extraBadges": [],
     "extraBadgesCount": 0
   },
@@ -6448,7 +6496,7 @@
       }
     ],
     "totalProfileBadges": 19,
-    "lastScrapedAt": "2026-11-01T03:18:07.496Z",
+    "lastScrapedAt": "2026-11-01T04:41:39.049Z",
     "extraBadges": [],
     "extraBadgesCount": 16
   },

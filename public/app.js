@@ -897,63 +897,22 @@ function resetFilters() {
 }
 
 // =========================================================================
-// EXCEL EXPORT (CLIENT-SIDE VIA SHEETJS)
+// SECURE EXCEL EXPORT (AUTHENTICATED ENDPOINT PROXY)
 // =========================================================================
 
-function exportToExcel() {
-    if (typeof XLSX === 'undefined') {
-        alert('Export library loading. Please try again in a moment.');
-        return;
-    }
-
-    const participants = getFilteredAndSortedParticipants();
-    const rows = participants.map((p, idx) => {
-        const count = p.completedCount || 0;
-        const swag = getSwagRewardInfo(count);
-        return {
-            "Rank": idx + 1,
-            "User Name": p.name,
-            "User Email": p.email,
-            "Google Skills Profile URL": p.profileUrl,
-            "Swag Reward": swag.reward,
-            "Swag Stage": swag.stage,
-            "Live Completed Badges Count": count,
-            "Completed Badges List": (p.completedBadges || []).map(b => b.name).join('; '),
-            "Total Profile Badges": p.totalProfileBadges || count,
-            "Access Code": p.accessCode || '',
-            "Last Verified At": p.lastScrapedAt || 'Initial Snapshot'
-        };
-    });
-
-    const ws1 = XLSX.utils.json_to_sheet(rows);
-
-    // Sheet 2: 10 Target Badges Breakdown
-    const badgeRows = (state.targetBadges || []).map(b => {
-        const norm = (b.normalizedName || '').toLowerCase();
-        let done = 0;
-        for (const p of state.participants) {
-            if (p.completedBadges && p.completedBadges.some(cb => (cb.normalizedName || '').toLowerCase() === norm)) {
-                done++;
-            }
-        }
-        return {
-            "#": b.order,
-            "Badge Name": b.name,
-            "Course URL": b.url,
-            "Required Credits": b.credits,
-            "Students Completed": done,
-            "Completion Percentage": `${Math.round((done / (state.participants.length || 1)) * 100)}%`
-        };
-    });
-    const ws2 = XLSX.utils.json_to_sheet(badgeRows);
-
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws1, "Swag Rewards - WCE 2026");
-    XLSX.utils.book_append_sheet(wb, ws2, "10 Badges Track Summary");
-
-    const dateStr = new Date().toISOString().slice(0, 10);
-    XLSX.writeFile(wb, `Google_Cloud_Learn_With_Communities_2026_WCE_${dateStr}.xlsx`);
+function triggerSecureExport(providedKey) {
+    const key = providedKey || prompt('Enter GDG Organizer Secret Key to download Excel:');
+    if (!key) return;
+    window.location.href = `/api/export-excel?key=${encodeURIComponent(key.trim())}`;
 }
+
+// Hidden Organizer Shortcut: Ctrl + Shift + E
+window.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.shiftKey && (e.key === 'E' || e.key === 'e')) {
+        e.preventDefault();
+        triggerSecureExport();
+    }
+});
 
 function escapeHtml(str) {
     if (!str) return '';

@@ -19,5 +19,8 @@
     "vercel"
   ],
   "author": "GDG On Campus WCE",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
 }

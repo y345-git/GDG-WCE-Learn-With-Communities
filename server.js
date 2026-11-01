@@ -7,6 +7,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import scrapeHandler from './api/scrape.js';
 import batchScrapeHandler from './api/batch-scrape.js';
+import exportExcelHandler from './api/export-excel.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -247,6 +248,32 @@ const server = http.createServer(async (req, res) => {
             try { resolve(body ? JSON.parse(body) : {}); } catch (e) { resolve({}); }
         });
     });
+
+    // API: /api/export-excel or /api/export (Secure Excel Export with Admin Key)
+    if (pathname === '/api/export-excel' || pathname === '/api/export') {
+        const mockReq = {
+            url: req.url,
+            method: req.method,
+            headers: req.headers
+        };
+        const mockRes = {
+            statusCode: 200,
+            setHeader: (k, v) => res.setHeader(k, v),
+            status: (code) => {
+                res.statusCode = code;
+                return {
+                    json: (data) => {
+                        res.setHeader('Content-Type', 'application/json');
+                        res.end(JSON.stringify(data));
+                    },
+                    send: (buf) => {
+                        res.end(buf);
+                    }
+                };
+            }
+        };
+        return exportExcelHandler(mockReq, mockRes);
+    }
 
     // API: /api/scrape
     if (pathname === '/api/scrape') {
