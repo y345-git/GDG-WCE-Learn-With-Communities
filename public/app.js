@@ -172,10 +172,10 @@ function getSwagRewardInfo(count) {
     if (count >= 10) {
         return {
             stage: 'Stage 2',
-            reward: 'T-Shirt',
+            reward: 'Google Developer Kit',
             badgeClass: 'bg-blue-50 dark:bg-blue-950/70 text-[#1a73e8] dark:text-blue-300 border-blue-200 dark:border-blue-800',
-            pillHtml: `<span class="inline-flex items-center gap-1.5">${getTShirtSvg('w-3.5 h-3.5 text-[#1a73e8] dark:text-blue-300')}<span>T-Shirt</span></span>`,
-            pillLabel: 'T-Shirt',
+            pillHtml: `<span class="inline-flex items-center gap-1.5">${getTShirtSvg('w-3.5 h-3.5 text-[#1a73e8] dark:text-blue-300')}<span>Google Developer Kit</span></span>`,
+            pillLabel: 'Google Developer Kit',
             isTShirt: true,
             isBottle: false
         };
@@ -676,7 +676,7 @@ function renderModalContent(p) {
     document.getElementById('modalCount').textContent = `${count} / 10`;
     const modalBar = document.getElementById('modalProgressBar');
     if (count >= 10) {
-        document.getElementById('modalPercent').innerHTML = `<span class="font-extrabold text-xs google-gradient-text">100% Complete • Stage 2 T-Shirt Achieved</span>`;
+        document.getElementById('modalPercent').innerHTML = `<span class="font-extrabold text-xs google-gradient-text">100% Complete • Stage 2 Google Developer Kit Achieved</span>`;
         modalBar.className = 'h-2.5 rounded-full google-progress-100 smooth-progress';
     } else {
         document.getElementById('modalPercent').textContent = `${pct}% Complete`;
@@ -871,7 +871,7 @@ function updateFilterNotice(count) {
 
     const desc = [];
     if (state.searchQuery) desc.push(`"${state.searchQuery}"`);
-    if (state.milestoneFilter === '10') desc.push('Stage 2: Official T-Shirt (10 Badges)');
+    if (state.milestoneFilter === '10') desc.push('Stage 2: Official Google Developer Kit (10 Badges)');
     else if (state.milestoneFilter === 'bottle_stage') desc.push('Stage 1: Water Bottle (5-9 Badges)');
     else if (state.milestoneFilter === 'in_progress_total') desc.push('In Progress (1-4 Badges)');
     else if (state.milestoneFilter === 'not_started') desc.push('Not Started (0 Badges)');
