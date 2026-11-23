@@ -6297,6 +6297,7 @@
     "extraBadges": [],
     "extraBadgesCount": 0
   },
+  
   {
     "id": 336,
     "name": "Nikhil Kamlesh Thakur",
@@ -6787,5 +6788,21 @@
     "lastScrapedAt": "2026-11-01T03:17:36.565Z",
     "extraBadges": [],
     "extraBadgesCount": 1
+  },
+  {
+    "id": 364,
+    "name": "Aditya singh",
+    "email": "ramannusingh1211@gmail.com",
+    "profileUrl": "https://www.skills.google/public_profiles/66ceb9ac-f9b9-4755-8a0a-b01f21ce0044",
+    "profileStatus": "All Good",
+    "accessCode": "6s-EDUCR-70::1CN__gh-F-8YQBrJ5TAHNw",
+    "redemptionStatus": "No",
+    "originalMilestone": "No Milestone",
+    "completedCount": 0,
+    "completedBadges": [],
+    "totalProfileBadges": 0,
+    "lastScrapedAt": "2026-11-01T03:17:28.575Z",
+    "extraBadges": [],
+    "extraBadgesCount": 0
   }
 ]
