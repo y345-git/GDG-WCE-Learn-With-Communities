@@ -6297,7 +6297,6 @@
     "extraBadges": [],
     "extraBadgesCount": 0
   },
-  
   {
     "id": 336,
     "name": "Nikhil Kamlesh Thakur",
@@ -6791,18 +6790,75 @@
   },
   {
     "id": 364,
-    "name": "Aditya singh",
+    "name": "Aditya Singh",
     "email": "ramannusingh1211@gmail.com",
     "profileUrl": "https://www.skills.google/public_profiles/66ceb9ac-f9b9-4755-8a0a-b01f21ce0044",
     "profileStatus": "All Good",
     "accessCode": "6s-EDUCR-70::1CN__gh-F-8YQBrJ5TAHNw",
     "redemptionStatus": "No",
     "originalMilestone": "No Milestone",
-    "completedCount": 0,
-    "completedBadges": [],
-    "totalProfileBadges": 0,
-    "lastScrapedAt": "2026-11-01T03:17:28.575Z",
+    "completedCount": 7,
+    "completedBadges": [
+      {
+        "name": "Create Your First Gemini Enterprise Application",
+        "normalizedName": "create your first gemini enterprise application",
+        "order": 7,
+        "earnedDate": "Earned Nov 13, 2026 EST",
+        "imageUrl": "https://cdn.qwiklabs.com/L0e8u5bkhDYEvFV%2Bsx%2FfXsxQiz%2F%2FsAwAHrJOvwu9VJY%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/66ceb9ac-f9b9-4755-8a0a-b01f21ce0044/badges/29616535"
+      },
+      {
+        "name": "Explore Generative AI in Agent Platform",
+        "normalizedName": "explore generative ai in agent platform",
+        "order": 10,
+        "earnedDate": "Earned Nov 13, 2026 EST",
+        "imageUrl": "https://cdn.qwiklabs.com/Ep488ur7qy53c%2Fwb0D1OS%2BeWzeTrNgXPu2ZbDDurm3E%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/66ceb9ac-f9b9-4755-8a0a-b01f21ce0044/badges/29616487"
+      },
+      {
+        "name": "Analyze Images with the Cloud Vision API",
+        "normalizedName": "analyze images with the cloud vision api",
+        "order": 5,
+        "earnedDate": "Earned Nov 12, 2026 EST",
+        "imageUrl": "https://cdn.qwiklabs.com/Vs%2FtJZhYzE6dd3YNzb6wUuDBOe2n1LLSlR%2FKyP9U4RA%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/66ceb9ac-f9b9-4755-8a0a-b01f21ce0044/badges/29587585"
+      },
+      {
+        "name": "Develop AI-Powered Prototypes in Google AI Studio",
+        "normalizedName": "develop ai-powered prototypes in google ai studio",
+        "order": 4,
+        "earnedDate": "Earned Nov 12, 2026 EST",
+        "imageUrl": "https://cdn.qwiklabs.com/Kj6dceihYIfHojkjapJHUAJtLZ93H%2BJ727%2FMnbYXZYE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/66ceb9ac-f9b9-4755-8a0a-b01f21ce0044/badges/29587164"
+      },
+      {
+        "name": "Implement Speech and Language Solutions with Pre-trained APIs",
+        "normalizedName": "implement speech and language solutions with pre-trained apis",
+        "order": 3,
+        "earnedDate": "Earned Nov 12, 2026 EST",
+        "imageUrl": "https://cdn.qwiklabs.com/W%2FApgdYs%2Bn4QOYhy42XW40XtBAuCpET%2FsIo2XoBiDEo%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/66ceb9ac-f9b9-4755-8a0a-b01f21ce0044/badges/29586219"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "normalizedName": "configure service accounts and iam roles for google cloud",
+        "order": 2,
+        "earnedDate": "Earned Nov 12, 2026 EST",
+        "imageUrl": "https://cdn.qwiklabs.com/I1TlsJ7q%2BHAYAI14j1n1efZUJjzOX30ktybTOXCXTQE%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/66ceb9ac-f9b9-4755-8a0a-b01f21ce0044/badges/29585517"
+      },
+      {
+        "name": "The Basics of Google Cloud Compute",
+        "normalizedName": "the basics of google cloud compute",
+        "order": 1,
+        "earnedDate": "Earned Nov 12, 2026 EST",
+        "imageUrl": "https://cdn.qwiklabs.com/9lB99Ij%2BMz%2FyOV0484V995beQHBMMCw0kimBFfZVtcM%3D",
+        "badgeUrl": "https://www.skills.google/public_profiles/66ceb9ac-f9b9-4755-8a0a-b01f21ce0044/badges/29583000"
+      }
+    ],
+    "totalProfileBadges": 10,
+    "lastScrapedAt": "2026-11-23T18:33:54.837Z",
     "extraBadges": [],
-    "extraBadgesCount": 0
+    "extraBadgesCount": 3
   }
 ]
