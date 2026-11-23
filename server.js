@@ -275,6 +275,47 @@ const server = http.createServer(async (req, res) => {
         return exportExcelHandler(mockReq, mockRes);
     }
 
+    // API: POST /api/add-participant (Secure Participant Addition)
+    if (pathname === '/api/add-participant') {
+        const ADMIN_KEY = process.env.EXPORT_SECRET_KEY || process.env.ADMIN_SECRET_KEY || 'gdg-wce-admin-2026';
+        const key = parsedUrl.searchParams.get('key') || req.headers['x-admin-key'];
+        if (key !== ADMIN_KEY) {
+            res.writeHead(403, { 'Content-Type': 'application/json' });
+            return res.end(JSON.stringify({ error: 'Forbidden', message: 'Valid admin key required' }));
+        }
+
+        const body = await getBody();
+        const { name, email, profileUrl } = body;
+        if (!name || !email || !profileUrl) {
+            res.writeHead(400, { 'Content-Type': 'application/json' });
+            return res.end(JSON.stringify({ error: 'Missing name, email, or profileUrl' }));
+        }
+
+        const maxId = participantsStore.reduce((m, p) => Math.max(m, p.id || 0), 0);
+        const newParticipant = {
+            id: maxId + 1,
+            name: name.trim(),
+            email: email.trim(),
+            profileUrl: profileUrl.trim(),
+            profileStatus: "All Good",
+            accessCode: "",
+            redemptionStatus: "Yes",
+            originalMilestone: "No Milestone",
+            completedCount: 0,
+            completedBadges: [],
+            totalProfileBadges: 0,
+            lastScrapedAt: new Date().toISOString(),
+            extraBadges: [],
+            extraBadgesCount: 0
+        };
+
+        participantsStore.push(newParticipant);
+        saveStoreToDisk();
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        return res.end(JSON.stringify({ success: true, participant: newParticipant, total: participantsStore.length }));
+    }
+
     // API: /api/scrape
     if (pathname === '/api/scrape') {
         req.query = Object.fromEntries(parsedUrl.searchParams);
